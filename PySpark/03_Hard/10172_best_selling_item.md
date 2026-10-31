@@ -71,4 +71,44 @@ result.toPandas()
 
 ---
 
-#
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10172").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+WITH calculate_total_paid AS (
+    SELECT EXTRACT(MONTH FROM invoicedate) AS month, 
+          description, 
+          SUM(unitprice * quantity) AS total_paid
+    FROM online_retail
+    GROUP BY 1,2
+),
+
+rank_items AS (
+    SELECT  month,
+            description,
+            total_paid,
+            DENSE_RANK() OVER(PARTITION BY month ORDER BY total_paid DESC) AS item_rank
+    FROM calculate_total_paid
+)
+
+SELECT month,
+       description,
+       total_paid
+FROM rank_items
+WHERE item_rank = 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
