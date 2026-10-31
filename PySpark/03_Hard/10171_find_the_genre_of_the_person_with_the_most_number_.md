@@ -580,4 +580,561 @@ year	category	nominee	movie	winner	id
 2007	actor in a supporting role	Hal Holbrook	Into the Wild	FALSE	542
 1999	actor in a supporting role	Haley Joel Osment	The Sixth Sense	FALSE	543
 2001	actress in a leading role	Halle Berry	Monster's Ball	TRUE	544
-194
+1946	actor in a supporting role	Harold Russell	The Best Years of Our Lives	TRUE	545
+1985	actor in a leading role	Harrison Ford	Witness	FALSE	546
+1939	actor in a supporting role	Harry Carey	Mr. Smith Goes to Washington	FALSE	547
+1991	actor in a supporting role	Harvey Keitel	Bugsy	FALSE	548
+1939	actress in a supporting role	Hattie McDaniel	Gone with the Wind	TRUE	549
+2005	actor in a leading role	Heath Ledger	Brokeback Mountain	FALSE	550
+2008	actor in a supporting role	Heath Ledger	The Dark Knight	TRUE	551
+1970	actress in a supporting role	Helen Hayes	Airport	TRUE	552
+1997	actress in a leading role	Helen Hunt	As Good as It Gets	TRUE	553
+2012	actress in a supporting role	Helen Hunt	The Sessions	FALSE	554
+1994	actress in a supporting role	Helen Mirren	The Madness of King George	FALSE	555
+2001	actress in a supporting role	Helen Mirren	Gosford Park	FALSE	556
+2006	actress in a leading role	Helen Mirren	The Queen	TRUE	557
+2009	actress in a leading role	Helen Mirren	The Last Station	FALSE	558
+1997	actress in a leading role	Helena Bonham Carter	The Wings of the Dove	FALSE	559
+2010	actress in a supporting role	Helena Bonham Carter	The King's Speech	FALSE	560
+1940	actor	Henry Fonda	The Grapes of Wrath	FALSE	561
+1981	actor in a leading role	Henry Fonda	On Golden Pond	TRUE	562
+1942	actor in a supporting role	Henry Travers	Mrs. Miniver	FALSE	563
+1959	actress in a supporting role	Hermione Baddeley	Room at the Top	FALSE	564
+1999	actress in a leading role	Hilary Swank	Boys Don't Cry	TRUE	565
+2004	actress in a leading role	Hilary Swank	Million Dollar Baby	TRUE	566
+1987	actress in a leading role	Holly Hunter	Broadcast News	FALSE	567
+1993	actress in a leading role	Holly Hunter	The Piano	TRUE	568
+1993	actress in a supporting role	Holly Hunter	The Firm	FALSE	569
+2003	actress in a supporting role	Holly Hunter	Thirteen	FALSE	570
+1950	actress in a supporting role	Hope Emerson	Caged	FALSE	571
+1957	actress in a supporting role	Hope Lange	Peyton Place	FALSE	572
+1981	actor in a supporting role	Howard E. Rollins, Jr.	Ragtime	FALSE	573
+1959	actor in a supporting role	Hugh Griffith	Ben-Hur	TRUE	574
+1963	actor in a supporting role	Hugh Griffith	Tom Jones	FALSE	575
+2012	actor in a leading role	Hugh Jackman	Les Mis_rables	FALSE	576
+1944	actor in a supporting role	Hume Cronyn	The Seventh Cross	FALSE	577
+1943	actor	Humphrey Bogart	Casablanca	FALSE	578
+1951	actor	Humphrey Bogart	The African Queen	TRUE	579
+1954	actor	Humphrey Bogart	The Caine Mutiny	FALSE	580
+1965	actor in a supporting role	Ian Bannen	The Flight of the Phoenix	FALSE	581
+1981	actor in a supporting role	Ian Holm	Chariots of Fire	FALSE	582
+1998	actor in a leading role	Ian McKellen	Gods and Monsters	FALSE	583
+2001	actor in a supporting role	Ian McKellen	The Lord of the Rings: The Fellowship of the Ring	FALSE	584
+1966	actress	Ida Kaminska	The Shop on Main Street	FALSE	585
+2004	actress in a leading role	Imelda Staunton	Vera Drake	FALSE	586
+1943	actress	Ingrid Bergman	For Whom the Bell Tolls	FALSE	587
+1944	actress	Ingrid Bergman	Gaslight	TRUE	588
+1945	actress	Ingrid Bergman	The Bells of St. Mary's	FALSE	589
+1948	actress	Ingrid Bergman	Joan of Arc	FALSE	590
+1956	actress	Ingrid Bergman	Anastasia	TRUE	591
+1974	actress in a supporting role	Ingrid Bergman	Murder on the Orient Express	TRUE	592
+1978	actress in a leading role	Ingrid Bergman	Autumn Sonata	FALSE	593
+1936	actress	Irene Dunne	Theodora Goes Wild	FALSE	594
+1937	actress	Irene Dunne	The Awful Truth	FALSE	595
+1939	actress	Irene Dunne	Love Affair	FALSE	596
+1948	actress	Irene Dunne	I Remember Mama	FALSE	597
+1975	actress	Isabelle Adjani	The Story of Adele H.	FALSE	598
+1989	actress in a leading role	Isabelle Adjani	Camille Claudel	FALSE	599
+1943	actor in a supporting role	J. Carrol Naish	Sahara	FALSE	600
+1945	actor in a supporting role	J. Carrol Naish	A Medal for Benny	FALSE	601
+1968	actor in a supporting role	Jack Albertson	The Subject Was Roses	TRUE	602
+1973	actor in a supporting role	Jack Gilford	Save the Tiger	FALSE	603
+1960	actor in a supporting role	Jack Kruschen	The Apartment	FALSE	604
+1955	actor in a supporting role	Jack Lemmon	Mister Roberts	TRUE	605
+1959	actor	Jack Lemmon	Some Like It Hot	FALSE	606
+1960	actor	Jack Lemmon	The Apartment	FALSE	607
+1962	actor	Jack Lemmon	Days of Wine and Roses	FALSE	608
+1973	actor	Jack Lemmon	Save the Tiger	TRUE	609
+1979	actor in a leading role	Jack Lemmon	The China Syndrome	FALSE	610
+1980	actor in a leading role	Jack Lemmon	Tribute	FALSE	611
+1982	actor in a leading role	Jack Lemmon	Missing	FALSE	612
+1969	actor in a supporting role	Jack Nicholson	Easy Rider	FALSE	613
+1970	actor	Jack Nicholson	Five Easy Pieces	FALSE	614
+1973	actor	Jack Nicholson	The Last Detail	FALSE	615
+1974	actor	Jack Nicholson	Chinatown	FALSE	616
+1975	actor	Jack Nicholson	One Flew over the Cuckoo's Nest	TRUE	617
+1981	actor in a supporting role	Jack Nicholson	Reds	FALSE	618
+1983	actor in a supporting role	Jack Nicholson	Terms of Endearment	TRUE	619
+1985	actor in a leading role	Jack Nicholson	Prizzi's Honor	FALSE	620
+1987	actor in a leading role	Jack Nicholson	Ironweed	FALSE	621
+1992	actor in a supporting role	Jack Nicholson	A Few Good Men	FALSE	622
+1997	actor in a leading role	Jack Nicholson	As Good as It Gets	TRUE	623
+2002	actor in a leading role	Jack Nicholson	About Schmidt	FALSE	624
+1940	actor in a supporting role	Jack Oakie	The Great Dictator	FALSE	625
+1952	actor in a supporting role	Jack Palance	Sudden Fear	FALSE	626
+1953	actor in a supporting role	Jack Palance	Shane	FALSE	627
+1991	actor in a supporting role	Jack Palance	City Slickers	TRUE	628
+1975	actor in a supporting role	Jack Warden	Shampoo	FALSE	629
+1978	actor in a supporting role	Jack Warden	Heaven Can Wait	FALSE	630
+1968	actor in a supporting role	Jack Wild	Oliver!	FALSE	631
+2010	actress in a supporting role	Jacki Weaver	Animal Kingdom	FALSE	632
+2012	actress in a supporting role	Jacki Weaver	Silver Linings Playbook	FALSE	633
+2006	actor in a supporting role	Jackie Earle Haley	Little Children	FALSE	634
+1961	actor in a supporting role	Jackie Gleason	The Hustler	FALSE	635
+2005	actor in a supporting role	Jake Gyllenhaal	Brokeback Mountain	FALSE	636
+1972	actor in a supporting role	James Caan	The Godfather	FALSE	637
+1938	actor	James Cagney	Angels with Dirty Faces	FALSE	638
+1942	actor	James Cagney	Yankee Doodle Dandy	TRUE	639
+1955	actor	James Cagney	Love Me or Leave Me	FALSE	640
+1998	actor in a supporting role	James Coburn	Affliction	TRUE	641
+1981	actor in a supporting role	James Coco	Only When I Laugh	FALSE	642
+1995	actor in a supporting role	James Cromwell	Babe	FALSE	643
+1955	actor	James Dean	East of Eden	FALSE	644
+1956	actor	James Dean	Giant	FALSE	645
+1945	actor in a supporting role	James Dunn	A Tree Grows in Brooklyn	TRUE	646
+1970	actor	James Earl Jones	The Great White Hope	FALSE	647
+2010	actor in a leading role	James Franco	127 Hours	FALSE	648
+1985	actor in a leading role	James Garner	Murphy's Romance	FALSE	649
+1941	actor in a supporting role	James Gleason	Here Comes Mr. Jordan	FALSE	650
+1954	actor	James Mason	A Star Is Born	FALSE	651
+1966	actor in a supporting role	James Mason	Georgy Girl	FALSE	652
+1982	actor in a supporting role	James Mason	The Verdict	FALSE	653
+1940	actor in a supporting role	James Stephenson	The Letter	FALSE	654
+1939	actor	James Stewart	Mr. Smith Goes to Washington	FALSE	655
+1940	actor	James Stewart	The Philadelphia Story	TRUE	656
+1946	actor	James Stewart	It's a Wonderful Life	FALSE	657
+1950	actor	James Stewart	Harvey	FALSE	658
+1959	actor	James Stewart	Anatomy of a Murder	FALSE	659
+1949	actor in a supporting role	James Whitmore	Battleground	FALSE	660
+1975	actor	James Whitmore	Give 'em Hell, Harry!	FALSE	661
+1986	actor in a leading role	James Woods	Salvador	FALSE	662
+1996	actor in a supporting role	James Woods	Ghosts of Mississippi	FALSE	663
+2004	actor in a leading role	Jamie Foxx	Ray	TRUE	664
+2004	actor in a supporting role	Jamie Foxx	Collateral	FALSE	665
+1954	actress in a supporting role	Jan Sterling	The High and the Mighty	FALSE	666
+1970	actress	Jane Alexander	The Great White Hope	FALSE	667
+1976	actress in a supporting role	Jane Alexander	All the President's Men	FALSE	668
+1979	actress in a supporting role	Jane Alexander	Kramer vs. Kramer	FALSE	669
+1983	actress in a leading role	Jane Alexander	Testament	FALSE	670
+1940	actress in a supporting role	Jane Darwell	The Grapes of Wrath	TRUE	671
+1969	actress	Jane Fonda	They Shoot Horses, Don't They?	FALSE	672
+1971	actress	Jane Fonda	Klute	TRUE	673
+1977	actress in a leading role	Jane Fonda	Julia	FALSE	674
+1978	actress in a leading role	Jane Fonda	Coming Home	TRUE	675
+1979	actress in a leading role	Jane Fonda	The China Syndrome	FALSE	676
+1981	actress in a supporting role	Jane Fonda	On Golden Pond	FALSE	677
+1986	actress in a leading role	Jane Fonda	The Morning After	FALSE	678
+1946	actress	Jane Wyman	The Yearling	FALSE	679
+1948	actress	Jane Wyman	Johnny Belinda	TRUE	680
+1951	actress	Jane Wyman	The Blue Veil	FALSE	681
+1954	actress	Jane Wyman	Magnificent Obsession	FALSE	682
+1937	actress	Janet Gaynor	A Star Is Born	FALSE	683
+1960	actress in a supporting role	Janet Leigh	Psycho	FALSE	684
+1999	actress in a leading role	Janet McTeer	Tumbleweeds	FALSE	685
+2011	actress in a supporting role	Janet McTeer	Albert Nobbs	FALSE	686
+1971	actress	Janet Suzman	Nicholas and Alexandra	FALSE	687
+1973	actor in a supporting role	Jason Miller	The Exorcist	FALSE	688
+1976	actor in a supporting role	Jason Robards	All the President's Men	TRUE	689
+1977	actor in a supporting role	Jason Robards	Julia	TRUE	690
+1980	actor in a supporting role	Jason Robards	Melvin and Howard	FALSE	691
+2000	actor in a leading role	Javier Bardem	Before Night Falls	FALSE	692
+2007	actor in a supporting role	Javier Bardem	No Country for Old Men	TRUE	693
+2010	actor in a leading role	Javier Bardem	Biutiful	FALSE	694
+1992	actor in a supporting role	Jaye Davidson	The Crying Game	FALSE	695
+1943	actress	Jean Arthur	The More the Merrier	FALSE	696
+2011	actor in a leading role	Jean Dujardin	The Artist	TRUE	697
+1952	actress in a supporting role	Jean Hagen	Singin' in the Rain	FALSE	698
+1948	actress in a supporting role	Jean Simmons	Hamlet	FALSE	699
+1969	actress	Jean Simmons	The Happy Ending	FALSE	700
+1949	actress	Jeanne Crain	Pinky	FALSE	701
+1972	actress in a supporting role	Jeannie Berlin	The Heartbreak Kid	FALSE	702
+1971	actor in a supporting role	Jeff Bridges	The Last Picture Show	FALSE	703
+1974	actor in a supporting role	Jeff Bridges	Thunderbolt and Lightfoot	FALSE	704
+1984	actor in a leading role	Jeff Bridges	Starman	FALSE	705
+2000	actor in a supporting role	Jeff Bridges	The Contender	FALSE	706
+2009	actor in a leading role	Jeff Bridges	Crazy Heart	TRUE	707
+2010	actor in a leading role	Jeff Bridges	True Grit	FALSE	708
+1950	actor in a supporting role	Jeff Chandler	Broken Arrow	FALSE	709
+2001	actress in a supporting role	Jennifer Connelly	A Beautiful Mind	TRUE	710
+2006	actress in a supporting role	Jennifer Hudson	Dreamgirls	TRUE	711
+1943	actress	Jennifer Jones	The Song of Bernadette	TRUE	712
+1944	actress in a supporting role	Jennifer Jones	Since You Went Away	FALSE	713
+1945	actress	Jennifer Jones	Love Letters	FALSE	714
+1946	actress	Jennifer Jones	Duel in the Sun	FALSE	715
+1955	actress	Jennifer Jones	Love Is a Many-Splendored Thing	FALSE	716
+2010	actress in a leading role	Jennifer Lawrence	Winter's Bone	FALSE	717
+2012	actress in a leading role	Jennifer Lawrence	Silver Linings Playbook	TRUE	718
+1994	actress in a supporting role	Jennifer Tilly	Bullets over Broadway	FALSE	719
+1990	actor in a leading role	Jeremy Irons	Reversal of Fortune	TRUE	720
+2009	actor in a leading role	Jeremy Renner	The Hurt Locker	FALSE	721
+2010	actor in a supporting role	Jeremy Renner	The Town	FALSE	722
+2010	actor in a leading role	Jesse Eisenberg	The Social Network	FALSE	723
+2011	actress in a supporting role	Jessica Chastain	The Help	FALSE	724
+2012	actress in a leading role	Jessica Chastain	Zero Dark Thirty	FALSE	725
+1982	actress in a leading role	Jessica Lange	Frances	FALSE	726
+1982	actress in a supporting role	Jessica Lange	Tootsie	TRUE	727
+1984	actress in a leading role	Jessica Lange	Country	FALSE	728
+1985	actress in a leading role	Jessica Lange	Sweet Dreams	FALSE	729
+1989	actress in a leading role	Jessica Lange	Music Box	FALSE	730
+1994	actress in a leading role	Jessica Lange	Blue Sky	TRUE	731
+1989	actress in a leading role	Jessica Tandy	Driving Miss Daisy	TRUE	732
+1991	actress in a supporting role	Jessica Tandy	Fried Green Tomatoes	FALSE	733
+1978	actress in a leading role	Jill Clayburgh	An Unmarried Woman	FALSE	734
+1979	actress in a leading role	Jill Clayburgh	Starting Over	FALSE	735
+2001	actor in a supporting role	Jim Broadbent	Iris	TRUE	736
+1955	actress in a supporting role	Jo Van Fleet	East of Eden	TRUE	737
+1995	actress in a supporting role	Joan Allen	Nixon	FALSE	738
+1996	actress in a supporting role	Joan Allen	The Crucible	FALSE	739
+2000	actress in a leading role	Joan Allen	The Contender	FALSE	740
+1951	actress in a supporting role	Joan Blondell	The Blue Veil	FALSE	741
+1945	actress	Joan Crawford	Mildred Pierce	TRUE	742
+1947	actress	Joan Crawford	Possessed	FALSE	743
+1952	actress	Joan Crawford	Sudden Fear	FALSE	744
+1988	actress in a supporting role	Joan Cusack	Working Girl	FALSE	745
+1997	actress in a supporting role	Joan Cusack	In & Out	FALSE	746
+1940	actress	Joan Fontaine	Rebecca	FALSE	747
+1941	actress	Joan Fontaine	Suspicion	TRUE	748
+1943	actress	Joan Fontaine	The Constant Nymph	FALSE	749
+1981	actress in a supporting role	Joan Hackett	Only When I Laugh	FALSE	750
+1945	actress in a supporting role	Joan Lorring	The Corn Is Green	FALSE	751
+1992	actress in a supporting role	Joan Plowright	Enchanted April	FALSE	752
+1957	actress	Joanne Woodward	The Three Faces of Eve	TRUE	753
+1968	actress	Joanne Woodward	Rachel, Rachel	FALSE	754
+1973	actress	Joanne Woodward	Summer Wishes, Winter Dreams	FALSE	755
+1990	actress in a leading role	Joanne Woodward	Mr. & Mrs. Bridge	FALSE	756
+2000	actor in a supporting role	Joaquin Phoenix	Gladiator	FALSE	757
+2005	actor in a leading role	Joaquin Phoenix	Walk the Line	FALSE	758
+2012	actor in a leading role	Joaquin Phoenix	The Master	FALSE	759
+1966	actress in a supporting role	Jocelyne Lagarde	Hawaii	FALSE	760
+1976	actress in a supporting role	Jodie Foster	Taxi Driver	FALSE	761
+1988	actress in a leading role	Jodie Foster	The Accused	TRUE	762
+1991	actress in a leading role	Jodie Foster	The Silence of the Lambs	TRUE	763
+1994	actress in a leading role	Jodie Foster	Nell	FALSE	764
+1955	actor in a supporting role	Joe Mantell	Marty	FALSE	765
+1980	actor in a supporting role	Joe Pesci	Raging Bull	FALSE	766
+1990	actor in a supporting role	Joe Pesci	Good Fellas	TRUE	767
+1972	actor in a supporting role	Joel Grey	Cabaret	TRUE	768
+2002	actor in a supporting role	John C. Reilly	Chicago	FALSE	769
+1967	actor in a supporting role	John Cassavetes	The Dirty Dozen	FALSE	770
+1945	actor in a supporting role	John Dall	The Corn Is Green	FALSE	771
+1938	actor in a supporting role	John Garfield	Four Daughters	FALSE	772
+1947	actor	John Garfield	Body and Soul	FALSE	773
+1964	actor in a supporting role	John Gielgud	Becket	FALSE	774
+1981	actor in a supporting role	John Gielgud	Arthur	TRUE	775
+2010	actor in a supporting role	John Hawkes	Winter's Bone	FALSE	776
+1973	actor in a supporting role	John Houseman	The Paper Chase	TRUE	777
+1978	actor in a supporting role	John Hurt	Midnight Express	FALSE	778
+1980	actor in a leading role	John Hurt	The Elephant Man	FALSE	779
+1963	actor in a supporting role	John Huston	The Cardinal	FALSE	780
+1949	actor in a supporting role	John Ireland	All the King's Men	FALSE	781
+1982	actor in a supporting role	John Lithgow	The World According to Garp	FALSE	782
+1983	actor in a supporting role	John Lithgow	Terms of Endearment	FALSE	783
+1984	actor in a supporting role	John Malkovich	Places in the Heart	FALSE	784
+1993	actor in a supporting role	John Malkovich	In the Line of Fire	FALSE	785
+1970	actor in a supporting role	John Marley	Love Story	FALSE	786
+1970	actor in a supporting role	John Mills	Ryan's Daughter	TRUE	787
+1977	actor in a leading role	John Travolta	Saturday Night Fever	FALSE	788
+1994	actor in a leading role	John Travolta	Pulp Fiction	FALSE	789
+1949	actor	John Wayne	Sands of Iwo Jima	FALSE	790
+1969	actor	John Wayne	True Grit	TRUE	791
+2003	actor in a leading role	Johnny Depp	Pirates of the Caribbean: The Curse of the Black Pearl	FALSE	792
+2004	actor in a leading role	Johnny Depp	Finding Neverland	FALSE	793
+2007	actor in a leading role	Johnny Depp	Sweeney Todd The Demon Barber of Fleet Street	FALSE	794
+1969	actor	Jon Voight	Midnight Cowboy	FALSE	795
+1978	actor in a leading role	Jon Voight	Coming Home	TRUE	796
+1985	actor in a leading role	Jon Voight	Runaway Train	FALSE	797
+2001	actor in a supporting role	Jon Voight	Ali	FALSE	798
+2011	actor in a supporting role	Jonah Hill	Moneyball	FALSE	799
+1948	actor in a supporting role	Jos_ Ferrer	Joan of Arc	FALSE	800
+1950	actor	Jos_ Ferrer	Cyrano de Bergerac	TRUE	801
+1952	actor	Jos_ Ferrer	Moulin Rouge	FALSE	802
+1937	actor in a supporting role	Joseph Schildkraut	The Life of Emile Zola	TRUE	803
+1950	actress in a supporting role	Josephine Hull	Harvey	TRUE	804
+2008	actor in a supporting role	Josh Brolin	Milk	FALSE	805
+1963	actress in a supporting role	Joyce Redman	Tom Jones	FALSE	806
+1965	actress in a supporting role	Joyce Redman	Othello	FALSE	807
+1959	actress in a supporting role	Juanita Moore	Imitation of Life	FALSE	808
+1980	actor in a supporting role	Judd Hirsch	Ordinary People	FALSE	809
+1999	actor in a supporting role	Jude Law	The Talented Mr. Ripley	FALSE	810
+2003	actor in a leading role	Jude Law	Cold Mountain	FALSE	811
+1997	actress in a leading role	Judi Dench	Mrs. Brown	FALSE	812
+1998	actress in a supporting role	Judi Dench	Shakespeare in Love	TRUE	813
+2000	actress in a supporting role	Judi Dench	Chocolat	FALSE	814
+2001	actress in a leading role	Judi Dench	Iris	FALSE	815
+2005	actress in a leading role	Judi Dench	Mrs. Henderson Presents	FALSE	816
+2006	actress in a leading role	Judi Dench	Notes on a Scandal	FALSE	817
+1940	actress in a supporting role	Judith Anderson	Rebecca	FALSE	818
+1984	actress in a leading role	Judy Davis	A Passage to India	FALSE	819
+1992	actress in a supporting role	Judy Davis	Husbands and Wives	FALSE	820
+1954	actress	Judy Garland	A Star Is Born	FALSE	821
+1961	actress in a supporting role	Judy Garland	Judgment at Nuremberg	FALSE	822
+1950	actress	Judy Holliday	Born Yesterday	TRUE	823
+1989	actress in a supporting role	Julia Roberts	Steel Magnolias	FALSE	824
+1990	actress in a leading role	Julia Roberts	Pretty Woman	FALSE	825
+2000	actress in a leading role	Julia Roberts	Erin Brockovich	TRUE	826
+1997	actress in a supporting role	Julianne Moore	Boogie Nights	FALSE	827
+1999	actress in a leading role	Julianne Moore	The End of the Affair	FALSE	828
+2002	actress in a leading role	Julianne Moore	Far from Heaven	FALSE	829
+2002	actress in a supporting role	Julianne Moore	The Hours	FALSE	830
+1964	actress	Julie Andrews	Mary Poppins	TRUE	831
+1965	actress	Julie Andrews	The Sound of Music	FALSE	832
+1982	actress in a leading role	Julie Andrews	Victor/Victoria	FALSE	833
+1965	actress	Julie Christie	Darling	TRUE	834
+1971	actress	Julie Christie	McCabe & Mrs. Miller	FALSE	835
+1997	actress in a leading role	Julie Christie	Afterglow	FALSE	836
+2007	actress in a leading role	Julie Christie	Away from Her	FALSE	837
+1952	actress	Julie Harris	The Member of the Wedding	FALSE	838
+1983	actress in a leading role	Julie Walters	Educating Rita	FALSE	839
+2000	actress in a supporting role	Julie Walters	Billy Elliot	FALSE	840
+1996	actress in a supporting role	Juliette Binoche	The English Patient	TRUE	841
+2000	actress in a leading role	Juliette Binoche	Chocolat	FALSE	842
+1991	actress in a supporting role	Juliette Lewis	Cape Fear	FALSE	843
+1979	actor in a supporting role	Justin Henry	Kramer vs. Kramer	FALSE	844
+1970	actress in a supporting role	Karen Black	Five Easy Pieces	FALSE	845
+1951	actor in a supporting role	Karl Malden	A Streetcar Named Desire	TRUE	846
+1954	actor in a supporting role	Karl Malden	On the Waterfront	FALSE	847
+2000	actress in a supporting role	Kate Hudson	Almost Famous	FALSE	848
+1991	actress in a supporting role	Kate Nelligan	The Prince of Tides	FALSE	849
+1995	actress in a supporting role	Kate Winslet	Sense and Sensibility	FALSE	850
+1997	actress in a leading role	Kate Winslet	Titanic	FALSE	851
+2001	actress in a supporting role	Kate Winslet	Iris	FALSE	852
+2004	actress in a leading role	Kate Winslet	Eternal Sunshine of the Spotless Mind	FALSE	853
+2006	actress in a leading role	Kate Winslet	Little Children	FALSE	854
+2008	actress in a leading role	Kate Winslet	The Reader	TRUE	855
+1940	actress	Katharine Hepburn	The Philadelphia Story	FALSE	856
+1942	actress	Katharine Hepburn	Woman of the Year	FALSE	857
+1951	actress	Katharine Hepburn	The African Queen	FALSE	858
+1955	actress	Katharine Hepburn	Summertime	FALSE	859
+1956	actress	Katharine Hepburn	The Rainmaker	FALSE	860
+1959	actress	Katharine Hepburn	Suddenly, Last Summer	FALSE	861
+1962	actress	Katharine Hepburn	Long Day's Journey into Night	FALSE	862
+1967	actress	Katharine Hepburn	Guess Who's Coming to Dinner	TRUE	863
+1968	actress	Katharine Hepburn	The Lion in Winter	TRUE	864
+1981	actress in a leading role	Katharine Hepburn	On Golden Pond	TRUE	865
+1967	actress in a supporting role	Katharine Ross	The Graduate	FALSE	866
+1995	actress in a supporting role	Kathleen Quinlan	Apollo 13	FALSE	867
+1986	actress in a leading role	Kathleen Turner	Peggy Sue Got Married	FALSE	868
+1990	actress in a leading role	Kathy Bates	Misery	TRUE	869
+1998	actress in a supporting role	Kathy Bates	Primary Colors	FALSE	870
+2002	actress in a supporting role	Kathy Bates	About Schmidt	FALSE	871
+1943	actress in a supporting role	Katina Paxinou	For Whom the Bell Tolls	TRUE	872
+1954	actress in a supporting role	Katy Jurado	Broken Lance	FALSE	873
+1968	actress in a supporting role	Kay Medford	Funny Girl	FALSE	874
+2005	actress in a leading role	Keira Knightley	Pride & Prejudice	FALSE	875
+2003	actress in a leading role	Keisha Castle-Hughes	Whale Rider	FALSE	876
+2003	actor in a supporting role	Ken Watanabe	The Last Samurai	FALSE	877
+1989	actor in a leading role	Kenneth Branagh	Henry V	FALSE	878
+2011	actor in a supporting role	Kenneth Branagh	My Week with Marilyn	FALSE	879
+1990	actor in a leading role	Kevin Costner	Dances With Wolves	FALSE	880
+1988	actor in a supporting role	Kevin Kline	A Fish Called Wanda	TRUE	881
+1951	actor in a supporting role	Kevin McCarthy	Death of a Salesman	FALSE	882
+1995	actor in a supporting role	Kevin Spacey	The Usual Suspects	TRUE	883
+1999	actor in a leading role	Kevin Spacey	American Beauty	TRUE	884
+1997	actress in a supporting role	Kim Basinger	L.A. Confidential	TRUE	885
+1951	actress in a supporting role	Kim Hunter	A Streetcar Named Desire	TRUE	886
+1964	actress	Kim Stanley	Seance on a Wet Afternoon	FALSE	887
+1982	actress in a supporting role	Kim Stanley	Frances	FALSE	888
+1949	actor	Kirk Douglas	Champion	FALSE	889
+1952	actor	Kirk Douglas	The Bad and the Beautiful	FALSE	890
+1956	actor	Kirk Douglas	Lust for Life	FALSE	891
+1985	actor in a supporting role	Klaus Maria Brandauer	Out of Africa	FALSE	892
+1996	actress in a leading role	Kristin Scott Thomas	The English Patient	FALSE	893
+1957	actress	Lana Turner	Peyton Place	FALSE	894
+1946	actor	Larry Parks	The Jolson Story	FALSE	895
+1991	actress in a leading role	Laura Dern	Rambling Rose	FALSE	896
+2000	actress in a leading role	Laura Linney	You Can Count on Me	FALSE	897
+2004	actress in a supporting role	Laura Linney	Kinsey	FALSE	898
+2007	actress in a leading role	Laura Linney	The Savages	FALSE	899
+1996	actress in a supporting role	Lauren Bacall	The Mirror Has Two Faces	FALSE	900
+1993	actor in a leading role	Laurence Fishburne	What's Love Got to Do with It	FALSE	901
+1959	actor	Laurence Harvey	Room at the Top	FALSE	902
+1939	actor	Laurence Olivier	Wuthering Heights	FALSE	903
+1940	actor	Laurence Olivier	Rebecca	FALSE	904
+1946	actor	Laurence Olivier	Henry V	FALSE	905
+1948	actor	Laurence Olivier	Hamlet	TRUE	906
+1960	actor	Laurence Olivier	The Entertainer	FALSE	907
+1965	actor	Laurence Olivier	Othello	FALSE	908
+1972	actor	Laurence Olivier	Sleuth	FALSE	909
+1976	actor in a supporting role	Laurence Olivier	Marathon Man	FALSE	910
+1978	actor in a leading role	Laurence Olivier	The Boys from Brazil	FALSE	911
+1951	actress in a supporting role	Lee Grant	Detective Story	FALSE	912
+1970	actress in a supporting role	Lee Grant	The Landlord	FALSE	913
+1975	actress in a supporting role	Lee Grant	Shampoo	TRUE	914
+1976	actress in a supporting role	Lee Grant	Voyage of the Damned	FALSE	915
+1954	actor in a supporting role	Lee J. Cobb	On the Waterfront	FALSE	916
+1958	actor in a supporting role	Lee J. Cobb	The Brothers Karamazov	FALSE	917
+1965	actor	Lee Marvin	Cat Ballou	TRUE	918
+1962	actress	Lee Remick	Days of Wine and Roses	FALSE	919
+1974	actor in a supporting role	Lee Strasberg	The Godfather Part II	FALSE	920
+1964	actor in a supporting role	Lee Tracy	The Best Man	FALSE	921
+1989	actress in a supporting role	Lena Olin	Enemies, A Love Story	FALSE	922
+1951	actor in a supporting role	Leo Genn	Quo Vadis	FALSE	923
+1971	actor in a supporting role	Leonard Frey	Fiddler on the Roof	FALSE	924
+1993	actor in a supporting role	Leonardo DiCaprio	What's Eating Gilbert Grape	FALSE	925
+2004	actor in a leading role	Leonardo DiCaprio	The Aviator	FALSE	926
+2006	actor in a leading role	Leonardo DiCaprio	Blood Diamond	FALSE	927
+1982	actress in a supporting role	Lesley Ann Warren	Victor/Victoria	FALSE	928
+1977	actress in a supporting role	Leslie Browne	The Turning Point	FALSE	929
+1953	actress	Leslie Caron	Lili	FALSE	930
+1963	actress	Leslie Caron	The L-Shaped Room	FALSE	931
+1938	actor	Leslie Howard	Pygmalion	FALSE	932
+1948	actor	Lew Ayres	Johnny Belinda	FALSE	933
+1993	actor in a leading role	Liam Neeson	Schindler's List	FALSE	934
+1964	actress in a supporting role	Lila Kedrova	Zorba the Greek	TRUE	935
+1963	actress in a supporting role	Lilia Skala	Lilies of the Field	FALSE	936
+1946	actress in a supporting role	Lillian Gish	Duel in the Sun	FALSE	937
+1975	actress in a supporting role	Lily Tomlin	Nashville	FALSE	938
+1973	actress in a supporting role	Linda Blair	The Exorcist	FALSE	939
+1983	actress in a supporting role	Linda Hunt	The Year of Living Dangerously	TRUE	940
+1984	actress in a supporting role	Lindsay Crouse	Places in the Heart	FALSE	941
+1972	actress	Liv Ullmann	The Emigrants	FALSE	942
+1976	actress in a leading role	Liv Ullmann	Face to Face	FALSE	943
+1969	actress	Liza Minnelli	The Sterile Cuckoo	FALSE	944
+1972	actress	Liza Minnelli	Cabaret	TRUE	945
+1947	actress	Loretta Young	The Farmer's Daughter	TRUE	946
+1949	actress	Loretta Young	Come to the Stable	FALSE	947
+1990	actress in a supporting role	Lorraine Bracco	Good Fellas	FALSE	948
+1961	actress in a supporting role	Lotte Lenya	The Roman Spring of Mrs. Stone	FALSE	949
+1950	actor	Louis Calhern	The Magnificent Yankee	FALSE	950
+1982	actor in a supporting role	Louis Gossett, Jr.	An Officer and a Gentleman	TRUE	951
+1975	actress	Louise Fletcher	One Flew over the Cuckoo's Nest	TRUE	952
+1943	actress in a supporting role	Lucile Watson	Watch on the Rhine	FALSE	953
+1936	actress	Luise Rainer	The Great Ziegfeld	TRUE	954
+1937	actress	Luise Rainer	The Good Earth	TRUE	955
+1968	actress in a supporting role	Lynn Carlin	Faces	FALSE	956
+1966	actress	Lynn Redgrave	Georgy Girl	FALSE	957
+1998	actress in a supporting role	Lynn Redgrave	Gods and Monsters	FALSE	958
+1973	actress in a supporting role	Madeline Kahn	Paper Moon	FALSE	959
+1974	actress in a supporting role	Madeline Kahn	Blazing Saddles	FALSE	960
+2009	actress in a supporting role	Maggie Gyllenhaal	Crazy Heart	FALSE	961
+1953	actress	Maggie McNamara	The Moon Is Blue	FALSE	962
+1965	actress in a supporting role	Maggie Smith	Othello	FALSE	963
+1969	actress	Maggie Smith	The Prime of Miss Jean Brodie	TRUE	964
+1972	actress	Maggie Smith	Travels with My Aunt	FALSE	965
+1978	actress in a supporting role	Maggie Smith	California Suite	TRUE	966
+1986	actress in a supporting role	Maggie Smith	A Room with a View	FALSE	967
+2001	actress in a supporting role	Maggie Smith	Gosford Park	FALSE	968
+1966	actor in a supporting role	Mako	The Sand Pebbles	FALSE	969
+1962	actor	Marcello Mastroianni	Divorce--Italian Style	FALSE	970
+1977	actor in a leading role	Marcello Mastroianni	A Special Day	FALSE	971
+1987	actor in a leading role	Marcello Mastroianni	Dark Eyes	FALSE	972
+2000	actress in a supporting role	Marcia Gay Harden	Pollock	TRUE	973
+2003	actress in a supporting role	Marcia Gay Harden	Mystic River	FALSE	974
+1995	actress in a supporting role	Mare Winningham	Georgia	FALSE	975
+1985	actress in a supporting role	Margaret Avery	The Color Purple	FALSE	976
+1971	actress in a supporting role	Margaret Leighton	The Go-Between	FALSE	977
+1963	actress in a supporting role	Margaret Rutherford	The V.I.P.s	TRUE	978
+1938	actress	Margaret Sullavan	Three Comrades	FALSE	979
+1941	actress in a supporting role	Margaret Wycherly	Sergeant York	FALSE	980
+1936	actress in a supporting role	Maria Ouspenskaya	Dodsworth	FALSE	981
+1939	actress in a supporting role	Maria Ouspenskaya	Love Affair	FALSE	982
+1996	actress in a supporting role	Marianne Jean-Baptiste	Secrets & Lies	FALSE	983
+1976	actress in a leading role	Marie-Christine Barrault	Cousin, Cousine	FALSE	984
+1979	actress in a supporting role	Mariel Hemingway	Manhattan	FALSE	985
+2007	actress in a leading role	Marion Cotillard	La Vie en Rose	TRUE	986
+1955	actress in a supporting role	Marisa Pavan	The Rose Tattoo	FALSE	987
+1992	actress in a supporting role	Marisa Tomei	My Cousin Vinny	TRUE	988
+2001	actress in a supporting role	Marisa Tomei	In the Bedroom	FALSE	989
+2008	actress in a supporting role	Marisa Tomei	The Wrestler	FALSE	990
+1947	actress in a supporting role	Marjorie Main	The Egg and I	FALSE	991
+1940	actress in a supporting role	Marjorie Rambeau	Primrose Path	FALSE	992
+1953	actress in a supporting role	Marjorie Rambeau	Torch Song	FALSE	993
+2010	actor in a supporting role	Mark Ruffalo	The Kids Are All Right	FALSE	994
+2006	actor in a supporting role	Mark Wahlberg	The Departed	FALSE	995
+1986	actress in a leading role	Marlee Matlin	Children of a Lesser God	TRUE	996
+1951	actor	Marlon Brando	A Streetcar Named Desire	FALSE	997
+1952	actor	Marlon Brando	Viva Zapata!	FALSE	998
+1953	actor	Marlon Brando	Julius Caesar	FALSE	999
+1954	actor	Marlon Brando	On the Waterfront	TRUE	1000
+1957	actor	Marlon Brando	Sayonara	FALSE	1001
+1972	actor	Marlon Brando	The Godfather	TRUE	1002
+1973	actor	Marlon Brando	Last Tango in Paris	FALSE	1003
+1989	actor in a supporting role	Marlon Brando	A Dry White Season	FALSE	1004
+1973	actress	Marsha Mason	Cinderella Liberty	FALSE	1005
+1977	actress in a leading role	Marsha Mason	The Goodbye Girl	FALSE	1006
+1979	actress in a leading role	Marsha Mason	Chapter Two	FALSE	1007
+1981	actress in a leading role	Marsha Mason	Only When I Laugh	FALSE	1008
+1958	actress in a supporting role	Martha Hyer	Some Came Running	FALSE	1009
+1940	actress	Martha Scott	Our Town	FALSE	1010
+1965	actor in a supporting role	Martin Balsam	A Thousand Clowns	TRUE	1011
+1988	actor in a supporting role	Martin Landau	Tucker The Man and His Dream	FALSE	1012
+1989	actor in a supporting role	Martin Landau	Crimes and Misdemeanors	FALSE	1013
+1994	actor in a supporting role	Martin Landau	Ed Wood	TRUE	1014
+1941	actress in a supporting role	Mary Astor	The Great Lie	TRUE	1015
+1962	actress in a supporting role	Mary Badham	To Kill a Mockingbird	FALSE	1016
+1986	actress in a supporting role	Mary Elizabeth Mastrantonio	The Color of Money	FALSE	1017
+1990	actress in a supporting role	Mary McDonnell	Dances With Wolves	FALSE	1018
+1992	actress in a leading role	Mary McDonnell	Passion Fish	FALSE	1019
+1980	actress in a supporting role	Mary Steenburgen	Melvin and Howard	TRUE	1020
+1980	actress in a leading role	Mary Tyler Moore	Ordinary People	FALSE	1021
+1960	actress in a supporting role	Mary Ure	Sons and Lovers	FALSE	1022
+1995	actor in a leading role	Massimo Troisi	The Postman (Il Postino)	FALSE	1023
+1997	actor in a leading role	Matt Damon	Good Will Hunting	FALSE	1024
+2009	actor in a supporting role	Matt Damon	Invictus	FALSE	1025
+2005	actor in a supporting role	Matt Dillon	Crash	FALSE	1026
+1958	actress in a supporting role	Maureen Stapleton	Lonelyhearts	FALSE	1027
+1970	actress in a supporting role	Maureen Stapleton	Airport	FALSE	1028
+1978	actress in a supporting role	Maureen Stapleton	Interiors	FALSE	1029
+1981	actress in a supporting role	Maureen Stapleton	Reds	TRUE	1030
+1988	actor in a leading role	Max von Sydow	Pelle the Conqueror	FALSE	1031
+2011	actor in a supporting role	Max von Sydow	Extremely Loud & Incredibly Close	FALSE	1032
+1961	actor	Maximilian Schell	Judgment at Nuremberg	TRUE	1033
+1975	actor	Maximilian Schell	The Man in the Glass Booth	FALSE	1034
+1977	actor in a supporting role	Maximilian Schell	Julia	FALSE	1035
+1985	actress in a supporting role	Meg Tilly	Agnes of God	FALSE	1036
+1988	actress in a leading role	Melanie Griffith	Working Girl	FALSE	1037
+1960	actress	Melina Mercouri	Never on Sunday	FALSE	1038
+1977	actress in a supporting role	Melinda Dillon	Close Encounters of the Third Kind	FALSE	1039
+1981	actress in a supporting role	Melinda Dillon	Absence of Malice	FALSE	1040
+2008	actress in a leading role	Melissa Leo	Frozen River	FALSE	1041
+2010	actress in a supporting role	Melissa Leo	The Fighter	TRUE	1042
+2011	actress in a supporting role	Melissa McCarthy	Bridesmaids	FALSE	1043
+1963	actor in a supporting role	Melvyn Douglas	Hud	TRUE	1044
+1970	actor	Melvyn Douglas	I Never Sang for My Father	FALSE	1045
+1979	actor in a supporting role	Melvyn Douglas	Being There	TRUE	1046
+1949	actress in a supporting role	Mercedes McCambridge	All the King's Men	TRUE	1047
+1956	actress in a supporting role	Mercedes McCambridge	Giant	FALSE	1048
+1991	actress in a supporting role	Mercedes Ruehl	The Fisher King	TRUE	1049
+1978	actress in a supporting role	Meryl Streep	The Deer Hunter	FALSE	1050
+1979	actress in a supporting role	Meryl Streep	Kramer vs. Kramer	TRUE	1051
+1981	actress in a leading role	Meryl Streep	The French Lieutenant's Woman	FALSE	1052
+1982	actress in a leading role	Meryl Streep	Sophie's Choice	TRUE	1053
+1983	actress in a leading role	Meryl Streep	Silkwood	FALSE	1054
+1985	actress in a leading role	Meryl Streep	Out of Africa	FALSE	1055
+1987	actress in a leading role	Meryl Streep	Ironweed	FALSE	1056
+1988	actress in a leading role	Meryl Streep	A Cry in the Dark	FALSE	1057
+1990	actress in a leading role	Meryl Streep	Postcards from the Edge	FALSE	1058
+1995	actress in a leading role	Meryl Streep	The Bridges of Madison County	FALSE	1059
+1998	actress in a leading role	Meryl Streep	One True Thing	FALSE	1060
+1999	actress in a leading role	Meryl Streep	Music of the Heart	FALSE	1061
+2002	actress in a supporting role	Meryl Streep	Adaptation	FALSE	1062
+2006	actress in a leading role	Meryl Streep	The Devil Wears Prada	FALSE	1063
+2008	actress in a leading role	Meryl Streep	Doubt	FALSE	1064
+2009	actress in a leading role	Meryl Streep	Julie & Julia	FALSE	1065
+2011	actress in a leading role	Meryl Streep	The Iron Lady	TRUE	1066
+1966	actor	Michael Caine	Alfie	FALSE	1067
+1972	actor	Michael Caine	Sleuth	FALSE	1068
+1983	actor in a leading role	Michael Caine	Educating Rita	FALSE	1069
+1986	actor in a supporting role	Michael Caine	Hannah and Her Sisters	TRUE	1070
+1999	actor in a supporting role	Michael Caine	The Cider House Rules	TRUE	1071
+2002	actor in a leading role	Michael Caine	The Quiet American	FALSE	1072
+1945	actor in a supporting role	Michael Chekhov	Spellbound	FALSE	1073
+1999	actor in a supporting role	Michael Clarke Duncan	The Green Mile	FALSE	1074
+1987	actor in a leading role	Michael Douglas	Wall Street	TRUE	1075
+1965	actor in a supporting role	Michael Dunn	Ship of Fools	FALSE	1076
+1967	actor in a supporting role	Michael J. Pollard	Bonnie and Clyde	FALSE	1077
+1991	actor in a supporting role	Michael Lerner	Barton Fink	FALSE	1078
+1980	actor in a supporting role	Michael O'Keefe	The Great Santini	FALSE	1079
+1947	actor	Michael Redgrave	Mourning Becomes Electra	FALSE	1080
+2008	actor in a supporting role	Michael Shannon	Revolutionary Road	FALSE	1081
+1974	actor in a supporting role	Michael V. Gazzo	The Godfather Part II	FALSE	1082
+1988	actress in a supporting role	Michelle Pfeiffer	Dangerous Liaisons	FALSE	1083
+1989	actress in a leading role	Michelle Pfeiffer	The Fabulous Baker Boys	FALSE	1084
+1992	actress in a leading role	Michelle Pfeiffer	Love Field	FALSE	1085
+2005	actress in a supporting role	Michelle Williams	Brokeback Mountain	FALSE	1086
+2010	actress in a leading role	Michelle Williams	Blue Valentine	FALSE	1087
+2011	actress in a leading role	Michelle Williams	My Week with Marilyn	FALSE	1088
+1939	actor	Mickey Rooney	Babes in Arms	FALSE	1089
+1943	actor	Mickey Rooney	The Human Comedy	FALSE	1090
+1956	actor in a supporting role	Mickey Rooney	The Bold and the Brave	FALSE	1091
+1979	actor in a supporting role	Mickey Rooney	The Black Stallion	FALSE	1092
+2008	actor in a leading role	Mickey Rourke	The Wrestler	FALSE	1093
+1977	actor in a supporting role	Mikhail Baryshnikov	The Turning Point	FALSE	1094
+1951	actress in a supporting role	Mildred Dunnock	Death of a Salesman	FALSE	1095
+1956	actress in a supporting role	Mildred Dunnock	Baby Doll	FALSE	1096
+1967	actress in a supporting role	Mildred Natwick	Barefoot in the Park	FALSE	1097
+1938	actress in a supporting role	Miliza Korjus	The Great Waltz	FALSE	1098
+1997	actress in a supporting role	Minnie Driver	Good Will Hunting	FALSE	1099
+1995	actress in a supporting role	Mira Sorvino	Mighty Aphrodite	TRUE	1100
+1992	actress in a supporting role	Miranda Richardson	Damage	FALSE	1101
+1994	actress in a leading role	Miranda Richardson	Tom & Viv	
