@@ -108,4 +108,116 @@ e3cdd90a-8097-4220-9722-2b914d761a84	ff3fe9f4-ec5f-4ca3-8ec3-6147f9589d91	81dd19
 eaa8118b-aba6-4c25-96cd-c72f01d6b063	d00b32e3-11ee-4f76-a5b4-a7f036ea6b10	ae78cc6b-db95-481e-90a6-1737fa2fafce	2014-10-14 02:29:03	2014-10-14 06:52:42	2014-10-14 14:44:13		2014-10-18	2014-10-20	2	6
 62d09c95-c3d2-44e6-9081-a3485618227d	c4988f29-6ab6-4afb-9c4c-1e8ae41524d2	44770890-bdfe-49df-bdd9-28e19eafee23	2014-10-04 12:43:01	2014-10-05 10:49:16	2014-10-05 10:49:16	2014-10-05 10:49:16	2014-10-25	2014-11-01	4	20
 5dacf820-a573-4ce2-9fd8-0d7ed979b822	f17ab24c-54cf-4370-bc2d-7d3cb6d42e41	24162baf-eb46-41af-9b64-ad421c4c7d4e	2014-10-14 20:45:21	2014-10-15 06:29:09	2014-10-15 06:29:09	2014-10-15 06:29:09	2014-10-17	2014-10-21	3	11
-70a2c590-f854-4ca6-adf5-03fc081cfddf	d5ab6ad0-b01b-46b3-8cb8-c3417c437da2	78628904-496a-4f46-b899-07e36751d04b	201
+70a2c590-f854-4ca6-adf5-03fc081cfddf	d5ab6ad0-b01b-46b3-8cb8-c3417c437da2	78628904-496a-4f46-b899-07e36751d04b	2014-10-10 23:14:47	2014-10-10 23:20:04			2014-10-11	2014-10-15	3	4
+02f0a750-34da-4268-94e8-f1a371f0460e	56e66e3a-0336-4a33-86bd-5485cc1ed58f	e5cfd6a7-8688-4ba6-bd79-d4c0c6472369	2014-10-08 13:55:15	2014-10-09 00:07:52	2014-10-09 00:07:52		2014-11-11	2014-11-19	2	4
+a1a53da7-7a33-4693-8568-1d7f2cd32e31	85f8ce6b-236c-4613-9d9b-6b088a6e61a3	f2cdaa1e-4a63-4e57-908a-196393a25246	2014-10-11 10:24:35	2014-10-11 11:10:57			2014-10-20	2014-10-22	4	4
+8375dde4-0de9-402c-8833-2127c1504601	2e2865d6-7471-4ff1-b4cd-7f9a794d7267	297c3163-464e-4780-85c5-86cfb7eb1f40	2014-10-05 21:55:02	2014-10-05 22:27:35			2014-10-11	2014-10-12	1	4
+4995debc-b753-4401-b556-a2bcbb897eba	c6874ea0-3dc7-418c-b1c2-2716e60db5bb	02f872a9-ea88-439f-a7e3-6154af90e3ee	2014-10-01 19:55:06	2014-10-04 06:52:15			2014-10-24	2014-10-29	6	2
+125242de-91b4-43bd-a926-75ae4b7a9322	85ececde-963c-4947-8c80-fd27de5a46a8	068de3fc-7217-45f0-a00a-1222e6db11bb	2014-09-16 15:33:05	2014-09-16 16:13:33			2014-10-22	2014-10-26	3	9
+f5ba8f82-682e-4ec9-9c6e-cedc2cd628ca	6b4dcfe4-43cd-476f-946a-26fa7889f031	d88bbd8e-57b1-4eb7-a8bd-adc6f36e1785	2014-10-01 13:17:18				2014-11-19	2014-11-22	2	2
+4ec2c8ec-9325-4b66-a370-820a56fbd1a3	7dcda8cb-7734-4394-a5c3-3876ab961804	bb38698e-25cb-4f54-878e-74ac66788a06	2014-10-14 13:41:18	2014-10-14 16:38:19			2014-10-15	2014-10-17	1	5
+ca6a9321-d7f9-42e9-aeb1-5d1832034da0	c85e97c3-6c63-4a8c-90a3-5353f187d1a8	59762fcf-afa1-4eef-9bf1-7a2a5bfa938f	2014-10-07 19:59:54	2014-10-08 07:26:18			2014-10-17	2014-10-20	2	8
+7e309181-e61e-426b-baef-dd031d5660d3	d12165bf-ce52-4415-9bfe-4d236d2ae857	29ec63ab-d1f2-4396-b393-2fede0b4e518	2014-10-08 12:35:06	2014-10-08 12:37:05	2014-10-08 12:37:05	2014-10-08 12:37:05	2014-10-27	2014-11-02	2	8
+e079182c-7628-4f49-8301-29ff8b4938ec	c7a43e26-a4f6-4449-95e2-740cb585f5e8	84052f3d-47a5-41d5-b7f4-8fbd1977d582	2014-09-30 21:37:11	2014-10-01 06:36:06			2014-10-01	2014-10-02	2	2
+3e6fbc52-3e54-4a74-9ca1-7ce13048aab7	86b39b70-965b-479d-a0b0-719b195acea2	e5dd99cd-ad45-409b-ac13-ab9a576a41a3	2014-10-28 04:13:28	2014-10-28 23:22:50			2015-01-03	2015-01-08	2	4
+e764ddb5-126e-4474-8e4e-4bdc330b51d1	d4c7b020-ed6a-410f-992c-1c86b17f918e	aa045c11-b971-4821-b14e-fbd427b9cf9f	2014-10-03 13:35:28	2014-10-04 15:11:21			2014-10-11	2014-10-24	1	2
+b6a8b1f9-5b40-4edd-91f3-ee522b0f9e5b	f7b9943a-f401-488c-84d3-56676d9d8efd	a4fd2f41-b8b6-4dc4-9556-0cdd28d36034	2014-11-07 20:45:23	2014-11-08 08:44:11			2014-12-27	2015-01-03	5	7
+b91e6323-bd26-4172-9070-1a4993fdc397	9b304b8e-12e2-4af3-ab98-62bdeb06c3e3	572a3057-ef3b-48ef-9cf6-a0891fcc351d	2014-10-14 08:23:26	2014-10-14 16:59:06			2014-10-16	2014-10-18	2	4
+b3e35a8f-5503-4d78-adb8-7693097dfca7	42bae547-e5d9-4614-8f47-c4ede1036371	441c44cd-3fe7-4a40-8547-468ccfbb6fd8	2014-10-19 13:59:30	2014-10-20 17:16:09			2014-11-03	2014-11-07	2	2
+e0d259e6-1b67-4964-a6dc-e8a8c69d3e01	becd48ad-623e-4821-9538-e9d8f84f1cac	e9f7ef72-286d-4ca5-be32-f9bbcd238270	2014-10-19 14:47:58	2014-10-19 15:00:13	2014-10-19 15:00:13		2014-11-16	2014-11-17	2	4
+67aece73-e112-4e9e-9e05-8a2a94b003b9	d5ab6ad0-b01b-46b3-8cb8-c3417c437da2	68e80a2a-f921-4a05-b2bd-a766362bd324	2014-10-11 15:19:37	2014-10-12 22:05:09			2014-11-09	2014-11-23	2	8
+be8a5e0c-e3fb-4517-a799-e1ed8a05b6e6	40dcd83f-2732-4414-8f38-e0ca131e9677	db25a5a7-0675-4045-9433-fe23409a5a5d	2014-10-12 13:49:40	2014-10-13 06:08:57			2014-10-16	2014-10-20	2	2
+72f07b78-99e1-46ac-8452-19dd2053eca3	4b506f77-378a-4634-b26a-b94bf72dd95f	66329697-0f5e-4aa5-8f4a-1c09090db3d4	2014-10-14 18:55:36	2014-10-14 19:23:25	2014-10-15 22:10:35		2014-10-30	2014-11-02	3	5
+b11cd744-101d-409b-9a55-7e151f2e79d5	c6874ea0-3dc7-418c-b1c2-2716e60db5bb	c782ee0f-58bf-4454-a87e-b391fab04ea2	2014-10-02 15:44:11				2014-10-03	2014-10-05	1	1
+18d343e3-0ef0-4bb7-8cd9-b83d3fbbb82f	883613d4-e3a3-4aaf-973c-070a85605aaa	6a7a6ef5-b169-4f6c-8952-e0e309d90199	2014-11-03 09:13:16	2014-11-03 09:21:04	2014-11-03 09:21:04		2014-11-08	2014-11-10	2	2
+f4602827-8672-4545-8887-43702f8c7ecc	19fc6fce-5b98-459c-ada0-513e5aee963e	16cee446-da3d-45c5-8422-5b0f24007c82	2014-10-02 21:26:50	2014-10-02 21:26:50	2014-10-02 21:26:50	2014-10-02 21:26:50	2014-10-08	2014-10-12	2	7
+6a8cf97f-8a77-4b55-b79a-b560bca414a4	bf16e655-3249-401b-837b-91d78cd82cdb	bc026dd6-76f6-4d9b-8e58-5b86e68f07c5	2014-09-11 18:51:30	2014-09-11 20:47:38			2014-11-07	2014-11-10	2	10
+882f3764-05cc-436a-b23b-93fea22ea847	6bbb88ca-db66-48c5-9c4b-862f7706284a	2b983216-a194-454c-a4a9-e5db51622e88	2014-10-14 09:25:14				2014-10-19	2014-10-21	2	1
+0187b377-ad1c-4da4-8a17-568b2c9098f4	ee55912a-88a0-414d-aed7-7f15ce527232	71bca3ca-cbbf-4496-b35b-15dcc39552da	2014-10-02 22:55:35	2014-10-03 06:33:24			2015-03-18	2015-03-20	1	2
+25cfc206-89aa-4e63-b2f4-3cbb8631d9fb	a6ae621a-72e7-4d11-94b2-4968260cbe6c	43b66fc6-c43b-4dd7-992b-7695e2aad765	2014-10-05 23:42:00	2014-10-06 09:17:30			2014-10-10	2014-10-12	2	8
+37a63847-b09a-4f32-81a5-97cfb8e84c6d	8a429bd7-b9a7-4d5a-a007-5d99aff3dcec	51a240bc-93eb-46e5-b90a-09ad59edcfc6	2014-10-02 14:39:32	2014-10-05 13:34:26			2015-03-11	2015-03-19	2	2
+id_guest:
+string
+id_host:
+string
+id_listing:
+string
+ts_contact_at:
+timestamp
+ts_reply_at:
+timestamp
+ts_accepted_at:
+timestamp
+ts_booking_at:
+timestamp
+ds_checkin:
+date
+ds_checkout:
+date
+n_guests:
+bigint
+n_messages:
+bigint
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.window import *
+
+# Start writing code
+
+df = airbnb_contacts
+df = df.groupBy(col("id_guest")).agg(sum(col("n_messages")).alias("sum_n_messages"))
+windowPartition = Window.orderBy(col("sum_n_messages").desc())
+# df = df.orderBy(desc(col("sum_n_messages")),col("id_guest"))
+df = df.withColumn("ranking",dense_rank().over(windowPartition))
+# df = df.withColumn("ranking",monotonically_increasing_id())
+# df.show(truncate=False)
+df1 = df.select("ranking","id_guest","sum_n_messages")
+# df1.show(truncate=False)
+df1.toPandas()
+# To validate your solution, convert your final pySpark df to a pandas df
+# airbnb_contacts.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10159").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10159\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
