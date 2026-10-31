@@ -114,4 +114,59 @@ string
 
 1. **Requirement Analysis**:
    - Understand the primary entity and granularity required in the final output.
-   - Filter down the dataset early if specific cond
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.window import *
+# Start writing code
+df=top_actors_rating
+window_spec = Window.partitionBy("actor_name").orderBy(desc("genre_count"),desc("avg_rating"))
+df_avg = df.groupBy("actor_name","genre").agg(count("*").alias("genre_count"),avg("movie_rating").alias("avg_rating"))
+df_avg = df_avg.orderBy(desc(col("genre_count")),desc(col("avg_rating")))
+df_avg = df_avg.withColumn("dns_rank",dense_rank().over(window_spec))
+df_avg = df_avg.filter((df_avg.dns_rank==1))
+df_avg = df_avg.orderBy(col("dns_rank"),desc(col("avg_rating")))
+window_spec1 = Window.orderBy(desc("avg_rating"))
+df_avg = df_avg.withColumn("dns_rank1",dense_rank().over(window_spec1))
+df_avg = df_avg.filter((df_avg.dns_rank1==1) | (df_avg.dns_rank1==2) | (df_avg.dns_rank1==3))
+df_avg = df_avg.select("actor_name","genre","avg_rating")
+# df_avg.show(50,truncate=False)
+df_avg.toPandas()
+# To validate your solution, convert your final pySpark df to a pandas df
+# top_actors_rating.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10548").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10548\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
