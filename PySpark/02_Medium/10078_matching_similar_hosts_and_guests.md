@@ -249,4 +249,56 @@ bigint
 
 ---
 
-## 3. Intervie
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+
+# Start writing code
+df=airbnb_hosts
+df1=airbnb_guests
+
+df2 = df.join(df1,(df.nationality == df1.nationality) & (df.gender == df1.gender), "left")
+df2 = df2.select("host_id","guest_id").distinct()
+# df2.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+# airbnb_hosts.toPandas()
+df2.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10078").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10078\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
