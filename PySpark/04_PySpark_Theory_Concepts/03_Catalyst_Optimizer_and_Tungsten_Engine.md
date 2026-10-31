@@ -42,4 +42,22 @@ Applies standard relational algebraic optimization rules:
 - Evaluates cost models (e.g., table sizes, statistics) to select the optimal physical plan (e.g., choosing between Broadcast Hash Join, Shuffle Hash Join, or Sort-Merge Join).
 
 ### Phase 4: Code Generation (Whole-Stage CodeGen)
-- Instead of using classic volcano-iterator model (function calls per row), Catalyst synthesizes compact Java byt
+- Instead of using classic volcano-iterator model (function calls per row), Catalyst synthesizes compact Java bytecode that collapses entire physical stages into a single flat `for` loop over CPU registers.
+
+---
+
+## 3. Project Tungsten: Hardware-Level Optimizations
+
+Project Tungsten redesigns the Spark execution engine to operate closer to bare-metal hardware:
+
+### 3.1 Off-Heap Memory Management (Binary In-Memory Representation)
+- JVM objects incur massive overhead (e.g., an 8-byte Java String can require 48 bytes of object header and padding).
+- Tungsten manages memory directly off-heap in compact C-style byte arrays (`sun.misc.Unsafe`), eliminating Java Garbage Collection (GC) pauses entirely for cached/intermediate data.
+
+### 3.2 Cache-Aware Computation
+- Modern CPU bottlenecks are memory access latency (L1/L2/L3 cache misses), not raw CPU cycles.
+- Tungsten lays out data structures (e.g., sort keys and pointers) contiguously in CPU cache-lines to maximize CPU cache hits during sorting and hashing.
+
+### 3.3 Whole-Stage Code Generation (WSCG)
+- Removes virtual function dispatch overhead.
+- Leverages CPU registers for intermediate variables instead of main memory.
