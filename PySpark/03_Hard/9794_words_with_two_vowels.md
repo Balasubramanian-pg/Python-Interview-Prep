@@ -90,4 +90,43 @@ WHERE NOT word ~ '([aeiou].*){3}'
 from pyspark.sql import SparkSession
 
 # Initialize Spark Session
-spark = SparkSession.builder.appName("StrataScrat
+spark = SparkSession.builder.appName("StrataScratch_9794").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- find words that contains 'two vowels'
+
+-- logic:
+-- turn each row into array
+-- unnest each array into individual rows (so 1 word 1 row)
+-- count vowel with regex_replace()
+
+
+SELECT word
+FROM (
+    -- unnest each array into individual word
+    SELECT DISTINCT UNNEST(STRING_TO_ARRAY(word, ',')) AS word
+    FROM (
+        -- combining two columns into rows
+        SELECT words1 AS word
+        FROM google_word_lists
+        UNION
+        SELECT words2 AS word
+        FROM google_word_lists
+    ) union_words
+) unnest_word_arrays
+-- filter words with >= 3 vowels
+WHERE NOT word ~ '([aeiou].*){3}'
+    -- and only keep words with 2 vowels
+    AND word ~ '([aeiou].*){2}'
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
