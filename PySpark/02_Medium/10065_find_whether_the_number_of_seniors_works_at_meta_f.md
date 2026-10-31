@@ -31,4 +31,30 @@ Dataset provided by StrataScratch environment for Question ID 10065.
    - Understand the primary entity and granularity required in the final output.
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
-   - Utilize native DataFrame API transf
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import SparkSession
+from pyspark.sql import functions as F
+
+#Initialize the Spark Session
+spark = SparkSession.builder.appName("EmployeeAnalysis").getOrCreate()
+# Start writing code
+counts = facebook_employees.select(F.count (F.when(F.col('is_senior') == 'TRUE',1 )).alias('senior_count'),F.count(F.when(F.col('location') == 'USA',1)).alias('USA_count')).collect()[0]
+
+# separate that count as per category
+senior_count = counts['senior_count']
+usa_count = counts['USA_count']
+
+# now comapre count 
+if senior_count > usa_count:
+    result = "More seniors"
+else :
