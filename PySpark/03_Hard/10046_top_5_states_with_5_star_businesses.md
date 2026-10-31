@@ -70,3 +70,45 @@ xhzUfaJ9BTa3EbD0bTeKWQ	IHOP		10662 E Southern Ave	Mesa	AZ	85209	33.39	-111.6	3	4
 JbWQtVLQDEOBlvbVWk2OFg	Chipotle Mexican Grill		903 W Anthony Dr, Ste A	Champaign	IL	61820	40.14	-88.26	5	40	1	Fast Food;Mexican;Restaurants
 J8DxZ7enKZ0aAuF40e3rew	Charlotte Dentist: Joseph LoParo, DMD	Uptown	400 S Tryon St, Ste M-4	Charlotte	NC	28202	35.22	-80.85	3	4	1	Health & Medical;Cosmetic Dentists;Dentists;General Dentistry
 zPSPUa9cgl68ydGNZt6gYQ	Thrifty Car Rental		5330 Wilkinson Blvd	Charlotte	NC	28208	35.23	-80.93	3	9	1	Car Rental;Hotels & Travel
+ct1uN_FOIyY1er8iLTsS6w	Eyeglass World	Westside	3819 W Sahara Ave	Las Vegas	NV	89102	36.14	-115.19	5	52	1	Ophthalmologists;Health & Medical;Eyewear & Opticians;Shopping;Optometrists;Doctors
+qngp1XfBYWi7lB5S9Mg5ZA	Metropolitan Home Design		15220 Madison Ave	Lakewood	OH	44107	41.48	-81.8	5	3	0	Interior Design;Home Services;Home & Garden;Shopping;Real Estate;Home Staging;Home Decor
+cDpUshHyJHDEc19TSTulJw	Urbana Acupuncture		155-A Lincoln Square Mall	Urbana	IL	61801	40.11	-88.21	5	8	1	Naturopathic/Holistic;Traditional Chinese Medicine;Doctors;Acupuncture;Health & Medical
+YjfRCKCTqkcL1yTKPIwDlg	Savers		3121 N Rancho Dr	Las Vegas	NV	89130	36.22	-115.21	3	29	1	Shopping;Thrift Stores;Fashion;Used;Vintage & Consignment
+4m5g6GUGDN9NqkfA0dk9fA	Test America Preview Studios	The Strip	3667 Las Vegas Blvd S, Ste H-82, Desert Passage Mall at the Aladdin	Las Vegas	NV	89109	36.11	-115.17	3	10	1	Arts & Entertainment;Local Services
+cMlHcrlADb5gRWwFaNKhjg	Samurai Sam's	Anthem	10075 S Eastern Ave, Ste 116	Henderson	NV	89052	36.01	-115.11	3	19	0	Asian Fusion;Japanese;Restaurants;Salad
+Ett_hy5k5_hI4GvPN9cyHg	Ulta Beauty	Southeast	6689 Las Vegas Blvd S	Las Vegas	NV	89119	36.07	-115.17	5	24	1	Hair Salons;Blow Dry/Out Services;Beauty & Spas;Cosmetics & Beauty Supply;Hair Extensions;Shopping
+MYB1ZMspBk1Xc_awp_PtSw	Naked City Pizza Express	Southwest	6935 Blue Diamond Rd	Las Vegas	NV	89178	36.02	-115.24	3	46	1	Sandwiches;Chicken Wings;Restaurants;Pizza
+FBptd43MkPFZxVLRMz0PFw	Orangetheory Fitness Solon		6025 Kruse Dr	Solon	OH	44139	41.39	-81.44	3	4	1	Fitness & Instruction;Active Life;Gyms;Trainers;Interval Training Gyms;Boot Camps
+iQfx6lghJJbrb-fz-toOCQ	Swarovski Canada	Etobicoke	25 The West Mall	Etobicoke	ON	M9C 1B8	43.61	-79.56	3	3	1	Home Decor;Shopping;Jewelry;Home & Garden
+9O0jWqGnHkBsXMOd-KOl4w	Hot and Sour	East Credit	1010 Dreamcrest Road, Unit 2	Mississauga	ON	L5V 3A4	43.59	-79.68	3	20	1	Restaurants;Asian Fusion;Halal;Chinese
+z7ns1g4S82kaBdIAC_RMRw	Subway		1000 Airport Blvd	Pittsburgh	PA	15231	40.49	-80.25	3	5	1	Sandwiches;Fast Food;Restaurants
+VdoNOOcO8HmLHbmxE_3psA	Sonora Quest Laboratories		9305 W Thomas Rd, Ste 300	Phoenix	AZ	85037	33.48	-112.26	3.5	7	1	Medical Centers;Diagnostic Services;Health & Medical;Laboratory Testing
+D3Tpd4SrPAnZ1PaGVRGBfQ	Weinstube Klink		Epplestr. 1 C	Stuttgart	BW	70597	48.75	9.17	3.5	3	1	German;Bars;Nightlife;Wine Bars;Restaurants
+p3My4o49oL_aOY2M2QLu8w	The Chanter	Old Town	30 - 32 Bread Street	Edinburgh	EDH	EH3 9AF	55.95	-3.2	5	21	1	Bars;Nightlife;Pubs
+XVDR44P_74FmA0ANanm4CQ	House of Pizza	Plaza Midwood	3640 Central Ave	Charlotte	NC	28205	35.22	-80.78	3.5	75	0	Greek;Restaurants;Pizza;Italian
+Ch7Kx4JPJePFvjpXw0PAVQ	AliKat Photography			Gilbert	AZ	85234	33.37	-111.75	5	12	1	Photographers;Event Photography;Session Photography;Event Planning & Services
+CV05rBOr5DdDGvxUZkRFmg	Angeline's	Uptown	303 S Church St	Charlotte	NC	28202	35.23	-80.85	3.5	17	1	Restaurants;Nightlife;Pizza;Cocktail Bars;Bars;Italian
+wHP1G6mEJJz5nDdA17R78w	Best Cleaners	Spring Valley	7080 S Jones Blvd, Ste 103	Las Vegas	NV	89118	36.06	-115.22	3.5	18	1	Local Services;Sewing & Alterations;Laundry Services;Dry Cleaning & Laundry
+m1Arqxfo66oyOqPrLTSYzw	Scorpion Specialists			Gilbert	AZ	85297	33.33	-111.79	5	7	1	Local Services;Pest Control
+RtcVbq18T0vNODpGwHzcVQ	Standard Restaurant Supply		5675 S Valley View	Las Vegas	NV	89118	36.09	-115.19	3.5	20	1	Kitchen & Bath;Shopping;Home & Garden;Restaurant Supplies;Professional Services;Wholesalers
+RWuk_fBzdWc__FBEsPozZw	Walsh Heating and Cooling		1650 E 361st St	Eastlake	OH	44095	41.64	-81.43	5	3	1	Metal Fabricators;Heating & Air Conditioning/HVAC;Local Services;Home Services;Appliances & Repair
+EsE8KTPqAJ2MjJdmuAifRw	Dante's Inferno Flats	East Bank	1059 Old River Rd	Cleveland	OH	44113	41.5	-81.71	3.5	21	1	Italian;Restaurants;Pizza
+PmLFk1s8pPVNXChqETM4MA	Coco Lezzone	The Annex	137 Avenue Road	Toronto	ON	M5R 2H4	43.67	-79.4	5	17	0	Italian;Restaurants;Event Planning & Services;Caterers
+tqEQd2LD0DeAqkE9tbZ7zA	#1 Cochran Hyundai - Monroeville		4520 William Penn Hwy	Monroeville	PA	15146	40.44	-79.75	3.5	25	1	Automotive;Car Dealers
+CppOcUSapx5kU2lQNt2w5w	Freemans	Marchmont	2-6 Spottiswoode Road	Edinburgh	EDH	EH9 1DY	55.94	-3.19	5	20	0	Coffee & Tea;Food
+vVz2o24e17PuQtHJOkHPfA	Brown Bag Deli	Downtown	817 Forbes Ave	Pittsburgh	PA	15219	40.44	-79.99	3.5	3	0	Cafes;Food;Food Delivery Services;Sandwiches;Restaurants
+Oys6S-x8nYdTJqvY7ksGCA	La Cage Aux Sports	Ville-Marie	1437 Boul Rene-Levesque Ouest	Montréal	QC	H3G 1T7	45.49	-73.57	3.5	18	0	Restaurants
+GaSR7qrkR5x0ubKe0av0rQ	Mr. Gao	Ville-Marie	1550 boulevard de Maisonneuve Ouest	Montréal	QC	H3G 1N2	45.5	-73.58	5	10	1	Restaurants;Chinese
+YiaOpyu4qx0x1nJC_G33TQ	Grimaldi's Pizzeria		7131 West Ray Rd, Ste 23	Chandler	AZ	85226	33.32	-111.97	4	187	1	Pizza;Restaurants
+owuI8y4A3iiYQlAp-fOmWQ	The Pilates Bodies		8961 E Bell Rd, Ste 202	Scottsdale	AZ	85260	33.64	-111.89	5	3	1	Active Life;Pilates;Fitness & Instruction
+mRDyt98UXamjbSOX9NinlA	Juniper Branch Library		1825 West Union Hills Dr	Phoenix	AZ	85027	33.65	-112.1	4	16	1	Libraries;Public Services & Government
+ueN-Y7p_fiRDSXeD9be14A	Lotus Bar & Grill		9030 E Via Linda	Scottsdale	AZ	85258	33.57	-111.89	4	18	0	Restaurants;Asian Fusion;Sports Bars;Bars;Nightlife
+gazJFJoMqPP_aG76kAWcYw	Tortas La Presa #2		4425 W Glendale Ave	Glendale	AZ	85301	33.54	-112.15	4	8	1	Mexican;Restaurants
+gBEWJ4b2OvUmN4Oh7ju3hw	Iron Chef		10810 N Tatum Blvd, Ste 106	Phoenix	AZ	85028	33.59	-111.98	4	331	1	Restaurants;Chinese;Japanese;Sushi Bars
+NizoFauSY9EgFKXdz5WoNg	Super Cool Heating & Cooling		1014 E Southern Ave	Phoenix	AZ	85040	33.39	-112.06	5	3	1	Heating & Air Conditioning/HVAC;Home Services
+QcTTRBfrd0rMzzuCDec_Cw	Jacquee's Espresso		40 N Central Ave, Ste 106	Phoenix	AZ	85004	33.45	-112.07	4	20	1	Delis;Coffee & Tea;Restaurants;Food
+xTW5PkLEdMBs2f2W8RGy0g	Miele's Italian and Banquet Hall		2050 W Guadalupe Rd, Ste 9	Mesa	AZ	85202	33.36	-111.88	4	87	1	Desserts;Italian;Pizza;Event Planning & Services;Buffets;Sandwiches;Food;Venues & Event Spaces;Restaurants
+sU26m6RAkTtaNUjiJUFqRw	Detroit Coney Cruiser			Scottsdale	AZ		33.49	-111.93	5	6	1	Food;Food Trucks
+1MxyFhzNpeIvTQHjtp-bSg	Diva Nails		6611 W Peoria Ave, Ste 2	Glendale	AZ	85302	33.58	-112.2	4	43	1	Nail Salons;Beauty & Spas
+yWmGplCGCnQBy9LJFaGa6A	Timesavers		7745 E Redfield Rd, Ste 500	Scottsdale	AZ	85260	33.61	-111.91	4	4	1	Local Services;Furniture Repair;Watch Repair
+2CQc-0KPuF2S8axUdGH24w	Punto fisso		Christophstr. 14	Stuttgart	BW	70178	48.77	9.18	5	5	0	Financial Services;Wine Bars;Restaurants;Italian;Pizza;Financial
