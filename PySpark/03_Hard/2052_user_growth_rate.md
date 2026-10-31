@@ -35,4 +35,53 @@ user_id             varchar
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
    - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
-   - If ranking or windowed calculations are needed, define explicit partition keys and order exp
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- logic: we need count users across two time period for each account_id
+-- assumption: all users present are counted as active
+
+-- growth rate: (after distinct users / before distinct users)
+SELECT b.account_id, a.distinct_users/ b.distinct_users::float AS growth_rate
+-- counting the distinct users before
+FROM (
+    SELECT account_id, COUNT(DISTINCT user_id) as distinct_users
+    FROM sf_events
+    -- getting the year-month
+    WHERE LEFT(date::varchar, 7) = '2020-12'
+    GROUP BY 1
+) b
+-- counting the distinct users after
+JOIN (
+    SELECT account_id, COUNT(DISTINCT user_id) as distinct_users
+    FROM sf_events
+    -- getting the year-month
+    WHERE LEFT(date::varchar, 7) = '2021-01'
+    GROUP BY 1
+) a
+ON b.account_id = a.account_id
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName
