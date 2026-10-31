@@ -62,4 +62,29 @@ playbook_events.toPandas()
 #toPandas: Moves data from the massive cluster to a small local table.
 
 
-# filter un-necessary data keep only "macbook pro" -> macbook users h
+# filter un-necessary data keep only "macbook pro" -> macbook users hav eenrolled in multiple events so we create event wise bucket using groupBy -> then count rows in every bucket -> after that we sort it with the name of event . -> then with the help of topanda() Moves data from the massive cluster to a small local table.
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9653").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9653\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
