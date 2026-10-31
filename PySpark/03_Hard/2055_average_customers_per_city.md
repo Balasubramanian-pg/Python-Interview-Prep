@@ -90,4 +90,42 @@ WHERE total_customers > (
 ## 5. Alternative Approach: PySpark SQL
 
 ```python
-from pyspark.sql import SparkSessio
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2055").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic: need find avg number of customers across all cities, find cities who have more than the global average
+
+-- count total customers per city
+WITH avg_cust_cities AS (
+    SELECT city_id, COUNT(*) AS total_customers
+    FROM linkedin_customers
+    GROUP BY 1
+)
+
+-- selecting the country and city name, alongside total customers
+SELECT lco.country_name, lci.city_name, total_customers
+FROM avg_cust_cities acc
+-- joins to retrieve the detail name
+JOIN linkedin_city lci
+    ON acc.city_id = lci.id
+JOIN linkedin_country lco
+    ON lci.country_id = lco.id
+-- filter for city's total customers > avg across all cities
+WHERE total_customers > (
+    SELECT AVG(total_customers)
+    FROM avg_cust_cities
+);
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
