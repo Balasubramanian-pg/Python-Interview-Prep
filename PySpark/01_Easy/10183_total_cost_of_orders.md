@@ -61,4 +61,31 @@ customers = customer_order_detail.select("id","first_name","total_cost").orderBy
 # To validate your solution, convert your final pySpark df to a pandas df
 customers.toPandas()
 
-#Performance: groupBy collapses the data before the join, r
+#Performance: groupBy collapses the data before the join, reducing Network I/O (Shuffle).
+#Safety: Using F.sum() prevents the MISSING_AGGREGATION error and ensures mathematical accuracy.
+#Readability: Chaining with () or \ keeps the Transformation DAG clean and maintainable.
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10183").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10183\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
