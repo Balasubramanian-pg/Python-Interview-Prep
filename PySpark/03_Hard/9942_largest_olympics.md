@@ -282,4 +282,196 @@ id	name	sex	age	height	weight	team	noc	games	year	season	city	sport	event	medal
 100799	Walter Riggs	M	47			Emily	GBR	1924 Summer	1924	Summer	Paris	Sailing	Sailing Mixed 8 metres	Silver
 29109	Reginald Frank Reggie Doherty	M	27			Great Britain-1	GBR	1900 Summer	1900	Summer	Paris	Tennis	Tennis Men's Doubles	Gold
 37138	Heinrich Heinz Freyschmidt	M	20			Germany	GER	1908 Summer	1908	Summer	London	Diving	Diving Men's Springboard	
-42827	Hans Grieder	M	22			Switzerland	SUI	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's P
+42827	Hans Grieder	M	22			Switzerland	SUI	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's Parallel Bars	
+97697	Alfred Harold Pycock	M				Great Britain	GBR	1924 Summer	1924	Summer	Paris	Swimming	Swimming Men's 100 metres Freestyle	
+77576	Matthew John Matt McGrath	M	48	182	115	United States	USA	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's Hammer Throw	Silver
+108898	Auguste Serrurier	M	43			France	FRA	1900 Summer	1900	Summer	Paris	Archery	Archery Men's Sur La Perche a La Pyramide	Silver
+118921	Leonora Josephine Leonie Taylor	F				United States	USA	1904 Summer	1904	Summer	St. Louis	Archery	Archery Women's Double National Round	
+128225	Jesse Alfred Wallingford	M	36			Great Britain	GBR	1908 Summer	1908	Summer	London	Shooting	Shooting Men's Free Rifle Three Positions 300 metres	
+56424	Theodore Hartmann Just	M	22			Great Britain	GBR	1908 Summer	1908	Summer	London	Athletics	Athletics Men's 800 metres	
+133892	Giorgio Zampori	M	36			Italy	ITA	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's Horizontal Bar	
+131533	Emily Woodruff (Smiley-)	F	58			United States	USA	1904 Summer	1904	Summer	St. Louis	Archery	Archery Women's Double Columbia Round	
+66323	Paul Maximilien Landowski	M	48			France	FRA	1924 Summer	1924	Summer	Paris	Art Competitions	Art Competitions Mixed Sculpturing	
+12198	Samuel Sam Blatherwick	M	19			Great Britain	GBR	1908 Summer	1908	Summer	London	Swimming	Swimming Men's 1500 metres Freestyle	
+66210	Albert T. E. Lammens	M				Belgium	BEL	1924 Summer	1924	Summer	Paris	Tennis	Tennis Men's Singles	
+34244	Adrien Fauchier-Magnan	M	26			France-4	FRA	1900 Summer	1900	Summer	Paris	Tennis	Tennis Men's Doubles	
+92407	Ernest Ernie Payne	M	23			Great Britain	GBR	1908 Summer	1908	Summer	London	Cycling	Cycling Men's Sprint	
+75868	Francesco Martino	M	23			Italy	ITA	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's Rings	Gold
+5	Christine Jacoba Aaftink	F	25	185	82	Netherlands	NED	1992 Winter	1992	Winter	Albertville	Speed Skating	Speed Skating Women's 500 metres	
+5	Christine Jacoba Aaftink	F	21	185	82	Netherlands	NED	1988 Winter	1988	Winter	Calgary	Speed Skating	Speed Skating Women's 1000 metres	
+5	Christine Jacoba Aaftink	F	27	185	82	Netherlands	NED	1994 Winter	1994	Winter	Lillehammer	Speed Skating	Speed Skating Women's 500 metres	
+5	Christine Jacoba Aaftink	F	21	185	82	Netherlands	NED	1988 Winter	1988	Winter	Calgary	Speed Skating	Speed Skating Women's 500 metres	
+5	Christine Jacoba Aaftink	F	25	185	82	Netherlands	NED	1992 Winter	1992	Winter	Albertville	Speed Skating	Speed Skating Women's 1000 metres	
+5	Christine Jacoba Aaftink	F	27	185	82	Netherlands	NED	1994 Winter	1994	Winter	Lillehammer	Speed Skating	Speed Skating Women's 1000 metres	
+54601	Jeong Won-Yong	M	20	178	74	South Korea	KOR	2012 Summer	2012	Summer	London	Swimming	Swimming Men's 400 metres Individual Medley	
+29914	Theodora Drakou	F	20	169	67	Greece	GRE	2012 Summer	2012	Summer	London	Swimming	Swimming Women's 50 metres Freestyle	
+12198	Samuel Sam Blatherwick	M	19			Great Britain	GBR	1908 Summer	1908	Summer	London	Swimming	Swimming Men's 1500 metres Freestyle	
+100458	Leslie George Rich	M	21			United States	USA	1908 Summer	1908	Summer	London	Swimming	Swimming Men's 100 metres Freestyle	
+12198	Samuel Sam Blatherwick	M	19			Great Britain	GBR	1908 Summer	1908	Summer	London	Swimming	Swimming Men's 1500 metres Freestyle	
+86869	Inger Nordb (Kragh-)	F	21			Norway	NOR	1936 Summer	1936	Summer	Berlin	Diving	Diving Women's Platform	
+124391	Catharina Maria Toos van der Klaauw (-Steensma)	F	20			Netherlands	NED	1936 Summer	1936	Summer	Berlin	Fencing	Fencing Women's Foil Individual	
+70968	Dorothy Brown Locke	F	24			United States	USA	1936 Summer	1936	Summer	Berlin	Fencing	Fencing Women's Foil Individual	
+18252	Anne Marie Carl-Nielsen (Brodersen-)	F	73			Denmark	DEN	1936 Summer	1936	Summer	Berlin	Art Competitions	Art Competitions Mixed Sculpturing Unknown Event	
+105390	Charles Edward Sands	M	34	181		United States/Great Britain	USA	1900 Summer	1900	Summer	Paris	Tennis	Tennis Men's Doubles	
+61099	Sndor Kleckner	M			62	Pannonia RC/National RC	HUN	1908 Summer	1908	Summer	London	Rowing	Rowing Men's Coxed Eights	
+86368	August Nilsson	M	27			Denmark/Sweden	SWE	1900 Summer	1900	Summer	Paris	Tug-Of-War	Tug-Of-War Men's Tug-Of-War	Gold
+26951	Maxime Omer Mathieu Max Omer-Dcugis	M	17			United States/France	FRA	1900 Summer	1900	Summer	Paris	Tennis	Tennis Men's Doubles	Silver
+107090	Eugen Stahl Schmidt	M	38			Denmark/Sweden	DEN	1900 Summer	1900	Summer	Paris	Tug-Of-War	Tug-Of-War Men's Tug-Of-War	Gold
+37710	Ole Kristian Furuseth	M	25	182	95	Norway	NOR	1992 Winter	1992	Winter	Albertville	Alpine Skiing	Alpine Skiing Men's Combined	
+61011	Marianne Kjrstad	F	23	173	64	Norway	NOR	1994 Winter	1994	Winter	Lillehammer	Alpine Skiing	Alpine Skiing Women's Super G	
+111597	Atle Skrdal	M	27	184	83	Norway	NOR	1994 Winter	1994	Winter	Lillehammer	Alpine Skiing	Alpine Skiing Men's Downhill	
+39301	Vibecke Caroline Gedde-Dahl	F	20	166	62	Norway	NOR	1994 Winter	1994	Winter	Lillehammer	Alpine Skiing	Alpine Skiing Women's Super G	
+71866	Astrid Ldemel	F	20			Norway	NOR	1992 Winter	1992	Winter	Albertville	Alpine Skiing	Alpine Skiing Women's Giant Slalom	
+20	Kjetil Andr Aamodt	M	20	176	85	Norway	NOR	1992 Winter	1992	Winter	Albertville	Alpine Skiing	Alpine Skiing Men's Giant Slalom	Bronze
+37710	Ole Kristian Furuseth	M	25	182	95	Norway	NOR	1992 Winter	1992	Winter	Albertville	Alpine Skiing	Alpine Skiing Men's Super G	
+120092	Jan Einar Thorsen	M	27	181	82	Norway	NOR	1994 Winter	1994	Winter	Lillehammer	Alpine Skiing	Alpine Skiing Men's Super G	
+61011	Marianne Kjrstad	F	23	173	64	Norway	NOR	1994 Winter	1994	Winter	Lillehammer	Alpine Skiing	Alpine Skiing Women's Slalom	
+75218	Didrik Marksten	M	20			Norway	NOR	1992 Winter	1992	Winter	Albertville	Alpine Skiing	Alpine Skiing Men's Slalom	
+45769	Lasse Norman Hansen	M	24	180	73	Denmark	DEN	2016 Summer	2016	Summer	Rio de Janeiro	Cycling	Cycling Men's Team Pursuit 4000 metres	Bronze
+14266	Frentorish Tori Bowie	F	25	175	58	United States	USA	2016 Summer	2016	Summer	Rio de Janeiro	Athletics	Athletics Women's 100 metres	Silver
+122881	Seremaia Jerry Tuwai Vunisa	M	27	174	81	Fiji	FIJ	2016 Summer	2016	Summer	Rio de Janeiro	Rugby Sevens	Rugby Sevens Men's Rugby Sevens	Gold
+118202	Lachlan Tame	M	27	176	80	Australia	AUS	2016 Summer	2016	Summer	Rio de Janeiro	Canoeing	Canoeing Men's Kayak Doubles 1000 metres	Bronze
+94406	Michael Fred Phelps II	M	31	193	91	United States	USA	2016 Summer	2016	Summer	Rio de Janeiro	Swimming	Swimming Men's 4 x 200 metres Freestyle Relay	Gold
+120074	Victoria Thornley	F	28	193	76	Great Britain	GBR	2016 Summer	2016	Summer	Rio de Janeiro	Rowing	Rowing Women's Double Sculls	Silver
+12740	Tijana Bogdanovi	F	18	172	52	Serbia	SRB	2016 Summer	2016	Summer	Rio de Janeiro	Taekwondo	Taekwondo Women's Flyweight	Silver
+18610	Hamish Carson	M	27	181	66	New Zealand	NZL	2016 Summer	2016	Summer	Rio de Janeiro	Athletics	Athletics Men's 1500 metres	
+90936	Pan Feihong	F	27	173	57	China	CHN	2016 Summer	2016	Summer	Rio de Janeiro	Rowing	Rowing Women's Lightweight Double Sculls	Bronze
+4747	Alice Aprot Nawowuna	F	22	152	54	Kenya	KEN	2016 Summer	2016	Summer	Rio de Janeiro	Athletics	Athletics Women's 10000 metres	
+122556	Blair Tuke	M	27	181	78	New Zealand	NZL	2016 Summer	2016	Summer	Rio de Janeiro	Sailing	Sailing Men's Skiff	Gold
+77716	Emma McKeon	F	22	180	60	Australia	AUS	2016 Summer	2016	Summer	Rio de Janeiro	Swimming	Swimming Women's 4 x 100 metres Freestyle Relay	Gold
+106423	Mohamed Karim Moe Sbihi	M	28	202	110	Great Britain	GBR	2016 Summer	2016	Summer	Rio de Janeiro	Rowing	Rowing Men's Coxless Fours	Gold
+47672	Josephine Henning	F	26	175	68	Germany	GER	2016 Summer	2016	Summer	Rio de Janeiro	Football	Football Women's Football	Gold
+129185	Sam Webster	M	25	183	80	New Zealand	NZL	2016 Summer	2016	Summer	Rio de Janeiro	Cycling	Cycling Men's Team Sprint	Silver
+115008	Jan trba	M	35	183	85	Czech Republic	CZE	2016 Summer	2016	Summer	Rio de Janeiro	Canoeing	Canoeing Men's Kayak Fours 1000 metres	Bronze
+1478	Rosaria Aiello	F	27	172	74	Italy	ITA	2016 Summer	2016	Summer	Rio de Janeiro	Water Polo	Water Polo Women's Water Polo	Silver
+17489	Facundo Callioni	M	30	183	77	Argentina	ARG	2016 Summer	2016	Summer	Rio de Janeiro	Hockey	Hockey Men's Hockey	Gold
+10177	Mark Stewart Bennett	M	23	183	89	Great Britain	GBR	2016 Summer	2016	Summer	Rio de Janeiro	Rugby Sevens	Rugby Sevens Men's Rugby Sevens	Silver
+19239	Elena Cecchini	F	24	168	55	Italy	ITA	2016 Summer	2016	Summer	Rio de Janeiro	Cycling	Cycling Women's Road Race Individual	
+38795	Denis Gargaud Chanut	M	29	181	76	France	FRA	2016 Summer	2016	Summer	Rio de Janeiro	Canoeing	Canoeing Men's Canadian Singles Slalom	Gold
+122858	Seda Gurgenovna Tutkhalyan	F	17	146	43	Russia	RUS	2016 Summer	2016	Summer	Rio de Janeiro	Gymnastics	Gymnastics Women's Team All-Around	Silver
+48562	Darrell Hill	M	22	191	145	United States	USA	2016 Summer	2016	Summer	Rio de Janeiro	Athletics	Athletics Men's Shot Put	
+27574	Deng Wei	F	23	159	63	China	CHN	2016 Summer	2016	Summer	Rio de Janeiro	Weightlifting	Weightlifting Women's Middleweight	Gold
+27572	Deng Shudi	M	24	163	58	China	CHN	2016 Summer	2016	Summer	Rio de Janeiro	Gymnastics	Gymnastics Men's Team All-Around	Bronze
+24028	Anna Cruz Lebrato	F	29	176	60	Spain	ESP	2016 Summer	2016	Summer	Rio de Janeiro	Basketball	Basketball Women's Basketball	Silver
+107368	Jonathan Michael Jon Schofield	M	31	182	80	Great Britain	GBR	2016 Summer	2016	Summer	Rio de Janeiro	Canoeing	Canoeing Men's Kayak Doubles 200 metres	Silver
+17755	Veronica Angella Campbell-Brown	F	34	168	58	Jamaica	JAM	2016 Summer	2016	Summer	Rio de Janeiro	Athletics	Athletics Women's 200 metres	
+75981	Kei Marumo	F	24	160	50	Japan	JPN	2016 Summer	2016	Summer	Rio de Janeiro	Synchronized Swimming	Synchronized Swimming Women's Team	Bronze
+60589	Eliud Kipchoge	M	31	167	57	Kenya	KEN	2016 Summer	2016	Summer	Rio de Janeiro	Athletics	Athletics Men's Marathon	Gold
+121635	Lucas Tramr	M	26	183	75	Switzerland	SUI	2016 Summer	2016	Summer	Rio de Janeiro	Rowing	Rowing Men's Lightweight Coxless Fours	Gold
+70315	David Thomas Lingmerth	M	29	170	79	Sweden	SWE	2016 Summer	2016	Summer	Rio de Janeiro	Golf	Golf Men's Individual	
+34233	Rachel Fattal	F	22	173	65	United States	USA	2016 Summer	2016	Summer	Rio de Janeiro	Water Polo	Water Polo Women's Water Polo	Gold
+19603	Kyle Chalmers	M	18	193	90	Australia	AUS	2016 Summer	2016	Summer	Rio de Janeiro	Swimming	Swimming Men's 4 x 100 metres Medley Relay	Bronze
+41869	Giulia Gorlero	F	25	180	73	Italy	ITA	2016 Summer	2016	Summer	Rio de Janeiro	Water Polo	Water Polo Women's Water Polo	Silver
+79853	Amy Millar	F	39	183	59	Canada	CAN	2016 Summer	2016	Summer	Rio de Janeiro	Equestrianism	Equestrianism Mixed Jumping Individual	
+15460	Aaron Brown	M	24	198	79	Canada	CAN	2016 Summer	2016	Summer	Rio de Janeiro	Athletics	Athletics Men's 100 metres	
+58866	Isabel Kerschowski	F	28	167	57	Germany	GER	2016 Summer	2016	Summer	Rio de Janeiro	Football	Football Women's Football	Gold
+100315	Kimberly Susan Kim Rhode (-Harryman)	F	37	163	82	United States	USA	2016 Summer	2016	Summer	Rio de Janeiro	Shooting	Shooting Women's Skeet	Bronze
+23040	Kevin Cordes	M	22	196	88	United States	USA	2016 Summer	2016	Summer	Rio de Janeiro	Swimming	Swimming Men's 100 metres Breaststroke	
+91785	Shannon Parry	F	26	170	70	Australia	AUS	2016 Summer	2016	Summer	Rio de Janeiro	Rugby Sevens	Rugby Sevens Women's Rugby Sevens	Gold
+39374	Oliver Geis	M	25	176	86	Germany	GER	2016 Summer	2016	Summer	Rio de Janeiro	Shooting	Shooting Men's Rapid-Fire Pistol 25 metres	
+105173	Germn Sal Snchez Snchez	M	24	165	50	Mexico	MEX	2016 Summer	2016	Summer	Rio de Janeiro	Diving	Diving Men's Platform	Silver
+43150	Marcus Gro	M	26	182	85	Germany	GER	2016 Summer	2016	Summer	Rio de Janeiro	Canoeing	Canoeing Men's Kayak Doubles 1000 metres	Gold
+9823	Anastasiya Yevgenyevna Belyakova	F	23	173	60	Russia	RUS	2016 Summer	2016	Summer	Rio de Janeiro	Boxing	Boxing Women's Lightweight	Bronze
+118778	Diana Lurena Taurasi	F	34	183	70	United States	USA	2016 Summer	2016	Summer	Rio de Janeiro	Basketball	Basketball Women's Basketball	Gold
+48230	Timm Herzbruch	M	19	180	76	Germany	GER	2016 Summer	2016	Summer	Rio de Janeiro	Hockey	Hockey Men's Hockey	Bronze
+22299	Massimo Colaci	M	31	180	75	Italy	ITA	2016 Summer	2016	Summer	Rio de Janeiro	Volleyball	Volleyball Men's Volleyball	Silver
+124162	Greg Van Avermaet	M	31	181	74	Belgium	BEL	2016 Summer	2016	Summer	Rio de Janeiro	Cycling	Cycling Men's Road Race Individual	Gold
+124031	Jean-Charles Valladont	M	27	180	83	France	FRA	2016 Summer	2016	Summer	Rio de Janeiro	Archery	Archery Men's Individual	Silver
+122321	Irakli Tsirekidze	M	26	184	90	Georgia	GEO	2008 Summer	2008	Summer	Beijing	Judo	Judo Men's Middleweight	Gold
+30576	Alina Alexandra Dumitru (-Croitoru)	F	25	158	48	Romania	ROU	2008 Summer	2008	Summer	Beijing	Judo	Judo Women's Extra-Lightweight	Gold
+70384	Soso Lip'art'eliani	M	25	178	78	Georgia	GEO	1996 Summer	1996	Summer	Atlanta	Judo	Judo Men's Half-Middleweight	Bronze
+87208	Michel Nowak	M	22	175	77	France	FRA	1984 Summer	1984	Summer	Los Angeles	Judo	Judo Men's Half-Middleweight	Bronze
+123132	Masae Ueno	F	25	160	70	Japan	JPN	2004 Summer	2004	Summer	Athina	Judo	Judo Women's Middleweight	Gold
+999999	John Testman	M	30	180	75	USA	USA	2000 Summer	2000	Summer	Sydney	Athletics	Athletics Men's 100 metres	 Gold
+999998	John Testman	M	30	180	75	Canada	CAN	2004 Summer	2004	Summer	Athens	Athletics	Athletics Men's 200 metres	 Bronze
+id:
+bigint
+name:
+string
+sex:
+string
+age:
+double
+height:
+double
+weight:
+double
+team:
+string
+noc:
+string
+games:
+string
+year:
+bigint
+season:
+string
+city:
+string
+sport:
+string
+event:
+string
+medal:
+string
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import *
+from pyspark.sql.functions import *
+# Start writing code
+# print(olympics_athletes_events.count())
+olympics_athletes_events1 =olympics_athletes_events.distinct()
+olympics_athletes_events2=olympics_athletes_events1.filter(olympics_athletes_events1.games=="1924 Summer")
+# olympics_athletes_events2.show(125,truncate=False)
+# print(olympics_athletes_events2.count())
+olympics_athletes_events3 = olympics_athletes_events2.dropDuplicates(["id"])
+# print(olympics_athletes_events3.count())
+
+olympics_athletes_events3 = olympics_athletes_events3.withColumn("athletes_count",lit(olympics_athletes_events3.count()))
+olympics_athletes_events4 = olympics_athletes_events3.select("games","athletes_count")
+# To validate your solution, convert your final pySpark df to a pandas df
+olympics_athletes_events4.toPandas().head(1)
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9942").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9942\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
