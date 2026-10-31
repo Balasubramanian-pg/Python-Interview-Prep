@@ -354,4 +354,152 @@ ABCD1312	TX	2643	0.13
 ABCD1313	TX	2607	0.13
 ABCD1314	TX	4044	0.42
 ABCD1315	TX	3105	0.73
-ABCD1316	TX	2257	0.2
+ABCD1316	TX	2257	0.21
+ABCD1317	TX	3044	0.66
+ABCD1318	TX	2690	0.8
+ABCD1319	TX	3642	0.76
+ABCD1320	TX	1149	0.12
+ABCD1321	TX	2321	0.02
+ABCD1322	TX	3122	0.35
+ABCD1323	TX	3052	0.23
+ABCD1324	TX	1107	0.8
+ABCD1325	TX	3113	0.82
+ABCD1326	TX	2014	0.33
+ABCD1327	TX	1225	0.46
+ABCD1328	TX	2596	0.37
+ABCD1329	TX	1094	0.06
+ABCD1330	TX	2284	0.85
+ABCD1331	TX	3778	0.44
+ABCD1332	TX	4192	0.48
+ABCD1333	TX	2110	0.67
+ABCD1334	TX	1180	0.67
+ABCD1335	TX	2586	0.7
+ABCD1336	TX	2582	0.07
+ABCD1337	TX	3645	0.24
+ABCD1338	TX	4872	0.43
+ABCD1339	TX	4788	0.38
+ABCD1340	TX	2390	0.09
+ABCD1341	TX	3325	0.82
+ABCD1342	TX	3041	0.75
+ABCD1343	TX	3865	0.68
+ABCD1344	TX	3135	0.59
+ABCD1345	TX	1752	0.26
+ABCD1346	TX	4634	0.61
+ABCD1347	TX	3632	0.24
+ABCD1348	TX	3358	0.33
+ABCD1349	TX	2350	0.27
+ABCD1350	TX	4870	0.93
+ABCD1351	TX	1870	0.24
+ABCD1352	TX	2329	0.49
+ABCD1353	TX	1764	0.72
+ABCD1354	TX	4338	0.48
+ABCD1355	TX	1655	0.05
+ABCD1356	TX	4881	0.46
+ABCD1357	TX	3163	0.79
+ABCD1358	TX	3125	0.46
+ABCD1359	TX	4164	0.57
+ABCD1360	TX	1176	0.06
+ABCD1361	TX	4950	1
+ABCD1362	TX	4416	0.4
+ABCD1363	TX	4103	0.96
+ABCD1364	TX	1417	0.73
+ABCD1365	TX	2479	0.33
+ABCD1366	TX	2453	0.97
+ABCD1367	TX	3212	0.28
+ABCD1368	TX	4394	0.21
+ABCD1369	TX	3332	0.25
+ABCD1370	TX	3762	0.83
+ABCD1371	TX	4866	0.52
+ABCD1372	TX	1650	0.36
+ABCD1373	TX	3408	0.58
+ABCD1374	TX	4215	0.78
+ABCD1375	TX	4969	0.71
+ABCD1376	TX	3237	0.13
+ABCD1377	TX	3297	0.77
+ABCD1378	TX	3959	0.38
+ABCD1379	TX	3399	0.26
+ABCD1380	TX	1050	0.02
+ABCD1381	TX	3950	0.88
+ABCD1382	TX	2898	0.73
+ABCD1383	TX	3709	0.63
+ABCD1384	TX	3610	0.53
+ABCD1385	TX	2056	0.08
+ABCD1386	TX	4311	0.96
+ABCD1387	TX	4298	0.31
+ABCD1388	TX	1528	0.07
+ABCD1389	TX	4874	0.12
+ABCD1390	TX	2274	0.53
+ABCD1391	TX	4172	0.08
+ABCD1392	TX	4139	0.68
+ABCD1393	TX	4397	0.17
+ABCD1394	TX	3171	0.85
+ABCD1395	TX	1715	0.79
+ABCD1396	TX	2535	0.93
+ABCD1397	TX	2358	0.76
+ABCD1398	TX	3191	0.98
+ABCD1399	TX	3107	0.42
+ABCD1400	TX	3922	0.59
+policy_num:
+string
+state:
+string
+claim_cost:
+bigint
+fraud_score:
+double
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import Window
+from pyspark.sql.functions import *
+# Start writing code
+w = Window.partitionBy("state").orderBy("fraud_score")
+fraud_score = fraud_score.withColumn('rank',percent_rank().over(w))
+fraud_score1 = fraud_score.where(col("rank")>=0.95)
+fraud_score1 = fraud_score1.select("policy_num","state","claim_cost",	"fraud_score")
+fraud_score1.show(50,truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+fraud_score1.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10303").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10303\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
