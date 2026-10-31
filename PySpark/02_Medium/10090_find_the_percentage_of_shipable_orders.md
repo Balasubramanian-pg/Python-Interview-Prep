@@ -127,4 +127,54 @@ string
 # Import your libraries
 import pandas as pd
 import pyspark
-from pyspark.sql.functions imp
+from pyspark.sql.functions import *
+from pyspark.sql.window import Window
+from pyspark.sql import SparkSession
+from pyspark.sql.types import *
+# Start writing code
+# orders
+# print(customers.count())
+spark1 = SparkSession.builder.appName("app").getOrCreate()
+
+customers = customers.filter(customers.address.isNotNull())
+# print(customers.count())
+df = orders.join(customers, orders.cust_id == customers.id, "inner")
+# df.show(truncate=False)
+total_sum = orders.select(count(col("total_order_cost"))).collect()[0][0]
+# total_sum = orders.groupBy(col("id")).sum(col("total_order_cost"))
+# total_sum.show(truncate=False)
+# print(total_sum)
+shipable_sum = df.select(count(col("total_order_cost"))).collect()[0][0]
+# print(shipable_sum)
+
+perc = int((shipable_sum/total_sum)*100)
+dict1 = {"per":perc}
+# print(perc)
+df = pd.DataFrame(dict1, index=[0])
+# To validate your solution, convert your final pySpark df to a pandas df
+# df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10090").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10090\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
