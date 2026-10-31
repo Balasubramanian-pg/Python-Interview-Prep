@@ -84,4 +84,52 @@ FROM (
         WHERE amenities LIKE '%Wireless Internet%'
             AND property_type = 'Villa'
             AND bed_type = 'Real Bed'
-    ) pri
+    ) price_ranking
+) cheapest_house
+WHERE price_rank = 1
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9636").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic:
+-- 1. filter for internet, bed_type and property_type
+-- 2. rank by price
+-- 3. get the lowest price
+
+SELECT neighbourhood
+FROM (
+    SELECT neighbourhood,
+           RANK() OVER(ORDER BY price ASC) AS price_rank
+    FROM (
+        SELECT id,
+               neighbourhood,
+               price
+        FROM airbnb_search_details
+        WHERE amenities LIKE '%Wireless Internet%'
+            AND property_type = 'Villa'
+            AND bed_type = 'Real Bed'
+    ) price_ranking
+) cheapest_house
+WHERE price_rank = 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
