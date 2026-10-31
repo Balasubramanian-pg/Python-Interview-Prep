@@ -120,4 +120,53 @@ spark = SparkSession.builder.appName("StrataScratch_10304").getOrCreate()
 # If using raw SQL query on registered temporary tables:
 """
 -- objective:
--- FIND projects that are at 
+-- FIND projects that are at risk of overbudget
+-- Overbudget: cost of all emps assigned  > budget of project
+
+-- assumption:
+-- not all projects are rated at 1 year, some are less than that
+-- need to prorate (salary of emp (cost) must feedback pro-rated rate)
+-- pro-rate is by days
+
+-- logic:
+-- LEFT JOIN emp_projects, employees ON projects
+-- COMPUTE project duration in months
+-- SUM(salary) GROUP BY projects.id
+-- Pro-rate SUM(salary) based on projects.start_date, projects.end_date
+-- ROUND(emp cost) to the next dollar amount
+
+-- output:
+-- project name, proj budget, prorated total employee expenses (rounded to next dollar amount)
+SELECT project_title,
+       project_budget,
+       CEILING(emp_costs * (duration/365::float)) total_costs
+FROM (
+    SELECT title AS project_title,
+          budget AS project_budget,
+          duration,
+          SUM(salary) AS emp_costs
+    FROM (
+        SELECT p.*,
+              p.end_date - p.start_date AS duration,
+              ep.emp_id,
+              e.salary
+        FROM linkedin_projects p
+        LEFT JOIN linkedin_emp_projects ep
+            ON p.id = ep.project_id
+        JOIN linkedin_employees e
+            ON ep.emp_id = e.id
+    ) proj_infos
+    GROUP BY 1, 2, 3
+) costs
+WHERE emp_costs * (duration/365::float) > project_budget
+ORDER BY 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
