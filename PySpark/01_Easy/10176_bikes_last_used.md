@@ -40,4 +40,38 @@ id                          int
 
 1. **Requirement Analysis**:
    - Understand the primary entity and granularity required in the final output.
-   - Filter down
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+
+# Start writing code
+dc_bikeshare_q1_2012 = dc_bikeshare_q1_2012.groupBy("bike_number").agg(F.max("end_time").alias('last_used')).orderBy(F.col("last_used").desc())
+
+# To validate your solution, convert your final pySpark df to a pandas df
+dc_bikeshare_q1_2012.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10176").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective: for each bike, we want to find the last t
