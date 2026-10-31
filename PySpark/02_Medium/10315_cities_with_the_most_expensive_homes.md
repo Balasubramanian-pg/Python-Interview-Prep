@@ -78,4 +78,37 @@ ORDER BY AVG(mkt_price) DESC;
 ## 5. Alternative Approach: PySpark SQL
 
 ```python
-from pyspark.sql
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10315").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic: we need to find the national average of houses
+-- we need to find the average home prices by city for comparison
+-- filter for cities that > national average
+-- return city names `city`
+
+-- subquery
+-- we only need the city name
+SELECT city
+FROM zillow_transactions
+GROUP BY 1
+-- agg avg func > the avg nation wide
+HAVING AVG(mkt_price) > (
+    SELECT AVG(mkt_price)
+    FROM zillow_transactions
+)
+-- just returning back the city in desc order of avg cost
+ORDER BY AVG(mkt_price) DESC;
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
