@@ -150,3 +150,105 @@ St. John's	Williams	113	512	559	686	197	113	512
 St. John's	Williams	114	636	402	201	157	114	636	
 St. John's	Williams	115	541	453	704	193	115	541	
 St. John's	Williams	116	457	406	723	20	116	457	
+St. John's	Williams	117	514	769	385	101	117	514	
+St. John's	Williams	118	578	492	797	57	118	578	
+St. John's	Williams	119	539	639	741	93	119	539	
+St. John's	Williams	120	213	633	248	8	120	213	
+St. John's	Tran	121	423	393	718	102	121	423	
+St. John's	Tran	122	598	470	729	129	122	598	
+St. John's	Tran	123	671	570	410	152	123	671	
+St. John's	Tran	124	454	624	739	149	124	454	
+St. John's	Tran	125	741	644	702	199	125	741	
+St. John's	Tran	126	593	239	626	46	126	593	
+St. John's	Tran	127	266	789	481		127	266	
+St. John's	Tran	128	560	493	605	92	128	560	
+St. John's	Tran	129	382	365	501		129	382	
+St. John's	Tran	130	702	505	455	47	130	702	
+St. John's	Tran	131	242	697	708	45	131	242	
+St. John's	Tran	132	619	742	718	156	132	619	
+St. John's	Tran	133	464	698	604	200	133	464	
+St. John's	Tran	134	344	351	510	12	134	344	
+St. John's	Tran	135	471	419	624	12	135	471	
+school:
+string
+teacher:
+string
+student_id:
+double
+sat_writing:
+double
+sat_verbal:
+double
+sat_math:
+double
+hrs_studied:
+double
+id:
+bigint
+average_sat:
+double
+love:
+double
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import *
+from pyspark.sql.functions import *
+# Start writing code
+df=sat_scores
+df1 = df.orderBy(df.sat_writing.asc())
+# df1.show(150,truncate=False)
+lst=df1.select("sat_writing")
+lst=lst.orderBy(lst.sat_writing.asc())
+lst=[x[0] for x in lst.select("sat_writing").collect()]
+# print(lst,type(lst))
+mid1=len(lst)//2
+mid1=lst[mid1]
+# print(lst[mid1])
+sat_scores=df1.where(df1["sat_writing"] == mid1).select("student_id")
+# sat_scores.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+sat_scores.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9610").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9610\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
