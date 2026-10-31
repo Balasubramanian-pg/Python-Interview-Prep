@@ -71,4 +71,46 @@ df=df.drop("department","salary")
 df=df.withColumnRenamed("dpt","department").withColumnRenamed("sal","salary")
 df=df.select("department","first_name","salary")
 # df.show(truncate=False)
-# To validate your solutio
+# To validate your solution, convert your final pySpark df to a pandas df
+# employee.toPandas()
+df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9897").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+/*
+
+1. find employee highest salary per department
+2. department name, employee first name and salary
+
+*/
+
+SELECT department, first_name, salary
+FROM (
+    SELECT department,
+           first_name,
+           salary,
+           DENSE_RANK() OVER (PARTITION BY department ORDER BY salary DESC) salary_rank
+    FROM employee
+    ) AS rank_salary
+WHERE salary_rank = 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
