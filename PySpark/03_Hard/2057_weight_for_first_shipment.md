@@ -36,4 +36,52 @@ shipment_date           datetime
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
    - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
-   - If ranking or wind
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- objective:
+-- find weight for each shipment's earliest shipment date
+
+-- assumption:
+-- there may be more than 1 sub_id per shipment_id for earliest date
+
+-- logic:
+-- min(shipment_date) for shipment_id
+-- where shipment = min(shipment_date)
+
+SELECT s.shipment_id,
+       SUM(s.weight)
+FROM amazon_shipment s
+JOIN (
+    SELECT shipment_id,
+           MIN(shipment_date) AS earliest_date
+    FROM amazon_shipment
+    GROUP BY 1
+) earliest_shipment
+    ON s.shipment_id = earliest_shipment.shipment_id
+    AND s.shipment_date = earliest_shipment.earliest_date
+GROUP BY 1
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
