@@ -78,4 +78,41 @@ ORDER BY 1
 
 ---
 
-## 5. Alternative Approach: PySpa
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10068").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- we need count for each user, 'promotion', 'social' and 'shopping' tags
+-- users are the user that RECEVIED
+
+SELECT to_user,
+       SUM(CASE WHEN label = 'Promotion' THEN 1
+           ELSE 0
+           END) AS promo_cnt,
+       SUM(CASE WHEN label = 'Social' THEN 1
+           ELSE 0
+           END) AS soc_cnt,
+       SUM(CASE WHEN label = 'Shopping' THEN 1
+           ELSE 0
+           END) AS shop_cnt
+FROM google_gmail_emails e
+JOIN google_gmail_labels l
+    ON e.id = l.email_id
+GROUP BY 1
+ORDER BY 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
