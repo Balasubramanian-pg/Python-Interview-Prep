@@ -50,4 +50,29 @@ Partition 2 [Dept A, Dept B] ---X---> Shuffle Exchange --> Node 2 [Dept B, Dept 
 
 ## 3. Actions: Triggering Execution
 
-Actions are operations that instr
+Actions are operations that instruct Spark to compute the DAG and produce non-DataFrame results (e.g., write to storage, return data to Driver, or output to console).
+
+| Action | Return Type | Description / Interview Caution |
+| :--- | :--- | :--- |
+| `df.count()` | `int` | Counts total records across distributed partitions. |
+| `df.show(n)` | `None` (Stdout) | Fetches the top `n` rows and prints a formatted text table. |
+| `df.first()` / `df.head(n)` | `Row` / `list[Row]` | Returns first row(s) to Driver. |
+| `df.collect()` | `list[Row]` | **Caution**: Downloads entire dataset to Driver JVM. Causes OOM on large datasets! |
+| `df.toPandas()` | `pandas.DataFrame` | **Caution**: Converts entire distributed DataFrame to single-node Pandas DataFrame. |
+| `df.write.parquet(path)` | `None` | Writes distributed partitions directly to persistent distributed storage. |
+| `df.take(n)` | `list[Row]` | Returns an array of the first `n` elements. |
+
+---
+
+## 4. Lineage Graph & Fault Recovery
+
+You can inspect the lineage of any DataFrame using `.explain()` or `.rdd.toDebugString()`:
+
+```python
+df1 = spark.read.csv("sales.csv", header=True)
+df2 = df1.filter(F.col("amount") > 100)
+df3 = df2.groupBy("customer_id").agg(F.sum("amount").alias("total_spent"))
+
+# Inspect Execution Plan
+df3.explain(True)
+```
