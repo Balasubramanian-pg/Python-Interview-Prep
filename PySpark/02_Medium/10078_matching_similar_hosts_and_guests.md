@@ -114,4 +114,139 @@ host_id	nationality	gender	age
 0	USA	M	28
 0	USA	M	28
 0	USA	M	28
-0	U
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+1	USA	F	29
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+1	USA	F	29
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+1	USA	F	29
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+1	USA	F	29
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+0	USA	M	28
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+6	Luxembourg	M	25
+7	Luxembourg	F	25
+host_id:
+bigint
+nationality:
+string
+gender:
+string
+age:
+bigint
+airbnb_guests
+Preview
+guest_id	nationality	gender	age
+0	Mali	M	21
+1	China	F	23
+2	Mali	F	27
+3	Australia	F	24
+4	Luxembourg	M	19
+5	USA	F	33
+6	Brazil	M	32
+7	China	M	27
+8	Australia	M	37
+9	USA	M	29
+10	Luxembourg	F	28
+11	Brazil	F	24
+guest_id:
+bigint
+nationality:
+string
+gender:
+string
+age:
+bigint
+```
+
+---
+
+## 3. Intervie
