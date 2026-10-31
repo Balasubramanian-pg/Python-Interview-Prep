@@ -96,4 +96,47 @@ ORDER BY 2 DESC
 from pyspark.sql import SparkSession
 
 # Initialize Spark Session
-spark =
+spark = SparkSession.builder.appName("StrataScratch_10301").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- calculate the amount of budget to each employee
+
+-- assumption:
+-- one employee may have multiple project budgets
+
+-- output:
+-- project title, project budget per employee
+
+-- logic:
+-- count number of employee per budget
+-- compute budget / no. employees
+-- order budget/employee DESC
+
+-- calculate the budget/employee
+SELECT title,
+       budget/no_employees::integer budget_per_emp
+FROM (
+    -- join the two tables first
+    -- this will result in duplicates
+    SELECT DISTINCT title,
+           budget,
+           -- find the total employee per project
+           COUNT(*) OVER(PARTITION BY title) no_employees
+    FROM ms_projects
+    JOIN ms_emp_projects
+        ON ms_projects.id = ms_emp_projects.project_id
+) budget_emps
+-- sort them by desc order
+ORDER BY 2 DESC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
