@@ -81,4 +81,36 @@ cnt=facebook_friends1.distinct().count()
 # print(cnt)
 facebook_friends1=facebook_friends1.distinct().orderBy("user1")
 # facebook_friends1.show(truncate=False)
-facebook_friends=facebook_friends.unionAll(facebook_friends.select("
+facebook_friends=facebook_friends.unionAll(facebook_friends.select("user2","user1"))
+# facebook_friends.show(truncate=False)
+facebook_friends=facebook_friends.groupBy("user1").agg(count("user2").alias("number_of_users"))
+facebook_friends=facebook_friends.withColumn("popularity",round((col("number_of_users")/cnt)*100,3))
+facebook_friends = facebook_friends.select("user1","popularity").orderBy("user1")
+facebook_friends.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+facebook_friends.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10284").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10284\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
