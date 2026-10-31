@@ -67,4 +67,29 @@ string
 
 ## 3. Interview Strategy & Logic
 
-1.
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.window import *
+# Start writing code
+df=sf_events
+
+window_spec = Window.partitionBy("user_id").orderBy("account_id","record_date")
+
+# df_window = df.withColumn("rw_num",row_number().over(window_spec))
+
+df = df.withColumn("next_date",lead("record_date",1).over(window_spec)).withColumn("prev_date",lag("record_date",1).over(window_spec))
+df = df.withColumn("date_diff_lead",datediff(to_date("next_date","yyyy-mm-dd"),to_date("record_date","yyyy-
