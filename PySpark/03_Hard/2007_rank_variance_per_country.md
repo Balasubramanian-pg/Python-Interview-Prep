@@ -111,4 +111,52 @@ spark = SparkSession.builder.appName("StrataScratch_2007").getOrCreate()
 
 # If using raw SQL query on registered temporary tables:
 """
--- logic: rank countries in dec 2019 an
+-- logic: rank countries in dec 2019 and jan 2020 seperately
+-- join by country
+-- compare former and latter rank
+-- filter country where latter rank < former rank
+
+-- assumption: earlier period might not have comments
+-- hence we need to right join on latter summary
+-- we need 1,2,3,4 no gaps in rank so dense_rank()
+
+-- ranking summary for dec 2019
+WITH dec_2019_rank AS (
+    SELECT u.country,
+           COUNT(*) AS no_comments,
+           DENSE_RANK() OVER (ORDER BY COUNT(*) DESC) AS rank
+    FROM fb_comments_count c
+    JOIN fb_active_users u
+        ON c.user_id = u.user_id
+    WHERE LEFT(c.created_at::varchar, 7) = '2019-12'
+    GROUP BY 1
+),
+
+-- ranking summary jan 2020
+jan_2020_rank AS (
+    SELECT u.country,
+           COUNT(*) AS no_comments,
+           DENSE_RANK() OVER (ORDER BY COUNT(*) DESC) AS rank
+    FROM fb_comments_count c
+    JOIN fb_active_users u
+        ON c.user_id = u.user_id
+    WHERE LEFT(c.created_at::varchar, 7) = '2020-01'
+    GROUP BY 1
+)
+
+SELECT j.country
+FROM dec_2019_rank d
+RIGHT JOIN jan_2020_rank j
+    ON d.country = j.country
+-- filter by either earlier period is null (0 comments, so latter period with comments will boost ranking regardless) or latter rank < former rank
+WHERE (j.rank < d.rank) OR d.rank IS NULL;
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
