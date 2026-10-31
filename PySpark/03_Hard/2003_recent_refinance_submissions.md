@@ -45,4 +45,59 @@ loan_id         int
 2. **PySpark Optimization Strategy**:
    - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
    - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
-   - Avoid co
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- objective:
+-- 1. total loan balance on the most RECENT 'Refinance' submission
+-- 2. Return all users and balance
+
+-- assumption:
+-- not all users have make the first payment for the 'Refinance submission'
+-- status should be 'offer_accepted' -> means they start the loan already
+
+-- logic:
+-- need latest date on 'refinance' for each user
+-- retrieve loan_id and user_id
+-- join submission on loan_id and user_id
+
+-- getting user_id and balance
+SELECT latest_refinance.user_id,
+       balance
+FROM (
+    -- for each loan submission, we want see the date vs the latest submission date for Refinance
+    SELECT DISTINCT user_id,
+           created_at,
+           id,
+           MAX(created_at) OVER(PARTITION BY user_id) AS latest_date
+    FROM loans
+    WHERE type = 'Refinance'
+) latest_refinance
+JOIN submissions s
+    ON latest_refinance.id = s.loan_id
+-- ensure that the latest refinance submission is observed
+WHERE latest_refinance.created_at = latest_refinance.latest_date
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2003").getOrC
