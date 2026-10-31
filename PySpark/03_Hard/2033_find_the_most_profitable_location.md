@@ -44,4 +44,62 @@ amt                     float
    - Understand the primary entity and granularity required in the final output.
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
-   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimiz
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- objective:
+-- MOST profitable location
+-- FIND average signup duration, average to compute ratio
+
+-- logic:
+-- COMPUTE avg duration signup_stop_date - signup_start_date
+-- AVG(duration) / signup, AVG(amt) / signup per location
+-- COMPUTE ratio: avg_revenue / avg_duration
+-- ORDER BY ratio
+
+-- output:
+-- location, avg_duration, avg_revenue, ratio
+-- order by ratio DESC
+
+SELECT DISTINCT location,
+       avg_duration,
+       avg_revenue,
+       avg_revenue/avg_duration::float AS ratio
+FROM (
+    SELECT s2.location,
+           AVG(s2.signup_stop_date - s2.signup_start_date) OVER(PARTITION BY s2.location) AS avg_duration,
+           avg_revenue
+    FROM signups s2
+    JOIN (
+        SELECT location,
+               AVG(amt) OVER(PARTITION BY location) AS avg_revenue
+        FROM transactions t1
+        JOIN signups s1
+            ON s1.signup_id = t1.signup_id
+    ) t2
+        ON s2.location = t2.location
+) avg_metrics
+ORDER BY 4 DESC
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
