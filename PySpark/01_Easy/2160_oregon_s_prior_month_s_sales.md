@@ -62,4 +62,32 @@ online_customer_orders = online_orders.join(
 online_customer_orders = online_customer_orders.withColumn("revenue", F.col('cost_in_dollars')*F.col('units_sold')).agg(F.sum('revenue').alias('total revenue'))
 
 
-# To validat*F.col(''e your solution, conv
+# To validat*F.col(''e your solution, convert your final pySpark df to a pandas df
+online_customer_orders.toPandas()
+
+# 1st we filter both tables as per our problems need .then only we do shuffle('join') . that help us to reduce cost of program execution,usage less memory and executed fast .....
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2160").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2160\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
