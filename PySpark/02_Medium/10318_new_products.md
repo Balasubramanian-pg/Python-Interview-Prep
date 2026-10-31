@@ -35,4 +35,34 @@ product_name            varchar
    - Understand the primary entity and granularity required in the final output.
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
-   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optim
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+
+# Start writing code
+car_launches_2020 = car_launches.filter(car_launches.year == 2020).groupBy("company_name").agg(count("*").alias("cnt1"))
+car_launches_2019 = car_launches.filter(car_launches.year == 2019).groupBy("company_name").agg(count("*").alias("cnt2"))
+car_launches_df1 = car_launches_2020.join(car_launches_2019, car_launches_2020['company_name'] == car_launches_2019['company_name'],"full").drop(car_launches_2019.company_name)
+car_launches_df1 = car_launches_df1.withColumn("net_products",car_launches_df1["cnt1"]-car_launches_df1["cnt2"]).drop("cnt1","cnt2").drop()
+# car_launches_df1.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+car_launches_df1.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initializ
