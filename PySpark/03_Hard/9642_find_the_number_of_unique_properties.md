@@ -65,4 +65,42 @@ from pyspark.sql.window import Window
 
 SELECT DISTINCT room_types
 FROM (
-    SELECT UNNEST(STRING_TO_ARRAY(filter_room_t
+    SELECT UNNEST(STRING_TO_ARRAY(filter_room_types, ',')) room_types
+    FROM airbnb_searches
+) unique_room_types
+WHERE room_types != ''
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9642").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- find number of different property types
+
+SELECT DISTINCT room_types
+FROM (
+    SELECT UNNEST(STRING_TO_ARRAY(filter_room_types, ',')) room_types
+    FROM airbnb_searches
+) unique_room_types
+WHERE room_types != ''
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
