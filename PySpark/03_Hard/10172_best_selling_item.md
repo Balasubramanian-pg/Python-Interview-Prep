@@ -39,4 +39,36 @@ country         varchar
    - Understand the primary entity and granularity required in the final output.
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
-   - Utilize native DataFr
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+
+# Start writing code
+df=online_retail
+df=df.withColumn("month",month(to_date(col("invoicedate"))))
+df=df.withColumn("total_paid",round(col("unitprice")*col("quantity"),2))
+df=df.groupby("month","description").agg(sum("total_paid").alias("total_paid"))
+df1=df.groupby("month").agg(max("total_paid").alias("max_value"))
+df1=df1.withColumnRenamed("month","month1")
+# df.show(truncate=False)
+# df1.show(truncate=False)
+result=df.join(df1,(df.month==df1.month1) & (df.total_paid==df1.max_value)).select("month","description","total_paid")
+result=result.orderBy("month")
+# result.show(truncate=False)
+result.toPandas()
+# To validate your solution, convert your final pySpark df to a pandas df
+# online_retail.toPandas()
+```
+
+---
+
+#
