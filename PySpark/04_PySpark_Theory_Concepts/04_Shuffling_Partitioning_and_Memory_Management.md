@@ -60,4 +60,24 @@ df.filter(F.col("status") == "active").coalesce(1).write.parquet("output/")
 
 Spark allocates executor JVM heap into two primary regions:
 
-```
+```
++---------------------------------------------------------------+
+|                    Executor JVM Total Memory                  |
+|  +---------------------------------------------------------+  |
+|  | Reserved Memory (300 MB, Spark internal system overhead)|  |
+|  +---------------------------------------------------------+  |
+|  | User Memory (40%: custom data structures, UDF objects)  |  |
+|  +---------------------------------------------------------+  |
+|  | Spark Memory Pool (60%):                                |  |
+|  |   +-----------------------+-----------------------+     |  |
+|  |   |    Storage Memory     |   Execution Memory    |     |  |
+|  |   | (Cached data, .cache)| (Shuffle, Join, Sort) |     |  |
+|  |   +-----------------------+-----------------------+     |  |
+|  |   <------- Dynamic Borrowing Boundary ----------->      |  |
+|  +---------------------------------------------------------+  |
++---------------------------------------------------------------+
+```
+
+- **Execution Memory**: Used for computation in shuffles, joins, sorts, and aggregations.
+- **Storage Memory**: Used for caching DataFrames (`.cache()`, `.persist()`) and broadcast variables.
+- **Dynamic Occupancy**: If no cached data exists, Execution memory can borrow 100% of Storage space. If Execution needs memory, it can evict Storage cached blocks to disk.
