@@ -69,4 +69,41 @@ customers_orders = orders.join(customers, customers.id == orders.cust_id , "inne
     F.col("order_date"),F.col("order_details"),F.col("total_order_cost"),F.col("first_name")).orderBy(F.col("cust_id").asc())
     
 
-# To validate your sol
+# To validate your solution, convert your final pySpark df to a pandas df
+customers_orders.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9913").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+/*
+1. filter customers' first name for Jill and Eva
+2. require order date, details and cost + first name 
+3. order records based on customer id ASC
+*/
+
+SELECT first_name, order_date, order_details, total_order_cost
+FROM customers c
+JOIN orders o
+    on c.id = o.cust_id
+WHERE first_name IN ('Jill', 'Eva')
+ORDER BY o.cust_id ASC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
