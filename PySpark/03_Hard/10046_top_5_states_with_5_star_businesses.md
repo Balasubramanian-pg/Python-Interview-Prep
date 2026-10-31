@@ -111,4 +111,114 @@ xTW5PkLEdMBs2f2W8RGy0g	Miele's Italian and Banquet Hall		2050 W Guadalupe Rd, St
 sU26m6RAkTtaNUjiJUFqRw	Detroit Coney Cruiser			Scottsdale	AZ		33.49	-111.93	5	6	1	Food;Food Trucks
 1MxyFhzNpeIvTQHjtp-bSg	Diva Nails		6611 W Peoria Ave, Ste 2	Glendale	AZ	85302	33.58	-112.2	4	43	1	Nail Salons;Beauty & Spas
 yWmGplCGCnQBy9LJFaGa6A	Timesavers		7745 E Redfield Rd, Ste 500	Scottsdale	AZ	85260	33.61	-111.91	4	4	1	Local Services;Furniture Repair;Watch Repair
-2CQc-0KPuF2S8axUdGH24w	Punto fisso		Christophstr. 14	Stuttgart	BW	70178	48.77	9.18	5	5	0	Financial Services;Wine Bars;Restaurants;Italian;Pizza;Financial
+2CQc-0KPuF2S8axUdGH24w	Punto fisso		Christophstr. 14	Stuttgart	BW	70178	48.77	9.18	5	5	0	Financial Services;Wine Bars;Restaurants;Italian;Pizza;Financial Advising;Caterers;Nightlife;Food;Wedding Planning;Event Planning & Services;Bars
+ZStsZ_B3RNY6mLNFfpYQfA	Würschtle Bude		Poststr. 13	Böblingen	BW	71032	48.68	9.01	4	3	1	German;Restaurants;Food Stands;Curry Sausage;Schnitzel
+HJ5GABl8RsLYjiWC9Zf7PQ	Matthews Alive Festival		Trade St	Matthews	NC	28105	35.12	-80.72	4	5	1	Arts & Entertainment;Festivals
+cTudgI-2jn-GlnZUmULy5Q	Bruegger's Bagels		1905 Matthews Township Pkwy	Matthews	NC	28105	35.12	-80.71	4	27	1	Restaurants;Sandwiches;Breakfast & Brunch;Bagels;Food
+xl8jk0FbszttHyI_vjozkA	Ton V Lee, DDS	Southeast	2425 E Hacienda Ave, Ste 120, Summerlin Smiles	Las Vegas	NV	89120	36.09	-115.12	5	4	1	Health & Medical;Dentists;Cosmetic Dentists;General Dentistry
+nUR_AQd_6Dhpx3sb2T6meg	Aces Bar & Grill	Southwest	7272 S El Capitan Way, Ste 2	Las Vegas	NV	89148	36.06	-115.29	4	77	1	Nightlife;Food;Specialty Food;Sports Bars;Bars
+dJGMbloBEtXTAWSQBqS5pw	My Natural Health Centre		3241 Major MacKenzie Road E	Richmond Hill	ON	L4S 1P4	43.88	-79.38	4	6	1	Health & Medical;Traditional Chinese Medicine
+ImIYQbWPsvLVSS0GyVz0og	T1 Rehabilitation & Wellness Center	Willowdale	77 Finch Avenue W, Unit103	Toronto	ON	M2N 2H5	43.78	-79.42	4	17	1	Massage;Medical Spas;Health & Medical;Chiropractors;Beauty & Spas;Physical Therapy;Acupuncture
+XbtNbyIGaTitIuEgzEBCzg	Royal Care Medical Centre	Kensington Market	295 College Street	Toronto	ON	M5T 1S2	43.66	-79.4	5	6	1	Health & Medical;Walk-in Clinics;Medical Centers
+rwOl_--ElAL1D50G8-BQLg	Signs Restaurant	Downtown Core	558 Yonge Street	Toronto	ON	M4Y 1Z1	43.66	-79.38	4	120	0	Gluten-Free;Food;Canadian (New);Restaurants;Beer;Wine & Spirits;Vegan
+Wvst5nUM1Yd64cdjIPOD6w	Alima's Roti and Pastry	Malton	13 Kenview Boulevard, Unit 49	Brampton	ON	L6T 5K9	43.74	-79.65	4	19	1	Food;Caribbean;Specialty Food;Restaurants;Indian
+lTxZFiWEd2NNF4Eh7_mlRg	Kassab's	South Side	1207 E Carson St	Pittsburgh	PA	15203	40.43	-79.99	4	101	1	Middle Eastern;Greek;Mediterranean;Lebanese;Restaurants
+WCMt5LU2NnkmzjKNhTB7UA	VFW Day Post 7591	Lake Edge	301 Cottage Grove Rd	Madison	WI	53716	43.08	-89.32	5	7	1	American (Traditional);Restaurants;Fish & Chips
+R6QCy5sVlySKgqvHb-HhTg	Jacs Dining and Tap House	Dudgeon-Monroe	2611 Monroe St	Madison	WI	53711	43.06	-89.43	4	197	1	American (New);Restaurants;Gluten-Free;Modern European
+BXyOtdsnUfGxMYtoM7lIwQ	Arizona Armory			Phoenix	AZ	85009	33.44	-112.13	4.5	6	1	Guns & Ammo;Shopping;Gun/Rifle Ranges;Active Life
+eyU4hQOMAG--PUFK-lihDA	Pepperwood Water & Ice Cream		805 W Baseline Rd, Ste 2	Tempe	AZ	85283	33.38	-111.95	5	13	1	Water Stores;Ice Cream & Frozen Yogurt;Shaved Ice;Food
+d7y2sEZQGTUQIxKJ4fFS-w	Tahoe Designs			Phoenix	AZ	85003	33.44	-112.06	4.5	6	1	Cabinetry;Home Services;Contractors
+vV6oNhupyM8gEhjmhqLPjQ	Anita Purves Nature Center		1505 N Broadway Ave	Urbana	IL	61801	40.13	-88.21	5	5	1	Parks;Active Life
+eLRCVsfSUKteoCQi_LVdGg	Savvy Lingerie	Westside	750 S Rampart Blvd, Ste 5	Las Vegas	NV	89145	36.16	-115.29	4.5	11	0	Women's Clothing;Shopping;Swimwear;Lingerie;Fashion
+dkLhVfBjMnlQeLl5SGb9KA	Sweets By Maggie		7660 Leavitt Rd	Amherst	OH	44001	41.38	-82.21	5	8	0	Bakeries;Food
+l4xrBZAKLXpSR4iprqTw8A	Mark's		1015 Lakeshore Boulevard E, Unit 5	Toronto	ON	M4M 1B3	43.66	-79.33	5	3	1	Women's Clothing;Shopping;Fashion;Men's Clothing
+ICdzSGuv70gpSk7aqpIrHw	Wok-In Bbq		3540 Rutherford Road, Unit 67	Vaughan	ON	L4H 3T8	43.83	-79.55	4.5	10	1	Chinese;Barbeque;Restaurants
+wk3wGDfJb1V-ciZpyhoNAA	Bic's Pub and Grill		560 State Road 130	Trafford	PA	15085	40.39	-79.73	4.5	7	1	Pubs;American (Traditional);Nightlife;Bars;Pizza;Restaurants
+NBYN4Nks_EsPHyAlJ_mdNw	Bistro Merlot		18425 Antoine Faucon	Pierrefonds	QC	H9K 1M7	45.45	-73.89	4.5	8	0	Salad;Pizza;Restaurants;Event Planning & Services;Vietnamese;Caterers
+xPy6fq53MdGMxtbvxBD4RA	The Addison		2674 N Park Ln	Fitchburg	WI	53711	43	-89.4	5	5	1	Property Management;Condominiums;Apartments;Home Services;Real Estate
+business_id:
+string
+name:
+string
+neighborhood:
+string
+address:
+string
+city:
+string
+state:
+string
+postal_code:
+string
+latitude:
+double
+longitude:
+double
+stars:
+double
+review_count:
+bigint
+is_open:
+bigint
+categories:
+string
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.window import Window
+# Start writing code
+# yelp_business.show(truncate=False)
+# print(yelp_business.count())
+yelp_business1 = yelp_business.where(yelp_business.stars>=5)
+# print(yelp_business1.count())
+yelp_business1=yelp_business1.select("state","stars").groupBy("state").agg(count("*").alias("n_businesses"))
+yelp_business1=yelp_business1.orderBy(desc("n_businesses"),"state")
+yelp_business1=yelp_business1.withColumn('rank',rank().over(Window.orderBy(desc("n_businesses"))))
+yelp_business1=yelp_business1.where(yelp_business1.rank<=5).select("state","n_businesses")
+# yelp_business1.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+yelp_business1.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10046").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10046\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
