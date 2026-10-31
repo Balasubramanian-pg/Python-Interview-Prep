@@ -155,4 +155,105 @@ id	time_id	user_id	customer_id	client_id	event_type	event_id
 121	2020-03-09	5575-GNVDE	Connectix	mobile	file sent	1
 122	2020-03-22	8091-TTVAX	Connectix	mobile	video call received	7
 123	2020-03-02	7469-LKBCI	Connectix	mobile	video call started	6
-124	2020-03-23	5575-GNVDE	Connectix	mobile	v
+124	2020-03-23	5575-GNVDE	Connectix	mobile	voice call received	9
+125	2020-03-30	9305-CDSKC	eShop	desktop	message sent	3
+126	2020-03-25	4190-MFLUW	Connectix	desktop	video call started	6
+127	2020-03-09	7590-VHVEG	Connectix	mobile	api message received	5
+128	2020-03-14	7795-CFOCW	Sendit	desktop	file received	2
+129	2020-04-04	9959-WOFKT	Connectix	mobile	message received	4
+130	2020-03-31	5129-JLPIS	Connectix	desktop	video call received	7
+131	2020-03-27	4183-MYFRB	Connectix	desktop	voice call received	9
+132	2020-04-03	5129-JLPIS	Connectix	desktop	file received	2
+133	2020-03-01	0280-XJGEX	Connectix	desktop	video call started	6
+134	2020-04-16	9763-GRSKD	Connectix	desktop	message sent	3
+135	2020-03-07	6388-TABGU	Connectix	desktop	api message received	5
+136	2020-03-20	9305-CDSKC	Zoomit	mobile	message sent	3
+137	2020-03-10	8091-TTVAX	Sendit	desktop	video call started	6
+138	2020-03-20	0280-XJGEX	Zoomit	mobile	message sent	3
+139	2020-02-23	5129-JLPIS	Connectix	mobile	file received	2
+140	2020-02-18	7590-VHVEG	Connectix	mobile	file sent	1
+141	2020-02-18	1452-KIOVK	Connectix	mobile	file received	2
+142	2020-02-08	3668-QPYBK	Sendit	desktop	message received	4
+143	2020-04-13	7469-LKBCI	Sendit	desktop	video call received	7
+144	2020-03-22	6388-TABGU	eShop	mobile	file sent	1
+145	2020-03-13	0280-XJGEX	Sendit	desktop	message sent	3
+146	2020-03-07	6388-TABGU	Connectix	desktop	voice call received	9
+147	2020-03-21	8091-TTVAX	Connectix	mobile	message sent	3
+148	2020-04-03	8191-XWSZG	Connectix	desktop	file received	2
+149	2020-02-22	7795-CFOCW	Connectix	desktop	message received	4
+150	2020-02-14	7590-VHVEG	Connectix	desktop	message received	4
+id:
+bigint
+time_id:
+date
+user_id:
+string
+customer_id:
+string
+client_id:
+string
+event_type:
+string
+event_id:
+bigint
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+
+
+# Start writing code
+fact_events_filt = fact_events.filter((fact_events.event_type).isin(['video call received','video call sent','voice call received','voice call sent']))
+fact_events_filt = fact_events_filt.groupBy("client_id","event_type").count()
+fact_events_filt = fact_events_filt.groupBy("client_id").sum("count")
+fact_events_filt1 = fact_events_filt.agg(max("sum(count)"))
+fact_events_filt1 = fact_events_filt1.withColumnRenamed("max(sum(count))","cnt")
+fact_events_filt = fact_events_filt.withColumnRenamed("sum(count)","cnt")
+df = fact_events_filt1.join(fact_events_filt,fact_events_filt1.cnt == fact_events_filt.cnt,"inner")
+df = df.select("client_id")
+# df.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2029").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2029\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
