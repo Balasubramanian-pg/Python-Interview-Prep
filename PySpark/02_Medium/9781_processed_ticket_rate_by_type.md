@@ -48,4 +48,30 @@ boolean
 
 1. **Requirement Analysis**:
    - Understand the primary entity and granularity required in the final output.
-   - Filter down the dataset early if specific conditional f
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+
+# Start writing code
+df = facebook_complaints
+df_total = df.groupBy(col("type")).count()
+df_total = df_total.withColumnRenamed("count","cnt_total")
+# df_total.show(truncate=False)
+df_processed = df.filter(df.processed==True)
+df_processed = df_processed.groupBy(col("type")).count()
+df_processed = df_processed.withColumnRenamed("count","cnt_processed")
+df_processed = df_processed.withColumnRenamed("type","type1")
+# df_processed.show(truncate=False)
+df_ans = df_total.join(df_processed, df_total.type == df_processed.type1, "outer")
+df_ans = df_ans.s
