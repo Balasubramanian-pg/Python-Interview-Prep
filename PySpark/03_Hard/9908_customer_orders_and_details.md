@@ -46,4 +46,56 @@ total_order_cost    int
    - Understand the primary entity and granularity required in the final output.
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
-   - Utilize native DataFrame API transformations (`select`,
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- objective:
+-- aggregation by city
+
+-- assumption:
+-- only include cities with at least 5 orders
+-- count all customers in each city even if they did not place an order
+
+-- logic:
+-- LEFT JOIN orders on customers
+-- GROUPBY(city) to aggregate by city
+-- COUNT(orders.id) for number of orders per city
+-- COUNT(customers.id) for number of customer per city
+-- COALESCE(SUM(total_order_cost)) total cost of orders, 0 if no COUNT(orders.id)
+
+-- output:
+-- city, no. orders, no. custs, total_order_cost
+
+
+SELECT city,
+       COUNT(o.id) AS no_orders,
+       COUNT(DISTINCT c.id) AS no_customers,
+       COALESCE(SUM(total_order_cost), 0) AS total_order_cost
+FROM customers c
+LEFT JOIN orders o
+    ON c.id = o.cust_id
+GROUP BY 1
+HAVING COUNT(o.id) >= 5
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+fro
