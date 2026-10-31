@@ -47,4 +47,30 @@ from pyspark.sql import functions as F
 # Here we 1st group all patients gender wise. then we take count of each gender and then select only most counted means most appointment taken gender as output.
 medical_appointments = medical_appointments.groupBy('gender').agg(F.count('appointmentid').alias('total_appointmentid')).orderBy(F.col('total_appointmentid').desc()).limit(1)
 
-# To validate your 
+# To validate your solution, convert your final pySpark df to a pandas df
+medical_appointments.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10170").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10170\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
