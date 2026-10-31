@@ -46,4 +46,52 @@ total_order_cost    int
    - Understand the primary entity and granularity required in the final output.
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
-   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimize
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.types import *
+
+# Start writing code
+df = customers.join(orders, customers.id == orders.cust_id,"right")
+# df.show(truncate=False)
+# print(df.count())
+df1 = df.filter((df.order_date>='2019-02-01') & (df.order_date<='2019-05-01'))
+# print(df1.count())
+# df1.show(truncate=False)
+df2=df1.groupBy("first_name","order_date").agg(sum("total_order_cost").alias("max_cost"))
+df2 = df2.orderBy(desc("max_cost")).limit(1)
+# df2.show(truncate=False)
+df2.toPandas()
+# To validate your solution, convert your final pySpark df to a pandas df
+# customers.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9915").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- customer with the highest total order cost
+-- between 2019-02-01 and 2019-05-01 (feb and may)
+-- first name, total cost of items (by date), and date (> 1 orders on certain day possible)
+
+-- assumption:
+-- customer has > 1 order
+-- there may be 
