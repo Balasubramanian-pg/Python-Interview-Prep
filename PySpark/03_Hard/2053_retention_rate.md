@@ -50,4 +50,68 @@ record_date	account_id	user_id
 2021-01-15	A2	U5
 2020-12-17	A2	U4
 2020-12-25	A3	U6
-2020-12-25	A3	
+2020-12-25	A3	U6
+2020-12-25	A3	U6
+2020-12-06	A3	U7
+2020-12-06	A3	U6
+2021-01-14	A3	U6
+2021-02-07	A1	U1
+2021-02-10	A1	U2
+2021-02-01	A2	U4
+2021-02-01	A2	U5
+2020-12-05	A1	U8
+record_date:
+date
+account_id:
+string
+user_id:
+string
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import datetime
+import pandas as pd
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.window import Window
+from pyspark.sql import SparkSession
+# Start writing code
+
+sf_events1 = sf_events
+df = sf_events.groupBy("user_id").agg(max("date").alias("maximum_date"))
+df = df.withColumn("extract_date",date_format("maximum_date","yyyy-MM"))
+# print(df)
+# df.show(truncate=False)
+# print(sf_events.count())
+df = df.withColumnRenamed("user_id","usr_id")
+
+df1 = sf_events.withColumn("date1",date_format("date","yyyy-MM"))
+# df1.show(truncate=False)
+# print(df1.count())
+
+df1 = df1.filter(col("date").between(pd.to_datetime('2020-12-01'),pd.to_datetime('2021-12-31')))
+# print("Filtered df1 count",df1.count())
+# df1.show(truncate=False)
+
+df2 = df1.select("account_id","user_id","date1").dropDuplicates()
+# df2.show(truncate=False)
+# print(df2.count())
+
+df2 = df2.groupBy("account_id").agg(count("
