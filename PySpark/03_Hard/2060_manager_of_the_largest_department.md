@@ -89,4 +89,38 @@ WHERE employee_count_rank.rank = 1 AND az.position ILIKE '%manager%';
 from pyspark.sql import SparkSession
 
 # Initialize Spark Session
-spark = SparkSession.builder.app
+spark = SparkSession.builder.appName("StrataScratch_2060").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic: count employees per department, filter for manager
+-- assumption: manager is counted as one of the employee, manager can be either 'Manager' or 'Interim Manager'
+
+-- filter for top-ranked department and select manager name
+SELECT az.first_name, az.last_name
+FROM (
+    -- rank department by employee count
+    SELECT department_id,
+           employee_count,
+           DENSE_RANK() OVER (ORDER BY employee_count DESC) AS rank
+    FROM (
+        SELECT department_id,
+        COUNT(*) AS employee_count
+        FROM az_employees
+        GROUP BY department_id
+    ) no_employees_by_department
+) employee_count_rank
+JOIN az_employees az
+ON az.department_id = employee_count_rank.department_id
+-- filter for top rank department and either manager position
+WHERE employee_count_rank.rank = 1 AND az.position ILIKE '%manager%';
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
