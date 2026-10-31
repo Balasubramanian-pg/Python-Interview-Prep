@@ -44,4 +44,57 @@ id	first_name	last_name	age	sex	employee_title	department	salary	target	bonus	em
 23	Britney	Berry	45	F	Sales	Sales	1200	200	100	Britney@company.com	Florida	3946 Steve Hunt Road	19
 25	Jack	Mick	29	M	Sales	Sales	1300	200	100	Jack@company.com	Hawaii	3762 Stratford Drive	19
 26	Ben	Ten	43	M	Sales	Sales	1300	150	100	Ben@company.com	Hawaii	3055 Indiana Avenue	19
-27	Tom	Fridy	32	M	Sales	Sales	120
+27	Tom	Fridy	32	M	Sales	Sales	1200	200	150	Tom@company.com	Hawaii	801 Stratford Drive	1
+29	Antoney	Adam	34	M	Sales	Sales	1300	180	150	Antoney@company.com	Hawaii	3533 Randall Drive	1
+28	Morgan	Matt	25	M	Sales	Sales	1200	200	150	Morgan@company.com	Hawaii	2641  Randall Drive	1
+6	Molly	Sam	28	F	Sales	Sales	1400	100	150	Molly@company.com	Arizona	3632 Polk Street	13
+7	Nicky	Bat	33	F	Sales	Sales	1400	400	100	Molly@company.com	Arizona	3461 Preston Street	13
+9	Monika	William	33	F	Sales	Sales	1000	200	100	Molly@company.com	Alabama		13
+17	Mick	Berry	44	M	Senior Sales	Sales	2200	200	150	Mick@company.com	Florida		11
+12	Shandler	Bing	23	M	Auditor	Audit	1100	200	150	Shandler@company.com	Arizona		11
+14	Jason	Tom	23	M	Auditor	Audit	1000	200	150	Jason@company.com	Arizona		11
+16	Celine	Anston	27	F	Auditor	Audit	1000	200	150	Celine@company.com	Colorado		11
+15	Michale	Jackson	44	F	Auditor	Audit	700	150	150	Michale@company.com	Colorado		11
+24	Adam	Morris	30	M	Sales	Sales	1300	200	100	Adam@company.com	Alabama	4541  Ferry Street	19
+30	Mark	Jon	28	M	Sales	Sales	1200	200	150	Mark@company.com	Alabama	2522  George Avenue	1
+8	John	Ford	26	M	Senior Sales	Sales	1500	140	100	Molly@company.com	Alabama	4832  New Creek Road	13
+1	Allen	Wang	55	F	Manager	Management	200000	0	300	Allen@company.com	California	1069 Ventura Drive	1
+2	Joe	Jack	32	M	Sales	Sales	1000	200	150	Joe@company.com	California	995 Jim Rosa Lane	1
+3	Henry	Ted	31	M	Senior Sales	Sales	2000	200	150	Henry@company.com	California	1609 Ford Street	1
+4	Sam	Mark	25	M	Sales	Sales	1000	120	150	Sam@company.com	California	4869 Libby Street	1
+id:
+bigint
+first_name:
+string
+last_name:
+string
+age:
+bigint
+sex:
+string
+employee_title:
+string
+department:
+string
+salary:
+bigint
+target:
+bigint
+bonus:
+bigint
+email:
+string
+city:
+string
+address:
+string
+manager_id:
+bigint
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity require
