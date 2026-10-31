@@ -64,4 +64,35 @@ df.toPandas()
 
 ---
 
-## 5. Alternative Approach: PySpar
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10322").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- we need identify RETURNING ACTIVE USERS
+-- RETURNING: make a 2nd purchase within 7 days
+
+-- we only need user_id
+SELECT DISTINCT(p.user_id)
+FROM amazon_transactions p
+JOIN amazon_transactions n
+    ON p.user_id = n.user_id
+    -- we do not need compare two same purchase
+WHERE p.id <> n.id
+    -- calculate the difference between two purchase dates
+    AND DATEDIFF(n.created_at, p.created_at) BETWEEN 0 AND 7
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
