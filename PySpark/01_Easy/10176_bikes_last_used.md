@@ -74,4 +74,43 @@ spark = SparkSession.builder.appName("StrataScratch_10176").getOrCreate()
 
 # If using raw SQL query on registered temporary tables:
 """
--- objective: for each bike, we want to find the last t
+-- objective: for each bike, we want to find the last time it was used
+-- output: bike_number, end_time
+-- sequence: end_time DESC (latest)
+
+-- assumption: all bikes are returned, no bikes are still in used (no end_time yet)
+
+-- logic:
+-- group by bike_number
+-- rank() end_time DESC
+-- take the top-rank (latest end time)
+
+-- group by bike_number find the latest end_time
+SELECT bike_number,
+      end_time
+FROM (
+    SELECT bike_number,
+          end_time,
+          RANK() OVER(PARTITION BY bike_number ORDER BY end_time DESC) last_time_used_rank
+    FROM dc_bikeshare_q1_2012
+) end_time_rank
+-- getting the latest end time
+WHERE last_time_used_rank = 1
+ORDER BY end_time DESC;
+
+-- simpler solution
+SELECT bike_number,
+       MAX(end_time) AS latest_use_time
+FROM dc_bikeshare_q1_2012
+GROUP BY 1
+ORDER BY 2 DESC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
