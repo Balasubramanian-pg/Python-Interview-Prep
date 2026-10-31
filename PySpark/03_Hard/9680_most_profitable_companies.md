@@ -42,4 +42,40 @@ forbeswebpage       varchar
 
 1. **Requirement Analysis**:
    - Understand the primary entity and granularity required in the final output.
-   - Filter down t
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- objective:
+-- FIND TOP 3 most profitable companies
+
+-- assumption:
+-- company can have same profits
+
+-- output:
+-- company name, profits
+-- ORDER BY profits DESC
+
+SELECT company,
+       profits
+FROM (
+    SELECT company,
+           profits,
+           DENSE_RANK() OVER(ORDER BY profits DESC) profit_rank
+    FROM forbes_global_2010_2014
+) rank_profits
+WHERE profit_rank <= 3
