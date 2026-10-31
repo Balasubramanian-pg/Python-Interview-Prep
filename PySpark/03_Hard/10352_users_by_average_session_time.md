@@ -47,4 +47,52 @@ action                  varchar
 # Import your libraries
 import pyspark
 from pyspark.sql.window import Window
-from pyspar
+from pyspark.sql.functions import *
+from pyspark.sql import SparkSession
+from pyspark.sql.types import *
+# Start writing code
+# facebook_web_log
+df=facebook_web_log
+# print(df.count())
+df=df.filter((df.action == "page_load") |  (df.action == "page_exit") )
+# print(df.count())
+df=df.withColumn("timestamp1",df["timestamp"].cast(DateType()))
+# df.show(truncate=False)
+window = Window.partitionBy("user_id","action","timestamp1").orderBy("user_id","timestamp1")
+df1=df.withColumn("rnk",row_number().over(window))
+# df1.show(50,truncate=False)
+df2=df1.filter(df1.action == "page_load")
+df3=df1.filter(df1.action == "page_exit")
+# df2.show(truncate=False)
+# df3.show(truncate=False)
+df2=df2.withColumn("max_rnk",max("rnk").over(window))
+df3=df3.withColumn("min_rnk",min("rnk").over(window))
+# df2.show(truncate=False)
+# df3.show(truncate=False)
+# df2=df2.filter(df2.rnk == df2.max_rnk)
+# df3=df3.filter(df3.rnk == df3.min_rnk)
+df3=df3.withColumnRenamed("action","action1")
+df3=df3.withColumnRenamed("timestamp","timestamp2")
+df2_alias = df2.alias("df2")
+df3_alias = df3.alias("df3")
+# df2.show(truncate=False)
+# df3.show(truncate=False)
+# df4=df2.join(df3,(df2.user_id==df3.user_id) ,"left").filter(df3.timestamp2<df2.timestamp)
+df4=df2_alias.join(df3_alias,(df2_alias.user_id == df3_alias.user_id),"left").filter(df2_alias.timestamp<df3_alias.timestamp2)
+# df4.show(truncate=False)
+df4=df4.groupBy("df2.user_id","df2.timestamp1").agg({"timestamp":"max","timestamp2":"min"})
+df4=df4.withColumn("duration",col("min(timestamp2)").cast("long")-col("max(timestamp)").cast("long"))
+df4=df4.groupBy("user_id").agg(mean("duration")).withColumnRenamed("avg(duration)","avg_session_duration")
+# df4.show(truncate=False)
+df4.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = 
