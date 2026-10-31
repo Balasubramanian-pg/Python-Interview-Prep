@@ -116,4 +116,49 @@ string
 ## 4. PySpark DataFrame API Solution
 
 ```python
-# 
+# Import your libraries
+import pyspark
+from pyspark.sql import *
+from pyspark.sql.functions import *
+# Start writing code
+df = voting_results
+
+df1 = df.filter(col("candidate").isNotNull())
+# df1.show(50,truncate=False)
+
+df2 = df1.groupby("voter").agg((1/count(df.voter)).alias("cnt"))
+# df2.show(truncate=False)
+
+df3 = df1.join(df2, df1["voter"]==df2["voter"])
+# df3.show(truncate=False)
+df3 = df3.groupby("candidate").agg(sum(col("cnt")).alias("sum_cnt"))
+df3 = df3.orderBy(["sum_cnt"],ascending=[False])
+# df3.show(truncate=False)
+
+# To validate your solution, convert your final pySpark df to a pandas df
+df3.toPandas()["candidate"].head(1)
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2099").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2099\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
