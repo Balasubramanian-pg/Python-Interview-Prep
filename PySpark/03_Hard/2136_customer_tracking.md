@@ -99,4 +99,37 @@ from pyspark.sql.window import *
 df=cust_tracking
 window_spec = Window.orderBy("cust_id","timestamp")
 
-df=df.withColumn("next",lead("timestamp",1).over
+df=df.withColumn("next",lead("timestamp",1).over(window_spec))
+df=df.filter(df.state==1)
+# df.show(truncate=False)
+df=df.withColumn("time_diff_hours",round((unix_timestamp(col("next"))-unix_timestamp(col("timestamp"))))) #Dividing by 3600 so that to get difference in hours
+df=df.groupBy("cust_id").agg((sum("time_diff_hours")/3600).alias("sum(time_diff)"))
+# df.show(truncate=False)
+df.toPandas()
+# To validate your solution, convert your final pySpark df to a pandas df
+# cust_tracking.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2136").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2136\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
