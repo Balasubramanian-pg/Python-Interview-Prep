@@ -124,4 +124,66 @@ spark = SparkSession.builder.appName("StrataScratch_10295").getOrCreate()
 # If using raw SQL query on registered temporary tables:
 """
 -- objective:
--- find the top 10 active users based on total number of message sent
+-- find the top 10 active users based on total number of message sent and received
+-- output:
+-- username (user1 or user2), total interactions
+
+-- assumption:
+-- there is a possiblity of users only receiving messages
+-- or only sending messages
+-- so we need a set of distinct users name
+
+-- find all the distint usernames
+WITH distinct_users AS (
+    SELECT *
+    FROM (
+        SELECT user1 AS username
+        FROM fb_messages
+        -- select distinct records
+        UNION
+        SELECT user2 AS username
+        FROM fb_messages
+    ) distinct_username
+),
+
+-- for all unique users, find their total sum of message sent and received
+interaction_counts AS (
+    SELECT du.username,
+           message_sent,
+           message_received,
+           COALESCE(message_sent, 0) + COALESCE(message_received, 0) AS total_interaction
+    FROM distinct_users du
+    LEFT JOIN (
+        SELECT user1, SUM(msg_count) AS message_sent
+        FROM fb_messages
+        GROUP BY 1
+    ) msg_sent
+        ON du.username = msg_sent.user1
+    LEFT JOIN (
+        SELECT user2, SUM(msg_count) AS message_received
+        FROM fb_messages
+        GROUP BY 1
+    ) msg_received
+        ON du.username = msg_received.user2
+)
+
+-- we rank each user based on their total_msg_count
+-- and select only the top 10
+SELECT username, total_interaction AS total_msg_count
+FROM (
+    SELECT username,
+           total_interaction,
+           RANK() OVER(ORDER BY total_interaction DESC) AS interaction_rank
+    FROM interaction_counts
+) interaction_ranking
+WHERE interaction_rank < 11
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
