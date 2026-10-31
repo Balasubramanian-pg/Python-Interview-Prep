@@ -100,4 +100,46 @@ WHERE latest_refinance.created_at = latest_refinance.latest_date
 from pyspark.sql import SparkSession
 
 # Initialize Spark Session
-spark = SparkSession.builder.appName("StrataScratch_2003").getOrC
+spark = SparkSession.builder.appName("StrataScratch_2003").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- 1. total loan balance on the most RECENT 'Refinance' submission
+-- 2. Return all users and balance
+
+-- assumption:
+-- not all users have make the first payment for the 'Refinance submission'
+-- status should be 'offer_accepted' -> means they start the loan already
+
+-- logic:
+-- need latest date on 'refinance' for each user
+-- retrieve loan_id and user_id
+-- join submission on loan_id and user_id
+
+-- getting user_id and balance
+SELECT latest_refinance.user_id,
+       balance
+FROM (
+    -- for each loan submission, we want see the date vs the latest submission date for Refinance
+    SELECT DISTINCT user_id,
+           created_at,
+           id,
+           MAX(created_at) OVER(PARTITION BY user_id) AS latest_date
+    FROM loans
+    WHERE type = 'Refinance'
+) latest_refinance
+JOIN submissions s
+    ON latest_refinance.id = s.loan_id
+-- ensure that the latest refinance submission is observed
+WHERE latest_refinance.created_at = latest_refinance.latest_date
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
