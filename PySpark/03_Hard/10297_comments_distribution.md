@@ -110,4 +110,56 @@ ORDER BY 1 ASC
 ```python
 from pyspark.sql import SparkSession
 
-# Initialize S
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10297").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- find the distribution of no. of comments in Jan 2020
+
+-- assumption:
+-- no. of comments might be continuous (e.g. 1, 3, 4, 5, 8...)
+-- would not be filling the blanks no. of comments in the range
+-- likely there a bug user post date < user join
+
+-- logic:
+-- filter for users who join between 2018 and 2020
+-- filter comments where in jan 2020
+-- filter comments where created_at < joined_at (fix bug)
+-- count no. of comments per users -> retrieve the distribution range
+-- count users no. of comments -> retrieve the distribution count
+-- order by no. of comments ASC
+
+-- join users and comments
+WITH count_valid_comments_per_user AS (
+    -- count the comments per user
+    SELECT c.user_id,
+           COUNT(c.*) no_comments
+    FROM fb_comments c
+    JOIN fb_users u
+        ON c.user_id = u.id
+    -- filter for both jan 2020 and fix bug
+    WHERE (LEFT(c.created_at::varchar, 7) = '2020-01')
+        AND (u.joined_at < c.created_at)
+        -- filter for user join between 2018 and 2020
+        AND EXTRACT('YEAR' FROM u.joined_at) BETWEEN 2018 AND 2020
+    GROUP BY 1
+)
+
+-- reverse: getting distribution count for each no. comments.
+SELECT no_comments,
+      COUNT(*)
+FROM count_valid_comments_per_user
+GROUP BY 1
+ORDER BY 1 ASC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
