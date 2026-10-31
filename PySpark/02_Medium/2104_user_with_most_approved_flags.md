@@ -62,3 +62,71 @@ Loretta	Crutcher	y6120QOlsfU	nkjgku
 Pauline	Wilks	jNQXAC9IVRw	ov5gd8
 Mary	Thompson	Ct6BUPvE2sM	qa16ua
 Daniel	Bell	5qap5aO4i9A	xciyse
+Evelyn	Johnson	dQw4w9WgXcQ	xvhk6d
+user_firstname:
+string
+user_lastname:
+string
+video_id:
+string
+flag_id:
+string
+flag_review
+Preview
+flag_id	reviewed_by_yt	reviewed_date	reviewed_outcome
+0cazx3	FALSE		
+1cn76u	TRUE	2022-03-15	REMOVED
+1i43zk	TRUE	2022-03-15	REMOVED
+1n0vef	TRUE	2022-03-15	REMOVED
+1sv6ib	TRUE	2022-03-15	APPROVED
+20xekb	TRUE	2022-03-17	REMOVED
+4cvwuv	TRUE	2022-03-15	APPROVED
+4l1tk7	FALSE		
+4sd6dv	TRUE	2022-03-14	REMOVED
+6jjkvn	TRUE	2022-03-16	APPROVED
+7ks264	TRUE	2022-03-15	APPROVED
+8946nx	FALSE		
+8wwg0l	FALSE		
+arydfd	TRUE	2022-03-15	APPROVED
+bl40qw	TRUE	2022-03-16	REMOVED
+ehn1pt	TRUE	2022-03-18	APPROVED
+hucyzx	FALSE		
+i2l3oo	TRUE	2022-03-17	REMOVED
+i6336w	FALSE		
+iey5vi	FALSE		
+kc41jd	TRUE	2022-03-14	REMOVED
+kktiwe	TRUE	2022-03-14	APPROVED
+nkjgku	FALSE		
+ov5gd8	TRUE	2022-03-17	APPROVED
+qa16ua	FALSE		
+xciyse	TRUE	2022-03-16	APPROVED
+xvhk6d	TRUE	2022-03-17	APPROVED
+flag_id:
+string
+reviewed_by_yt:
+boolean
+reviewed_date:
+date
+reviewed_outcome:
+string
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pysp
