@@ -84,4 +84,37 @@ WHERE status = 'free'
 ## 5. Alternative Approach: PySpark SQL
 
 ```python
-from pyspark.sql imp
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2018").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic:
+-- filter status = 'free'
+-- filter list of users in who made call in Apr 2020
+-- find all users and return users who have not made a call in 2020
+
+
+SELECT user_id
+FROM rc_users
+WHERE status = 'free'
+    -- free user should not have made a call in apr 2020
+    AND user_id NOT IN (
+        -- users who made call in apr 2020
+        SELECT DISTINCT user_id
+        FROM rc_calls
+        WHERE DATE_PART('year', date) = '2020'
+            AND DATE_PART('month', date) = '04'
+    )
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
