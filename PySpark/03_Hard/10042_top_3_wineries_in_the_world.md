@@ -109,4 +109,52 @@ from pyspark.sql import SparkSession
 # Initialize Spark Session
 spark = SparkSession.builder.appName("StrataScratch_10042").getOrCreate()
 
-# If using raw SQL query on
+# If using raw SQL query on registered temporary tables:
+"""
+SELECT country,
+       COALESCE(MAX(top_winery), 'No top winery') top_winery,
+       COALESCE(MAX(second_winery), 'No second winery') second_winery,
+       COALESCE(MAX(third_winery), 'No third winery') third_winery
+FROM (
+    SELECT country,
+            CASE
+                WHEN ranking = 1 THEN winery || ' (' || ROUND(avg_points) || ')'
+                ELSE NULL
+                END
+            AS top_winery,
+            CASE
+                WHEN ranking = 2 THEN winery || ' (' || ROUND(avg_points) || ')'
+                ELSE NULL
+                END
+            AS second_winery,
+            CASE
+                WHEN ranking = 3 THEN winery || ' (' || ROUND(avg_points) || ')'
+                ELSE NULL
+                END
+            AS third_winery
+    FROM (
+        -- rank each winery by their avg in each country with the tiebreaker
+        SELECT country, 
+               winery, 
+               avg_points, 
+               DENSE_RANK() OVER(PARTITION BY country 
+                                 ORDER BY avg_points DESC, winery ASC) ranking
+        FROM (
+            -- compute the avg points for each winery
+            SELECT country, winery, AVG(points) AS avg_points
+            FROM winemag_p1
+            GROUP BY 1,2
+        ) compute_avg_points
+    ) rank_wineries
+) AS select_top_3_wineries
+GROUP BY 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
