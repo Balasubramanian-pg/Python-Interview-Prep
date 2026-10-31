@@ -126,4 +126,51 @@ bigint
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
    - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
-   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+'In these we have used left-anti join'
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql import *
+# Start writing code
+orders1 = orders.filter((col("order_date")>=to_date(lit('2019-02-01'),'yyyy-MM-dd')) & (col("order_date")<=to_date(lit('2019-03-01'),'yyyy-MM-dd'))).select("cust_id").distinct()
+# orders.show(truncate=False)
+df=customers.join(orders1,customers["id"]==orders1["cust_id"],"leftanti")
+# df.show(truncate=False)
+
+# To validate your solution, convert your final pySpark df to a pandas df
+df=df.select("first_name")
+# customers.toPandas()
+df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10142").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10142\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
