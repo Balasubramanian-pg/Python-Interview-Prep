@@ -50,4 +50,33 @@ event_details = playbook_events.select('user_id','location')
 playbook_events = (
     event_details.join(f.broadcast(playbook_users),on = 'user_id', how = 'inner').
     groupBy(f.col('location').alias('country'),'language').
-    agg(f.countDistinct("user_id").alias
+    agg(f.countDistinct("user_id").alias("n_speakers"))
+    .orderBy('country')
+    )
+# To validate your solution, convert your final pySpark df to a pandas df
+playbook_events.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9669").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9669\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
