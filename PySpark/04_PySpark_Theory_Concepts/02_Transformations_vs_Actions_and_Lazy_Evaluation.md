@@ -17,4 +17,37 @@ Transformations produce a new DataFrame from an existing one without modifying t
 
 ### 2.1 Narrow Transformations (No Shuffle)
 - Each input partition contributes to **at most one** output partition.
-- Can be executed entirely in parallel on each worker node in me
+- Can be executed entirely in parallel on each worker node in memory without network communication.
+- **Common Examples**:
+  - `df.select("colA", "colB")`
+  - `df.filter(F.col("age") > 25)`
+  - `df.withColumn("new_col", F.col("x") * 2)`
+  - `df.drop("temp_col")`
+  - `df.union(df2)` (when schemas and partitioning align)
+
+### 2.2 Wide Transformations (Requires Shuffle)
+- Each input partition can contribute to **multiple** output partitions.
+- Requires redistributing data across physical cluster nodes over the network, known as a **Shuffle**.
+- Defines the boundary between **Stages** in a Spark Job.
+- **Common Examples**:
+  - `df.groupBy("department").agg(F.avg("salary"))`
+  - `df1.join(df2, on="id", how="inner")`
+  - `df.distinct()` / `df.dropDuplicates()`
+  - `df.orderBy("created_at")` / `df.sort()`
+  - `df.repartition(100)`
+
+```
+Narrow Transformation (Pipelineable):
+Partition 1 [Row 1, Row 2] ---> Task 1 (filter + select) ---> Partition 1 [Row 2]
+Partition 2 [Row 3, Row 4] ---> Task 2 (filter + select) ---> Partition 2 [Row 4]
+
+Wide Transformation (Shuffle Barrier):
+Partition 1 [Dept A, Dept B] --\  /--> Shuffle Exchange --> Node 1 [Dept A, Dept A]
+Partition 2 [Dept A, Dept B] ---X---> Shuffle Exchange --> Node 2 [Dept B, Dept B]
+```
+
+---
+
+## 3. Actions: Triggering Execution
+
+Actions are operations that instr
