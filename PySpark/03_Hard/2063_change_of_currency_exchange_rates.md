@@ -72,4 +72,34 @@ WHERE t1.date = '2020-01-01'
 
 ## 5. Alternative Approach: PySpark SQL
 
-```p
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2063").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic: self-join to get the columns side by side for diff operations, need to join on two keys to have 1:1 match
+-- logic: we will also need to find exchange to USD ONLY
+
+-- ensure that we are minus from the latest date
+SELECT t1.source_currency, t2.exchange_rate - t1.exchange_rate AS difference
+FROM sf_exchange_rate t1
+JOIN sf_exchange_rate t2
+    ON t1.source_currency = t2.source_currency
+    AND t2.target_currency = t2.target_currency
+-- set the date for differencing
+WHERE t1.date = '2020-01-01'
+      AND t2.date = '2020-07-01'
+      AND t1.target_currency = 'USD'
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
