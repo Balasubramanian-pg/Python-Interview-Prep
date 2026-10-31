@@ -150,4 +150,59 @@ bigint
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
    - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
-   - If ranking or windowed calculations are needed, define explicit partition keys and order expressi
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.types import *
+from pyspark.sql import Window
+# Start writing code
+sf_transactions
+df = sf_transactions.withColumn("new_date",date_format('created_at','yyyy-MM'))
+df = df.withColumn("new_date_sum",sum("value").over(Window.partitionBy("new_date")))
+df1 = df.select("new_date","new_date_sum")
+df1 = df1.distinct()
+# df1.show(truncate=False)
+# df2 = df1.withColumn("row_number", row_number().over(Window.partitionBy("new_date").orderBy( "new_date")))
+# df2.show(truncate=False)
+wind = Window.partitionBy().orderBy(date_format("new_date","MM").cast('int'))
+df2 = df1.withColumn("prev_new_date_sum",lag(df1.new_date_sum).over(wind))
+# df2.show(truncate=False)
+df2 = df2.withColumn("revenue_diff_pct",round(((df2.new_date_sum-df2.prev_new_date_sum)/df2.prev_new_date_sum)*100,2))
+df3=df2.drop("new_date_sum","prev_new_date_sum")
+df3 = df3.withColumnRenamed("new_date","year_month")
+# df3.show(truncate=False)
+#To validate your solution, convert your final pySpark df to a pandas df
+df3.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10319").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10319\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
