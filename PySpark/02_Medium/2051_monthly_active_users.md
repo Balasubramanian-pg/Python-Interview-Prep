@@ -50,4 +50,30 @@ sf_events = sf_events.filter((F.col('record_date')>='2021-01-01') & (F.col('reco
 # We count the unique users found within that account's January data.
 monthly_count = sf_events.groupBy('account_id').agg(F.countDistinct('user_id')).alias("CountDatewise")
 
-# To validate your soluti
+# To validate your solution, convert your final pySpark df to a pandas df
+monthly_count.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2051").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2051\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
