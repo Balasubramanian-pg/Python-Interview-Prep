@@ -136,4 +136,50 @@ from pyspark.sql import *
 spark = SparkSession.builder.appName("app").getOrCreate()
 df=premium_accounts_by_day
 df=df.orderBy(col("entry_date"),col("account_id"))
-df2=df.filter(df.entry_d
+df2=df.filter(df.entry_date>="2022-02-14").where(df.final_price!=0)
+df1=df.filter(df.entry_date<"2022-02-14").where(df.final_price!=0)
+df2=df2.withColumnRenamed("entry_date","entry_date_plus_7").withColumn("entry_date_minus_7",date_sub(col("entry_date_plus_7"),7))
+df2=df2.withColumnRenamed("account_id","acc_id")
+group_df1 = df1.groupBy(col("entry_date")).count()
+# group_df1.show(truncate=False)
+# df1.show(truncate=False)
+# df2.show(truncate=False)
+df1.createOrReplaceTempView("df1")
+df2.createOrReplaceTempView("df2")
+joined_df2=spark.sql("select * from df2 d2 left join df1 d1 on d1.entry_date=d2.entry_date_minus_7 where d1.account_id==d2.acc_id")
+# joined_df2.show(truncate=False)
+# joined_df2 = df2.join(df1,on="entry_date",how="left").where(df2["acc_id"]==df1["account_id"])
+# joined_df2.show(truncate=False)
+group_joined_df2 = joined_df2.groupBy(col("entry_date")).count()
+group_joined_df2 = group_joined_df2.withColumnRenamed("count","premium_paid_accounts_after_7d")
+# group_joined_df2.show(truncate=False)
+premium_accounts_by_day = group_df1.join(group_joined_df2,on="entry_date",how="left")
+premium_accounts_by_day = premium_accounts_by_day.orderBy(col("entry_date"))
+# premium_accounts_by_day.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+premium_accounts_by_day.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2097").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2097\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
