@@ -79,4 +79,55 @@ FROM (
            NTILE(50) OVER(ORDER BY SUM(order_total)) AS ntile
     FROM doordash_delivery
     WHERE EXTRACT('MONTH' FROM customer_placed_order_datetime) = 5
-        AND EXTRACT('YEAR' FROM customer_placed_order
+        AND EXTRACT('YEAR' FROM customer_placed_order_datetime) = 2020
+    GROUP BY 1
+) restaurant_revenue
+WHERE ntile = 1
+ORDER BY 2 DESC
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2036").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- find restaurant and their revenue which falls in the bottom 2%
+
+-- logic:
+-- sum the total revenue for may 2020
+-- ntile(total_revenue) and bottom 2%
+-- filter restaurant if ntile = 1 (for ntile(50)) or ntile <= 2 (for ntile(100))
+
+SELECT restaurant_id,
+       total_revenue
+FROM (
+    SELECT restaurant_id,
+           SUM(order_total) total_revenue,
+           NTILE(50) OVER(ORDER BY SUM(order_total)) AS ntile
+    FROM doordash_delivery
+    WHERE EXTRACT('MONTH' FROM customer_placed_order_datetime) = 5
+        AND EXTRACT('YEAR' FROM customer_placed_order_datetime) = 2020
+    GROUP BY 1
+) restaurant_revenue
+WHERE ntile = 1
+ORDER BY 2 DESC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
