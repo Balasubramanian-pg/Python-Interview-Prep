@@ -91,3 +91,40 @@ bigint
 # Import your libraries
 import pyspark
 from pyspark.sql.functions import *
+# Start writing code
+df=customers
+df_orders=orders
+
+df1=df.join(df_orders,df.id==df_orders.cust_id,"left").drop(df_orders.id)
+df2=df1.groupby("id").agg(count("order_details").alias("total_orders"))
+df2=df2.orderBy(desc("total_orders")).limit(1)
+# df2.show(truncate=False)
+# df.show(truncate=False)
+df2.toPandas()
+# To validate your solution, convert your final pySpark df to a pandas df
+# customers.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9909").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9909\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
