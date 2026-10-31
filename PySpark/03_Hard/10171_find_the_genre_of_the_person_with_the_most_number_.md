@@ -1137,4 +1137,654 @@ year	category	nominee	movie	winner	id
 1997	actress in a supporting role	Minnie Driver	Good Will Hunting	FALSE	1099
 1995	actress in a supporting role	Mira Sorvino	Mighty Aphrodite	TRUE	1100
 1992	actress in a supporting role	Miranda Richardson	Damage	FALSE	1101
-1994	actress in a leading role	Miranda Richardson	Tom & Viv	
+1994	actress in a leading role	Miranda Richardson	Tom & Viv	FALSE	1102
+1936	actor in a supporting role	Mischa Auer	My Man Godfrey	FALSE	1103
+1957	actress in a supporting role	Miyoshi Umeki	Sayonara	TRUE	1104
+2009	actress in a supporting role	Mo'Nique	Precious: Based on the Novel 'Push' by Sapphire	TRUE	1105
+1948	actor	Montgomery Clift	The Search	FALSE	1106
+1951	actor	Montgomery Clift	A Place in the Sun	FALSE	1107
+1953	actor	Montgomery Clift	From Here to Eternity	FALSE	1108
+1961	actor in a supporting role	Montgomery Clift	Judgment at Nuremberg	FALSE	1109
+1942	actor	Monty Woolley	The Pied Piper	FALSE	1110
+1944	actor in a supporting role	Monty Woolley	Since You Went Away	FALSE	1111
+1987	actor in a supporting role	Morgan Freeman	Street Smart	FALSE	1112
+1989	actor in a leading role	Morgan Freeman	Driving Miss Daisy	FALSE	1113
+1994	actor in a leading role	Morgan Freeman	The Shawshank Redemption	FALSE	1114
+2004	actor in a supporting role	Morgan Freeman	Million Dollar Baby	TRUE	1115
+2009	actor in a leading role	Morgan Freeman	Invictus	FALSE	1116
+1956	actress	Nancy Kelly	The Bad Seed	FALSE	1117
+1950	actress in a supporting role	Nancy Olson	Sunset Blvd.	FALSE	1118
+2003	actress in a leading role	Naomi Watts	21 Grams	FALSE	1119
+2012	actress in a leading role	Naomi Watts	The Impossible	FALSE	1120
+2004	actress in a supporting role	Natalie Portman	Closer	FALSE	1121
+2010	actress in a leading role	Natalie Portman	Black Swan	TRUE	1122
+1955	actress in a supporting role	Natalie Wood	Rebel without a Cause	FALSE	1123
+1961	actress	Natalie Wood	Splendor in the Grass	FALSE	1124
+1963	actress	Natalie Wood	Love with the Proper Stranger	FALSE	1125
+1976	actor in a supporting role	Ned Beatty	Network	FALSE	1126
+1963	actor in a supporting role	Nick Adams	Twilight of Honor	FALSE	1127
+1991	actor in a leading role	Nick Nolte	The Prince of Tides	FALSE	1128
+1998	actor in a leading role	Nick Nolte	Affliction	FALSE	1129
+2011	actor in a supporting role	Nick Nolte	Warrior	FALSE	1130
+1995	actor in a leading role	Nicolas Cage	Leaving Las Vegas	TRUE	1131
+2002	actor in a leading role	Nicolas Cage	Adaptation	FALSE	1132
+2001	actress in a leading role	Nicole Kidman	Moulin Rouge	FALSE	1133
+2002	actress in a leading role	Nicole Kidman	The Hours	TRUE	1134
+2010	actress in a leading role	Nicole Kidman	Rabbit Hole	FALSE	1135
+1994	actor in a leading role	Nigel Hawthorne	The Madness of King George	FALSE	1136
+1954	actress in a supporting role	Nina Foch	Executive Suite	FALSE	1137
+1984	actor in a supporting role	Noriyuki 'Pat' Morita	The Karate Kid	FALSE	1138
+1987	actress in a supporting role	Norma Aleandro	Gaby - A True Story	FALSE	1139
+1936	actress	Norma Shearer	Romeo and Juliet	FALSE	1140
+1938	actress	Norma Shearer	Marie Antoinette	FALSE	1141
+2011	actress in a supporting role	Octavia Spencer	The Help	TRUE	1142
+1939	actress in a supporting role	Olivia de Havilland	Gone with the Wind	FALSE	1143
+1941	actress	Olivia de Havilland	Hold Back the Dawn	FALSE	1144
+1946	actress	Olivia de Havilland	To Each His Own	TRUE	1145
+1948	actress	Olivia de Havilland	The Snake Pit	FALSE	1146
+1949	actress	Olivia de Havilland	The Heiress	TRUE	1147
+1987	actress in a supporting role	Olympia Dukakis	Moonstruck	TRUE	1148
+1962	actor in a supporting role	Omar Sharif	Lawrence of Arabia	FALSE	1149
+1985	actress in a supporting role	Oprah Winfrey	The Color Purple	FALSE	1150
+1941	actor	Orson Welles	Citizen Kane	FALSE	1151
+1948	actor in a supporting role	Oscar Homolka	I Remember Mama	FALSE	1152
+1965	actor	Oskar Werner	Ship of Fools	FALSE	1153
+2003	actress in a supporting role	Patricia Clarkson	Pieces of April	FALSE	1154
+1941	actress in a supporting role	Patricia Collinge	The Little Foxes	FALSE	1155
+1963	actress	Patricia Neal	Hud	TRUE	1156
+1968	actress	Patricia Neal	The Subject Was Roses	FALSE	1157
+1962	actress in a supporting role	Patty Duke	The Miracle Worker	TRUE	1158
+1956	actress in a supporting role	Patty McCormack	The Bad Seed	FALSE	1159
+2005	actor in a supporting role	Paul Giamatti	Cinderella Man	FALSE	1160
+1943	actor	Paul Lukas	Watch on the Rhine	TRUE	1161
+1936	actor	Paul Muni	The Story of Louis Pasteur	TRUE	1162
+1937	actor	Paul Muni	The Life of Emile Zola	FALSE	1163
+1959	actor	Paul Muni	The Last Angry Man	FALSE	1164
+1958	actor	Paul Newman	Cat on a Hot Tin Roof	FALSE	1165
+1961	actor	Paul Newman	The Hustler	FALSE	1166
+1963	actor	Paul Newman	Hud	FALSE	1167
+1967	actor	Paul Newman	Cool Hand Luke	FALSE	1168
+1981	actor in a leading role	Paul Newman	Absence of Malice	FALSE	1169
+1982	actor in a leading role	Paul Newman	The Verdict	FALSE	1170
+1986	actor in a leading role	Paul Newman	The Color of Money	TRUE	1171
+1994	actor in a leading role	Paul Newman	Nobody's Fool	FALSE	1172
+2002	actor in a supporting role	Paul Newman	Road to Perdition	FALSE	1173
+1966	actor	Paul Scofield	A Man for All Seasons	TRUE	1174
+1994	actor in a supporting role	Paul Scofield	Quiz Show	FALSE	1175
+1972	actor	Paul Winfield	Sounder	FALSE	1176
+1943	actress in a supporting role	Paulette Goddard	So Proudly We Hail!	FALSE	1177
+1989	actress in a leading role	Pauline Collins	Shirley Valentine	FALSE	1178
+1984	actress in a supporting role	Peggy Ashcroft	A Passage to India	TRUE	1179
+1958	actress in a supporting role	Peggy Cass	Auntie Mame	FALSE	1180
+1955	actress in a supporting role	Peggy Lee	Pete Kelly's Blues	FALSE	1181
+1965	actress in a supporting role	Peggy Wood	The Sound of Music	FALSE	1182
+2006	actress in a leading role	Pen_lope Cruz	Volver	FALSE	1183
+2008	actress in a supporting role	Pen_lope Cruz	Vicky Cristina Barcelona	TRUE	1184
+2009	actress in a supporting role	Pen_lope Cruz	Nine	FALSE	1185
+1978	actress in a supporting role	Penelope Milford	Coming Home	FALSE	1186
+1993	actor in a supporting role	Pete Postlethwaite	In the Name of the Father	FALSE	1187
+1960	actor in a supporting role	Peter Falk	Murder, Inc.	FALSE	1188
+1961	actor in a supporting role	Peter Falk	Pocketful of Miracles	FALSE	1189
+1971	actor	Peter Finch	Sunday Bloody Sunday	FALSE	1190
+1976	actor in a leading role	Peter Finch	Network	TRUE	1191
+1977	actor in a supporting role	Peter Firth	Equus	FALSE	1192
+1997	actor in a leading role	Peter Fonda	Ulee's Gold	FALSE	1193
+1962	actor	Peter O'Toole	Lawrence of Arabia	FALSE	1194
+1964	actor	Peter O'Toole	Becket	FALSE	1195
+1968	actor	Peter O'Toole	The Lion in Winter	FALSE	1196
+1969	actor	Peter O'Toole	Goodbye, Mr. Chips	FALSE	1197
+1972	actor	Peter O'Toole	The Ruling Class	FALSE	1198
+1980	actor in a leading role	Peter O'Toole	The Stunt Man	FALSE	1199
+1982	actor in a leading role	Peter O'Toole	My Favorite Year	FALSE	1200
+2006	actor in a leading role	Peter O'Toole	Venus	FALSE	1201
+1964	actor	Peter Sellers	Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb	FALSE	1202
+1979	actor in a leading role	Peter Sellers	Being There	FALSE	1203
+1951	actor in a supporting role	Peter Ustinov	Quo Vadis	FALSE	1204
+1960	actor in a supporting role	Peter Ustinov	Spartacus	TRUE	1205
+1964	actor in a supporting role	Peter Ustinov	Topkapi	TRUE	1206
+2005	actor in a leading role	Philip Seymour Hoffman	Capote	TRUE	1207
+2007	actor in a supporting role	Philip Seymour Hoffman	Charlie Wilson's War	FALSE	1208
+2008	actor in a supporting role	Philip Seymour Hoffman	Doubt	FALSE	1209
+2012	actor in a supporting role	Philip Seymour Hoffman	The Master	FALSE	1210
+1961	actress	Piper Laurie	The Hustler	FALSE	1211
+1976	actress in a supporting role	Piper Laurie	Carrie	FALSE	1212
+1986	actress in a supporting role	Piper Laurie	Children of a Lesser God	FALSE	1213
+2002	actress in a supporting role	Queen Latifah	Chicago	FALSE	1214
+1977	actress in a supporting role	Quinn Cummings	The Goodbye Girl	FALSE	1215
+2012	actress in a leading role	Quvenzhan_ Wallis	Beasts of the Southern Wild	FALSE	1216
+1998	actress in a supporting role	Rachel Griffiths	Hilary and Jackie	FALSE	1217
+1963	actress	Rachel Roberts	This Sporting Life	FALSE	1218
+2005	actress in a supporting role	Rachel Weisz	The Constant Gardener	TRUE	1219
+1937	actor in a supporting role	Ralph Bellamy	The Awful Truth	FALSE	1220
+1993	actor in a supporting role	Ralph Fiennes	Schindler's List	FALSE	1221
+1996	actor in a leading role	Ralph Fiennes	The English Patient	FALSE	1222
+1949	actor in a supporting role	Ralph Richardson	The Heiress	FALSE	1223
+1984	actor in a supporting role	Ralph Richardson	Greystoke: The Legend of Tarzan, Lord of the Apes	FALSE	1224
+1973	actor in a supporting role	Randy Quaid	The Last Detail	FALSE	1225
+1945	actor	Ray Milland	The Lost Weekend	TRUE	1226
+1940	actor	Raymond Massey	Abe Lincoln in Illinois	FALSE	1227
+1957	actor in a supporting role	Red Buttons	Sayonara	TRUE	1228
+2005	actress in a leading role	Reese Witherspoon	Walk the Line	TRUE	1229
+2001	actress in a leading role	Ren_e Zellweger	Bridget Jones's Diary	FALSE	1230
+2002	actress in a leading role	Ren_e Zellweger	Chicago	FALSE	1231
+2003	actress in a supporting role	Ren_e Zellweger	Cold Mountain	TRUE	1232
+1963	actor	Rex Harrison	Cleopatra	FALSE	1233
+1964	actor	Rex Harrison	My Fair Lady	TRUE	1234
+1952	actor in a supporting role	Richard Burton	My Cousin Rachel	FALSE	1235
+1953	actor	Richard Burton	The Robe	FALSE	1236
+1964	actor	Richard Burton	Becket	FALSE	1237
+1965	actor	Richard Burton	The Spy Who Came In from the Cold	FALSE	1238
+1966	actor	Richard Burton	Who's Afraid of Virginia Woolf?	FALSE	1239
+1969	actor	Richard Burton	Anne of the Thousand Days	FALSE	1240
+1977	actor in a leading role	Richard Burton	Equus	FALSE	1241
+1970	actor in a supporting role	Richard Castellano	Lovers and Other Strangers	FALSE	1242
+1977	actor in a leading role	Richard Dreyfuss	The Goodbye Girl	TRUE	1243
+1995	actor in a leading role	Richard Dreyfuss	Mr. Holland's Opus	FALSE	1244
+1978	actor in a supporting role	Richard Farnsworth	Comes a Horseman	FALSE	1245
+1999	actor in a leading role	Richard Farnsworth	The Straight Story	FALSE	1246
+1963	actor	Richard Harris	This Sporting Life	FALSE	1247
+1990	actor in a leading role	Richard Harris	The Field	FALSE	1248
+1971	actor in a supporting role	Richard Jaeckel	Sometimes a Great Notion	FALSE	1249
+2008	actor in a leading role	Richard Jenkins	The Visitor	FALSE	1250
+1949	actor	Richard Todd	The Hasty Heart	FALSE	1251
+1947	actor in a supporting role	Richard Widmark	Kiss of Death	FALSE	1252
+2006	actress in a supporting role	Rinko Kikuchi	Babel	FALSE	1253
+1983	actor in a supporting role	Rip Torn	Cross Creek	FALSE	1254
+1961	actress in a supporting role	Rita Moreno	West Side Story	TRUE	1255
+1988	actor in a supporting role	River Phoenix	Running on Empty	FALSE	1256
+1974	actor in a supporting role	Robert De Niro	The Godfather Part II	TRUE	1257
+1976	actor in a leading role	Robert De Niro	Taxi Driver	FALSE	1258
+1978	actor in a leading role	Robert De Niro	The Deer Hunter	FALSE	1259
+1980	actor in a leading role	Robert De Niro	Raging Bull	TRUE	1260
+1990	actor in a leading role	Robert De Niro	Awakenings	FALSE	1261
+1991	actor in a leading role	Robert De Niro	Cape Fear	FALSE	1262
+2012	actor in a supporting role	Robert De Niro	Silver Linings Playbook	FALSE	1263
+1938	actor	Robert Donat	The Citadel	FALSE	1264
+1939	actor	Robert Donat	Goodbye, Mr. Chips	TRUE	1265
+1992	actor in a leading role	Robert Downey Jr.	Chaplin	FALSE	1266
+2008	actor in a supporting role	Robert Downey Jr.	Tropic Thunder	FALSE	1267
+1972	actor in a supporting role	Robert Duvall	The Godfather	FALSE	1268
+1979	actor in a supporting role	Robert Duvall	Apocalypse Now	FALSE	1269
+1980	actor in a leading role	Robert Duvall	The Great Santini	FALSE	1270
+1983	actor in a leading role	Robert Duvall	Tender Mercies	TRUE	1271
+1997	actor in a leading role	Robert Duvall	The Apostle	FALSE	1272
+1998	actor in a supporting role	Robert Duvall	A Civil Action	FALSE	1273
+1997	actor in a supporting role	Robert Forster	Jackie Brown	FALSE	1274
+1985	actor in a supporting role	Robert Loggia	Jagged Edge	FALSE	1275
+1945	actor in a supporting role	Robert Mitchum	G. I. Joe	FALSE	1276
+1937	actor	Robert Montgomery	Night Must Fall	FALSE	1277
+1941	actor	Robert Montgomery	Here Comes Mr. Jordan	FALSE	1278
+1938	actor in a supporting role	Robert Morley	Marie Antoinette	FALSE	1279
+1982	actor in a supporting role	Robert Preston	Victor/Victoria	FALSE	1280
+1973	actor	Robert Redford	The Sting	FALSE	1281
+1947	actor in a supporting role	Robert Ryan	Crossfire	FALSE	1282
+1966	actor in a supporting role	Robert Shaw	A Man for All Seasons	FALSE	1283
+1956	actor in a supporting role	Robert Stack	Written on the Wind	FALSE	1284
+1953	actor in a supporting role	Robert Strauss	Stalag 17	FALSE	1285
+1959	actor in a supporting role	Robert Vaughn	The Young Philadelphians	FALSE	1286
+1998	actor in a leading role	Roberto Benigni	Life Is Beautiful	TRUE	1287
+1987	actor in a leading role	Robin Williams	Good Morning, Vietnam	FALSE	1288
+1989	actor in a leading role	Robin Williams	Dead Poets Society	FALSE	1289
+1991	actor in a leading role	Robin Williams	The Fisher King	FALSE	1290
+1997	actor in a supporting role	Robin Williams	Good Will Hunting	TRUE	1291
+1956	actor	Rock Hudson	Giant	FALSE	1292
+1954	actor in a supporting role	Rod Steiger	On the Waterfront	FALSE	1293
+1965	actor	Rod Steiger	The Pawnbroker	FALSE	1294
+1967	actor	Rod Steiger	In the Heat of the Night	TRUE	1295
+1937	actor in a supporting role	Roland Young	Topper	FALSE	1296
+1968	actor	Ron Moody	Oliver!	FALSE	1297
+1942	actor	Ronald Colman	Random Harvest	FALSE	1298
+1947	actor	Ronald Colman	A Double Life	TRUE	1299
+1975	actress in a supporting role	Ronee Blakley	Nashville	FALSE	1300
+2011	actress in a leading role	Rooney Mara	The Girl with the Dragon Tattoo	FALSE	1301
+1942	actress	Rosalind Russell	My Sister Eileen	FALSE	1302
+1946	actress	Rosalind Russell	Sister Kenny	FALSE	1303
+1947	actress	Rosalind Russell	Mourning Becomes Electra	FALSE	1304
+1958	actress	Rosalind Russell	Auntie Mame	FALSE	1305
+1994	actress in a supporting role	Rosemary Harris	Tom & Viv	FALSE	1306
+1993	actress in a supporting role	Rosie Perez	Fearless	FALSE	1307
+1971	actor in a supporting role	Roy Scheider	The French Connection	FALSE	1308
+1979	actor in a leading role	Roy Scheider	All That Jazz	FALSE	1309
+2007	actress in a supporting role	Ruby Dee	American Gangster	FALSE	1310
+1969	actor in a supporting role	Rupert Crosse	The Reivers	FALSE	1311
+1957	actor in a supporting role	Russ Tamblyn	Peyton Place	FALSE	1312
+1999	actor in a leading role	Russell Crowe	The Insider	FALSE	1313
+2000	actor in a leading role	Russell Crowe	Gladiator	TRUE	1314
+2001	actor in a leading role	Russell Crowe	A Beautiful Mind	FALSE	1315
+1965	actress in a supporting role	Ruth Gordon	Inside Daisy Clover	FALSE	1316
+1968	actress in a supporting role	Ruth Gordon	Rosemary's Baby	TRUE	1317
+1940	actress in a supporting role	Ruth Hussey	The Philadelphia Story	FALSE	1318
+2006	actor in a leading role	Ryan Gosling	Half Nelson	FALSE	1319
+1970	actor	Ryan O'Neal	Love Story	FALSE	1320
+1955	actor in a supporting role	Sal Mineo	Rebel without a Cause	FALSE	1321
+1960	actor in a supporting role	Sal Mineo	Exodus	FALSE	1322
+1979	actress in a leading role	Sally Field	Norma Rae	TRUE	1323
+1984	actress in a leading role	Sally Field	Places in the Heart	TRUE	1324
+2012	actress in a supporting role	Sally Field	Lincoln	FALSE	1325
+1970	actress in a supporting role	Sally Kellerman	M*A*S*H	FALSE	1326
+1987	actress in a leading role	Sally Kirkland	Anna	FALSE	1327
+2002	actress in a leading role	Salma Hayek	Frida	FALSE	1328
+1950	actor in a supporting role	Sam Jaffe	The Asphalt Jungle	FALSE	1329
+1983	actor in a supporting role	Sam Shepard	The Right Stuff	FALSE	1330
+1984	actor in a leading role	Sam Waterston	The Killing Fields	FALSE	1331
+1965	actress	Samantha Eggar	The Collector	FALSE	1332
+1999	actress in a supporting role	Samantha Morton	Sweet and Lowdown	FALSE	1333
+2003	actress in a leading role	Samantha Morton	In America	FALSE	1334
+1994	actor in a supporting role	Samuel L. Jackson	Pulp Fiction	FALSE	1335
+2009	actress in a leading role	Sandra Bullock	The Blind Side	TRUE	1336
+1966	actress in a supporting role	Sandy Dennis	Who's Afraid of Virginia Woolf?	TRUE	1337
+2007	actress in a supporting role	Saoirse Ronan	Atonement	FALSE	1338
+1941	actress in a supporting role	Sara Allgood	How Green Was My Valley	FALSE	1339
+1970	actress	Sarah Miles	Ryan's Daughter	FALSE	1340
+1987	actor in a supporting role	Sean Connery	The Untouchables	TRUE	1341
+1995	actor in a leading role	Sean Penn	Dead Man Walking	FALSE	1342
+1999	actor in a leading role	Sean Penn	Sweet and Lowdown	FALSE	1343
+2001	actor in a leading role	Sean Penn	I Am Sam	FALSE	1344
+2003	actor in a leading role	Sean Penn	Mystic River	TRUE	1345
+2008	actor in a leading role	Sean Penn	Milk	TRUE	1346
+1957	actor in a supporting role	Sessue Hayakawa	The Bridge on the River Kwai	FALSE	1347
+1968	actor in a supporting role	Seymour Cassel	Faces	FALSE	1348
+1995	actress in a leading role	Sharon Stone	Casino	FALSE	1349
+1951	actress	Shelley Winters	A Place in the Sun	FALSE	1350
+1959	actress in a supporting role	Shelley Winters	The Diary of Anne Frank	TRUE	1351
+1965	actress in a supporting role	Shelley Winters	A Patch of Blue	TRUE	1352
+1972	actress in a supporting role	Shelley Winters	The Poseidon Adventure	FALSE	1353
+1952	actress	Shirley Booth	Come Back, Little Sheba	TRUE	1354
+1960	actress in a supporting role	Shirley Jones	Elmer Gantry	TRUE	1355
+1960	actress in a supporting role	Shirley Knight	The Dark at the Top of the Stairs	FALSE	1356
+1962	actress in a supporting role	Shirley Knight	Sweet Bird of Youth	FALSE	1357
+1958	actress	Shirley MacLaine	Some Came Running	FALSE	1358
+1960	actress	Shirley MacLaine	The Apartment	FALSE	1359
+1963	actress	Shirley MacLaine	Irma La Douce	FALSE	1360
+1977	actress in a leading role	Shirley MacLaine	The Turning Point	FALSE	1361
+1983	actress in a leading role	Shirley MacLaine	Terms of Endearment	TRUE	1362
+2003	actress in a supporting role	Shohreh Aghdashloo	House of Sand and Fog	FALSE	1363
+1958	actor	Sidney Poitier	The Defiant Ones	FALSE	1364
+1963	actor	Sidney Poitier	Lilies of the Field	TRUE	1365
+1986	actress in a leading role	Sigourney Weaver	Aliens	FALSE	1366
+1988	actress in a leading role	Sigourney Weaver	Gorillas in the Mist	FALSE	1367
+1988	actress in a supporting role	Sigourney Weaver	Working Girl	FALSE	1368
+1959	actress	Simone Signoret	Room at the Top	TRUE	1369
+1965	actress	Simone Signoret	Ship of Fools	FALSE	1370
+1956	actor	Sir Laurence Olivier	Richard III	FALSE	1371
+1976	actress in a leading role	Sissy Spacek	Carrie	FALSE	1372
+1980	actress in a leading role	Sissy Spacek	Coal Miner's Daughter	TRUE	1373
+1982	actress in a leading role	Sissy Spacek	Missing	FALSE	1374
+1984	actress in a leading role	Sissy Spacek	The River	FALSE	1375
+1986	actress in a leading role	Sissy Spacek	Crimes of the Heart	FALSE	1376
+2001	actress in a leading role	Sissy Spacek	In the Bedroom	FALSE	1377
+1968	actress in a supporting role	Sondra Locke	The Heart Is a Lonely Hunter	FALSE	1378
+1961	actress	Sophia Loren	Two Women	TRUE	1379
+1964	actress	Sophia Loren	Marriage Italian Style	FALSE	1380
+2004	actress in a supporting role	Sophie Okonedo	Hotel Rwanda	FALSE	1381
+1936	actor	Spencer Tracy	San Francisco	FALSE	1382
+1937	actor	Spencer Tracy	Captains Courageous	TRUE	1383
+1938	actor	Spencer Tracy	Boys Town	TRUE	1384
+1950	actor	Spencer Tracy	Father of the Bride	FALSE	1385
+1955	actor	Spencer Tracy	Bad Day at Black Rock	FALSE	1386
+1958	actor	Spencer Tracy	The Old Man and the Sea	FALSE	1387
+1960	actor	Spencer Tracy	Inherit the Wind	FALSE	1388
+1961	actor	Spencer Tracy	Judgment at Nuremberg	FALSE	1389
+1967	actor	Spencer Tracy	Guess Who's Coming to Dinner	FALSE	1390
+1938	actress in a supporting role	Spring Byington	You Can't Take It with You	FALSE	1391
+1964	actor in a supporting role	Stanley Holloway	My Fair Lady	FALSE	1392
+2009	actor in a supporting role	Stanley Tucci	The Lovely Bones	FALSE	1393
+1992	actor in a leading role	Stephen Rea	The Crying Game	FALSE	1394
+1966	actor	Steve McQueen	The Sand Pebbles	FALSE	1395
+1993	actress in a leading role	Stockard Channing	Six Degrees of Separation	FALSE	1396
+1936	actor in a supporting role	Stuart Erwin	Pigskin Parade	FALSE	1397
+1961	actor	Stuart Whitman	The Mark	FALSE	1398
+1947	actress	Susan Hayward	Smash-Up--The Story of a Woman	FALSE	1399
+1949	actress	Susan Hayward	My Foolish Heart	FALSE	1400
+1952	actress	Susan Hayward	With a Song in My Heart	FALSE	1401
+1955	actress	Susan Hayward	I'll Cry Tomorrow	FALSE	1402
+1958	actress	Susan Hayward	I Want to Live!	TRUE	1403
+1959	actress in a supporting role	Susan Kohner	Imitation of Life	FALSE	1404
+1942	actress in a supporting role	Susan Peters	Random Harvest	FALSE	1405
+1981	actress in a leading role	Susan Sarandon	Atlantic City	FALSE	1406
+1991	actress in a leading role	Susan Sarandon	Thelma & Louise	FALSE	1407
+1992	actress in a leading role	Susan Sarandon	Lorenzo's Oil	FALSE	1408
+1994	actress in a leading role	Susan Sarandon	The Client	FALSE	1409
+1995	actress in a leading role	Susan Sarandon	Dead Man Walking	TRUE	1410
+1972	actress in a supporting role	Susan Tyrrell	Fat City	FALSE	1411
+1969	actress in a supporting role	Susannah York	They Shoot Horses, Don't They?	FALSE	1412
+1941	actor in a supporting role	Sydney Greenstreet	The Maltese Falcon	FALSE	1413
+1976	actor in a leading role	Sylvester Stallone	Rocky	FALSE	1414
+1969	actress in a supporting role	Sylvia Miles	Midnight Cowboy	FALSE	1415
+1975	actress in a supporting role	Sylvia Miles	Farewell, My Lovely	FALSE	1416
+1973	actress in a supporting role	Sylvia Sidney	Summer Wishes, Winter Dreams	FALSE	1417
+1974	actress in a supporting role	Talia Shire	The Godfather Part II	FALSE	1418
+1976	actress in a leading role	Talia Shire	Rocky	FALSE	1419
+2008	actress in a supporting role	Taraji P. Henson	The Curious Case of Benjamin Button	FALSE	1420
+1973	actress in a supporting role	Tatum O'Neal	Paper Moon	TRUE	1421
+1962	actor in a supporting role	Telly Savalas	Birdman of Alcatraz	FALSE	1422
+1962	actor in a supporting role	Terence Stamp	Billy Budd	FALSE	1423
+1941	actress in a supporting role	Teresa Wright	The Little Foxes	FALSE	1424
+1942	actress	Teresa Wright	The Pride of the Yankees	FALSE	1425
+1942	actress in a supporting role	Teresa Wright	Mrs. Miniver	TRUE	1426
+1982	actress in a supporting role	Teri Garr	Tootsie	FALSE	1427
+2005	actor in a leading role	Terrence Howard	Hustle & Flow	FALSE	1428
+1952	actress in a supporting role	Terry Moore	Come Back, Little Sheba	FALSE	1429
+1986	actress in a supporting role	Tess Harper	Crimes of the Heart	FALSE	1430
+1950	actress in a supporting role	Thelma Ritter	All about Eve	FALSE	1431
+1951	actress in a supporting role	Thelma Ritter	The Mating Season	FALSE	1432
+1952	actress in a supporting role	Thelma Ritter	With a Song in My Heart	FALSE	1433
+1953	actress in a supporting role	Thelma Ritter	Pickup on South Street	FALSE	1434
+1959	actress in a supporting role	Thelma Ritter	Pillow Talk	FALSE	1435
+1962	actress in a supporting role	Thelma Ritter	Birdman of Alcatraz	FALSE	1436
+1958	actor in a supporting role	Theodore Bikel	The Defiant Ones	FALSE	1437
+1947	actor in a supporting role	Thomas Gomez	Ride the Pink Horse	FALSE	1438
+2004	actor in a supporting role	Thomas Haden Church	Sideways	FALSE	1439
+1937	actor in a supporting role	Thomas Mitchell	The Hurricane	FALSE	1440
+1939	actor in a supporting role	Thomas Mitchell	Stagecoach	TRUE	1441
+2007	actress in a supporting role	Tilda Swinton	Michael Clayton	TRUE	1442
+2003	actor in a supporting role	Tim Robbins	Mystic River	TRUE	1443
+1995	actor in a supporting role	Tim Roth	Rob Roy	FALSE	1444
+1980	actor in a supporting role	Timothy Hutton	Ordinary People	TRUE	1445
+1986	actor in a supporting role	Tom Berenger	Platoon	FALSE	1446
+1983	actor in a leading role	Tom Conti	Reuben, Reuben	FALSE	1447
+1965	actor in a supporting role	Tom Courtenay	Doctor Zhivago	FALSE	1448
+1983	actor in a leading role	Tom Courtenay	The Dresser	FALSE	1449
+1989	actor in a leading role	Tom Cruise	Born on the Fourth of July	FALSE	1450
+1996	actor in a leading role	Tom Cruise	Jerry Maguire	FALSE	1451
+1999	actor in a supporting role	Tom Cruise	Magnolia	FALSE	1452
+1988	actor in a leading role	Tom Hanks	Big	FALSE	1453
+1993	actor in a leading role	Tom Hanks	Philadelphia	TRUE	1454
+1994	actor in a leading role	Tom Hanks	Forrest Gump	TRUE	1455
+1998	actor in a leading role	Tom Hanks	Saving Private Ryan	FALSE	1456
+2000	actor in a leading role	Tom Hanks	Cast Away	FALSE	1457
+1984	actor in a leading role	Tom Hulce	Amadeus	FALSE	1458
+1954	actor in a supporting role	Tom Tully	The Caine Mutiny	FALSE	1459
+2001	actor in a leading role	Tom Wilkinson	In the Bedroom	FALSE	1460
+2007	actor in a supporting role	Tom Wilkinson	Michael Clayton	FALSE	1461
+1991	actor in a supporting role	Tommy Lee Jones	JFK	FALSE	1462
+1993	actor in a supporting role	Tommy Lee Jones	The Fugitive	TRUE	1463
+2007	actor in a leading role	Tommy Lee Jones	In the Valley of Elah	FALSE	1464
+2012	actor in a supporting role	Tommy Lee Jones	Lincoln	FALSE	1465
+1999	actress in a supporting role	Toni Collette	The Sixth Sense	FALSE	1466
+1958	actor	Tony Curtis	The Defiant Ones	FALSE	1467
+1971	actor	Topol	Fiddler on the Roof	FALSE	1468
+1960	actor	Trevor Howard	Sons and Lovers	FALSE	1469
+1977	actress in a supporting role	Tuesday Weld	Looking for Mr. Goodbar	FALSE	1470
+1994	actress in a supporting role	Uma Thurman	Pulp Fiction	FALSE	1471
+1961	actress in a supporting role	Una Merkel	Summer and Smoke	FALSE	1472
+1974	actress in a supporting role	Valentina Cortese	Day for Night	FALSE	1473
+1974	actress	Valerie Perrine	Lenny	FALSE	1474
+1942	actor in a supporting role	Van Heflin	Johnny Eager	TRUE	1475
+1966	actress	Vanessa Redgrave	Morgan!	FALSE	1476
+1968	actress	Vanessa Redgrave	Isadora	FALSE	1477
+1971	actress	Vanessa Redgrave	Mary, Queen of Scots	FALSE	1478
+1977	actress in a supporting role	Vanessa Redgrave	Julia	TRUE	1479
+1984	actress in a leading role	Vanessa Redgrave	The Bostonians	FALSE	1480
+1992	actress in a supporting role	Vanessa Redgrave	Howards End	FALSE	1481
+2009	actress in a supporting role	Vera Farmiga	Up in the Air	FALSE	1482
+1962	actor in a supporting role	Victor Buono	What Ever Happened to Baby Jane?	FALSE	1483
+1952	actor in a supporting role	Victor McLaglen	The Quiet Man	FALSE	1484
+2007	actor in a leading role	Viggo Mortensen	Eastern Promises	FALSE	1485
+1973	actor in a supporting role	Vincent Gardenia	Bang the Drum Slowly	FALSE	1486
+1987	actor in a supporting role	Vincent Gardenia	Moonstruck	FALSE	1487
+2008	actress in a supporting role	Viola Davis	Doubt	FALSE	1488
+2011	actress in a leading role	Viola Davis	The Help	FALSE	1489
+2004	actress in a supporting role	Virginia Madsen	Sideways	FALSE	1490
+1957	actor in a supporting role	Vittorio De Sica	A Farewell to Arms	FALSE	1491
+1939	actress	Vivien Leigh	Gone with the Wind	TRUE	1492
+1951	actress	Vivien Leigh	A Streetcar Named Desire	TRUE	1493
+1966	actress in a supporting role	Vivien Merchant	Alfie	FALSE	1494
+1936	actor in a supporting role	Walter Brennan	Come and Get It	TRUE	1495
+1938	actor in a supporting role	Walter Brennan	Kentucky	TRUE	1496
+1940	actor in a supporting role	Walter Brennan	The Westerner	TRUE	1497
+1941	actor in a supporting role	Walter Brennan	Sergeant York	FALSE	1498
+1936	actor	Walter Huston	Dodsworth	FALSE	1499
+1941	actor	Walter Huston	All That Money Can Buy	FALSE	1500
+1942	actor in a supporting role	Walter Huston	Yankee Doodle Dandy	FALSE	1501
+1948	actor in a supporting role	Walter Huston	The Treasure of the Sierra Madre	TRUE	1502
+1966	actor in a supporting role	Walter Matthau	The Fortune Cookie	TRUE	1503
+1971	actor	Walter Matthau	Kotch	FALSE	1504
+1975	actor	Walter Matthau	The Sunshine Boys	FALSE	1505
+1942	actor	Walter Pidgeon	Mrs. Miniver	FALSE	1506
+1943	actor	Walter Pidgeon	Madame Curie	FALSE	1507
+1967	actor	Warren Beatty	Bonnie and Clyde	FALSE	1508
+1978	actor in a leading role	Warren Beatty	Heaven Can Wait	FALSE	1509
+1981	actor in a leading role	Warren Beatty	Reds	FALSE	1510
+1991	actor in a leading role	Warren Beatty	Bugsy	FALSE	1511
+1938	actress	Wendy Hiller	Pygmalion	FALSE	1512
+1958	actress in a supporting role	Wendy Hiller	Separate Tables	TRUE	1513
+1966	actress in a supporting role	Wendy Hiller	A Man for All Seasons	FALSE	1514
+1985	actress in a leading role	Whoopi Goldberg	The Color Purple	FALSE	1515
+1990	actress in a supporting role	Whoopi Goldberg	Ghost	TRUE	1516
+2001	actor in a leading role	Will Smith	Ali	FALSE	1517
+2006	actor in a leading role	Will Smith	The Pursuit of Happyness	FALSE	1518
+1986	actor in a supporting role	Willem Dafoe	Platoon	FALSE	1519
+2000	actor in a supporting role	Willem Dafoe	Shadow of the Vampire	FALSE	1520
+1942	actor in a supporting role	William Bendix	Wake Island	FALSE	1521
+1946	actor in a supporting role	William Demarest	The Jolson Story	FALSE	1522
+1940	actor in a supporting role	William Gargan	They Knew What They Wanted	FALSE	1523
+1996	actor in a supporting role	William H. Macy	Fargo	FALSE	1524
+1985	actor in a supporting role	William Hickey	Prizzi's Honor	FALSE	1525
+1950	actor	William Holden	Sunset Blvd.	FALSE	1526
+1953	actor	William Holden	Stalag 17	TRUE	1527
+1976	actor in a leading role	William Holden	Network	FALSE	1528
+1985	actor in a leading role	William Hurt	Kiss of the Spider Woman	TRUE	1529
+1986	actor in a leading role	William Hurt	Children of a Lesser God	FALSE	1530
+1987	actor in a leading role	William Hurt	Broadcast News	FALSE	1531
+2005	actor in a supporting role	William Hurt	A History of Violence	FALSE	1532
+1936	actor	William Powell	My Man Godfrey	FALSE	1533
+1947	actor	William Powell	Life with Father	FALSE	1534
+1993	actress in a supporting role	Winona Ryder	The Age of Innocence	FALSE	1535
+1994	actress in a leading role	Winona Ryder	Little Women	FALSE	1536
+1977	actor in a leading role	Woody Allen	Annie Hall	FALSE	1537
+1996	actor in a leading role	Woody Harrelson	The People vs. Larry Flynt	FALSE	1538
+2009	actor in a supporting role	Woody Harrelson	The Messenger	FALSE	1539
+1956	actor	Yul Brynner	The King and I	TRUE	1540
+year:
+bigint
+category:
+string
+nominee:
+string
+movie:
+string
+winner:
+boolean
+id:
+bigint
+nominee_information
+Preview
+name	amg_person_id	top_genre	birthday	id
+Ruby Dee	P 18243	Drama	1924-10-27	234
+Hal Holbrook	P 32790	Drama	1925-02-17	241
+Cloris Leachman	P 41211	Comedy	1926-04-30	257
+Rosemary Harris	P 30676	Drama	1930-09-19	301
+Martin Landau	P 40247	Spy Film	1931-06-20	312
+Ian Holm	P 32962	Drama	1931-09-12	315
+Debbie Reynolds	P 59782	Comedy	1932-04-01	321
+Michael Caine	P 10198	Thriller	1933-03-14	335
+Alan Alda	P 79264	Comedy	1936-01-28	366
+Albert Finney	P 23545	Drama	1936-05-09	371
+Morgan Freeman	P 90514	Drama	1937-06-01	386
+Anthony Hopkins	P 94812	Drama	1937-12-31	391
+Ian McKellen	P 47684	Drama	1939-05-25	409
+Tom Conti	P 14627	Drama	1941-11-22	437
+Bob Hoskins	P 33185	Drama	1942-10-26	447
+Joe Pesci	P 56237	Comedy	1943-02-09	448
+Robert De Niro	P 17593	Drama	1943-08-17	452
+Sam Shepard	P111142	Drama	1943-11-05	456
+Ben Kingsley	P 38383	Drama	1943-12-31	458
+Gary Busey	P  9844	Drama	1944-06-29	463
+Michael Douglas	P 88134	Drama	1944-09-25	464
+Sally Kirkland	P 38510	Drama	1944-10-31	465
+Helen Mirren	P 49576	Drama	1945-07-26	471
+Diane Keaton	P 96996	Comedy	1946-01-05	476
+Bruce Davison	P 17454	Drama	1946-06-28	482
+Tommy Lee Jones	P 36238	Drama	1946-09-15	485
+Stephen Rea	P 59079	Drama	1946-10-31	488
+Sally Field	P 89714	Comedy	1946-11-06	489
+Richard Jenkins	P 35464	Drama	1947-05-04	494
+Kevin Kline	P 38699	Comedy	1947-10-24	500
+Dianne Wiest	P 76163	Drama	1948-03-28	506
+Kathy Bates	P  4516	Drama	1948-06-28	508
+Samuel L. Jackson	P 34866	Drama	1948-12-21	511
+Gerard Depardieu	P 87517	Drama	1948-12-27	512
+David Strathairn	P 68638	Drama	1949-01-26	513
+Jessica Lange	P 40447	Drama	1949-04-20	514
+Jim Broadbent	P  8575	Drama	1949-05-24	515
+Sigourney Weaver	P 75144	Comedy	1949-10-08	518
+Jeff Bridges	P  3197	Drama	1949-12-04	519
+Julie Walters	P 74515	Drama	1950-02-22	521
+Ed Harris	P 30614	Drama	1950-11-28	531
+Chazz Palminteri	P 54860	Drama	1952-05-15	540
+Liam Neeson	P 52070	Drama	1952-06-07	541
+Dan Aykroyd	P 80282	Comedy	1952-07-01	544
+Denzel Washington	P 74843	Drama	1954-12-28	562
+Kevin Costner	P 15189	History [nf]	1955-01-18	563
+Willem Dafoe	P 16547	Drama	1955-07-22	570
+Whoopi Goldberg	P 27431	Comedy	1955-11-13	573
+Joan Allen	P  1026	Drama	1956-08-20	580
+Christoph Waltz	P221135	Drama	1956-10-04	581
+Daniel Day Lewis	P 17559	Drama	1957-04-29	582
+Daniel Day-Lewis	P 17559	Drama	1957-04-29	583
+Frances McDormand	P 47305	Drama	1957-06-23	584
+Sharon Stone	P 68496	Drama	1958-03-10	588
+Gary Oldman	P 53946	Drama	1958-03-21	590
+Alec Baldwin	P  3515	Comedy	1958-04-03	591
+Michelle Pfeiffer	P 56469	Drama	1958-04-29	592
+Angela Bassett	P  4466	Drama	1958-08-16	594
+Viggo Mortensen	P 50903	Drama	1958-10-20	597
+Catherine Keener	P 37341	Comedy	1959-03-26	600
+Emma Thompson	P 70692	Drama	1959-04-15	601
+John Hawkes	P 31099	Comedy	1959-09-11	605
+Ken Watanabe	P 74900	Drama	1959-10-21	606
+Stanley Tucci	P 72023	Comedy	1960-01-11	608
+Thomas Haden Church	P195520	Comedy	1960-06-17	611
+Colin Firth	P 23590	Drama	1960-09-10	614
+Melissa Leo	P 41835	Drama	1960-09-14	615
+Eddie Murphy	P 51440	Comedy	1961-04-03	620
+George Clooney	P 13722	Comedy	1961-05-06	622
+Jackie Earle Haley	P 29701	Comedy	1961-07-14	625
+Woody Harrelson	P 30548	Comedy	1961-07-23	628
+Laurence Fishburne	P 23625	Drama	1961-07-30	629
+Tom Cruise	P 86295	Drama	1962-07-03	631
+Jodie Foster	P 90220	Drama	1962-11-19	633
+Ralph Fiennes	P 23390	Drama	1962-12-22	635
+Johnny Depp	P 18682	Drama	1963-06-09	636
+Brad Pitt	P 56988	Drama	1963-12-18	643
+Nicolas Cage	P 10155	Drama	1964-01-07	644
+Matt Dillon	P 19210	Drama	1964-02-18	646
+Juliette Binoche	P  6261	Drama	1964-03-09	647
+Russell Crowe	P 15959	Drama	1964-04-07	648
+Djimon Hounsou	P 33391	Drama	1964-04-24	649
+Sandra Bullock	P  9472	Comedy	1964-07-26	650
+Rosie Perez	P106101	Drama	1964-09-06	651
+Don Cheadle	P 12587	Drama	1964-11-29	653
+Diane Lane	P 40350	Drama	1965-01-22	655
+Robert Downey Jr.	P 19966	Comedy	1965-04-04	656
+Helena Bonham Carter	P  7266	Drama	1966-05-26	660
+Paul Giamatti	P 26680	Comedy	1967-06-06	667
+Nicole Kidman	P 38065	Drama	1967-06-20	668
+Mark Ruffalo	P197651	Drama	1967-11-22	673
+Jamie Foxx	P 24604	Comedy	1967-12-13	675
+Cuba Gooding Jr.	P 27665	Drama	1968-01-02	677
+Josh Brolin	P  8657	Drama	1968-02-12	678
+Will Smith	P 66596	Comedy	1968-09-25	681
+Hugh Jackman	P269258	Action	1968-10-12	683
+Javier Bardem	P  3887	Drama	1969-03-01	684
+Terrence Howard	P 33528	Drama	1969-03-11	685
+Cate Blanchett	P215038	Drama	1969-05-14	687
+Edward Norton	P215904	Drama	1969-08-18	688
+Catherine Zeta-Jones	P 36062	Comedy	1969-09-25	689
+Queen Latifah	P 40714	Comedy	1970-03-18	692
+Matt Damon	P 16762	Drama	1970-10-08	698
+Jeremy Renner	P199226	Drama	1971-01-07	701
+Rachel Weisz	P216376	Drama	1971-03-07	702
+Winona Ryder	P 62446	Drama	1971-10-29	705
+Gwyneth Paltrow	P 54871	Drama	1972-09-28	707
+Toni Collette	P 14165	Drama	1972-11-01	708
+Vera Farmiga	P241678	Drama	1973-08-06	712
+Christian Bale	P  3538	Drama	1974-01-30	713
+Michael Shannon	P516240	Drama	1974-08-07	716
+Charlize Theron	P216257	Drama	1975-08-07	722
+Amy Adams	P273224	Comedy	1975-08-20	724
+Marion Cotillard	P195575	Drama	1975-09-30	726
+Reese Witherspoon	P 77086	Comedy	1976-03-22	728
+Jessica Chastain	P470479	Adventure	1977-03-29	730
+Samantha Morton	P230665	Drama	1977-05-13	731
+James Franco	P299361	Drama	1978-04-19	733
+Kate Hudson	P263367	Comedy	1979-04-19	735
+Michelle Williams	P198320	Drama	1980-09-09	736
+Ryan Gosling	P279096	Drama	1980-11-12	737
+Rinko Kikuchi	P475244	Drama	1981-01-06	739
+Jennifer Hudson	P454405	Drama	1981-09-12	742
+Anne Hathaway	P292630	Drama	1982-11-12	744
+Jonah Hill	P418718	Comedy	1983-12-20	747
+Jennifer Lawrence	P562566	Drama	1990-08-15	755
+Ingrid Bergman	P999996	Drama	1915-08-29	1541
+name:
+string
+amg_person_id:
+string
+top_genre:
+string
+birthday:
+date
+id:
+bigint
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+# Start writing code
+df=oscar_nominees
+df1=nominee_information
+
+df2=df.join(df1,df.nominee==df1.name)
+df2=df2.filter(df2.winner==True)
+df2=df2.groupby("top_genre").agg(count("winner").alias("cnt"))
+df2=df2.orderBy(desc("cnt")).limit(1).select("top_genre")
+# df2.show(truncate=False)
+df2.toPandas()
+
+# To validate your solution, convert your final pySpark df to a pandas df
+# oscar_nominees.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10171").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10171\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
