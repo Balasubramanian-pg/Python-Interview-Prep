@@ -72,4 +72,34 @@ df.toPandas().head(1)
 from pyspark.sql import SparkSession
 
 # Initialize Spark Session
-spark = SparkSession.
+spark = SparkSession.builder.appName("StrataScratch_2005").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- find the proportion of active / non-active users in USA
+
+-- logic:
+-- find total users (US)
+-- find active user (us)
+-- active user (us) / total users (US)
+
+SELECT active_users/total_users::float AS active_users_share
+FROM (
+    SELECT COUNT(user_id) total_users,
+           SUM(CASE WHEN status = 'open' THEN 1
+                 ELSE 0
+                 END) active_users
+    FROM fb_active_users
+    WHERE country = 'USA'
+) usa_user_counts
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
