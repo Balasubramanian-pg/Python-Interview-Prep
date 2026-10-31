@@ -65,4 +65,32 @@ GROUP BY 1
 
 ---
 
-## 5. Alternative Ap
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2004").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- count number of comments per user in the last 30 days 2020-02-10 - 30 days
+
+SELECT user_id,
+       SUM(number_of_comments)
+FROM fb_comments_count
+-- date conversion
+WHERE created_at BETWEEN '2020-02-10'::date - 30 * INTERVAL '1 DAY' AND '2020-02-10'::date
+GROUP BY 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
