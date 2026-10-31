@@ -84,4 +84,39 @@ ON b.account_id = a.account_id
 from pyspark.sql import SparkSession
 
 # Initialize Spark Session
-spark = SparkSession.builder.appName
+spark = SparkSession.builder.appName("StrataScratch_2052").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic: we need count users across two time period for each account_id
+-- assumption: all users present are counted as active
+
+-- growth rate: (after distinct users / before distinct users)
+SELECT b.account_id, a.distinct_users/ b.distinct_users::float AS growth_rate
+-- counting the distinct users before
+FROM (
+    SELECT account_id, COUNT(DISTINCT user_id) as distinct_users
+    FROM sf_events
+    -- getting the year-month
+    WHERE LEFT(date::varchar, 7) = '2020-12'
+    GROUP BY 1
+) b
+-- counting the distinct users after
+JOIN (
+    SELECT account_id, COUNT(DISTINCT user_id) as distinct_users
+    FROM sf_events
+    -- getting the year-month
+    WHERE LEFT(date::varchar, 7) = '2021-01'
+    GROUP BY 1
+) a
+ON b.account_id = a.account_id
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
