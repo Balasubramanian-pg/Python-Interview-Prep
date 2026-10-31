@@ -100,4 +100,49 @@ from pyspark.sql import SparkSession
 # Initialize Spark Session
 spark = SparkSession.builder.appName("StrataScratch_2012").getOrCreate()
 
-# If using raw SQL query on registered 
+# If using raw SQL query on registered temporary tables:
+"""
+-- assumption:
+-- data is clean
+-- session_type is either 'viewer' or 'streamer'
+-- each session must end first before another occurs, hence each row is a complete session by its own
+
+-- logic:
+-- rank each user's session by date (earliest is number 1)
+-- filter for user whose first session_type = 'viewer'
+-- count users with session_type = 'streamer'
+-- order by num_session desc asc user id
+
+-- count the number of session_type 'streamer'
+-- if there is, means they turn into streamers
+SELECT user_id,
+       COUNT(*)
+FROM twitch_sessions
+WHERE user_id IN (
+    -- we want to select the first event
+    SELECT user_id
+    FROM (
+        -- ranking of sessions for users
+        -- asc order of time
+        SELECT user_id,
+               session_type,
+               RANK() OVER(PARTITION BY user_id ORDER BY session_start ASC) session_order
+        FROM twitch_sessions
+    ) session_orders
+    -- filter user whose first session_type = 'viewer'
+    WHERE session_order = 1
+        AND session_type = 'viewer'
+) AND session_type = 'streamer'
+GROUP BY 1
+-- order by asc user id
+ORDER BY 2 DESC, 1 ASC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
