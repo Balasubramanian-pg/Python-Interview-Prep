@@ -77,4 +77,77 @@ acc_id	status_date	status
 47	2019-12-16	open
 47	2019-12-19	closed
 47	2019-12-27	open
-48	201
+48	2019-12-17	open
+49	2019-12-28	open
+49	2020-01-04	closed
+50	2020-01-03	closed
+51	2019-12-27	closed
+52	2020-01-10	open
+54	2019-12-17	closed
+55	2019-12-22	closed
+56	2020-01-06	open
+56	2020-01-12	closed
+59	2020-01-11	open
+59	2020-01-15	open
+64	2020-01-07	open
+65	2020-01-09	open
+66	2019-12-30	open
+66	2020-01-01	open
+68	2019-12-18	closed
+68	2020-01-11	open
+69	2019-12-26	open
+69	2019-12-28	closed
+71	2020-01-13	closed
+72	2019-12-16	open
+72	2020-01-08	closed
+72	2020-01-12	open
+73	2020-01-03	open
+74	2019-12-16	open
+75	2020-01-10	closed
+78	2019-12-25	open
+79	2020-01-03	closed
+80	2019-12-24	open
+80	2020-01-15	closed
+81	2019-12-17	closed
+81	2020-01-01	open
+82	2019-12-15	open
+82	2019-12-22	closed
+82	2020-01-07	open
+84	2020-01-12	open
+85	2019-12-15	open
+85	2019-12-25	closed
+86	2019-12-31	open
+86	2020-01-05	closed
+87	2020-01-03	closed
+88	2019-12-15	open
+88	2019-12-28	open
+88	2020-01-10	closed
+88	2020-01-15	open
+89	2019-12-27	closed
+90	2019-12-30	open
+90	2020-01-06	closed
+90	2020-01-10	closed
+91	2019-12-20	closed
+93	2019-12-30	closed
+94	2020-01-03	open
+94	2020-01-10	open
+96	2020-01-10	open
+98	2019-12-19	closed
+acc_id:
+bigint
+status_date:
+date
+status:
+string
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations ar
