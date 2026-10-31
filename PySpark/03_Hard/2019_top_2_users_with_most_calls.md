@@ -90,4 +90,40 @@ WHERE rank <= 2;
 from pyspark.sql import SparkSession
 
 # Initialize Spark Session
-spark = SparkSessio
+spark = SparkSession.builder.appName("StrataScratch_2019").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic: we need top 2 users that called the most
+-- need: a ranking of users, ranking keeps all users with similar profiles
+
+-- get the aggregation (count) of calls by users
+WITH user_call_count AS (
+    SELECT user_id, COUNT(*) AS call_count
+    FROM rc_calls
+    GROUP BY user_id
+)
+
+-- filter the rank up to top 2 user(s)
+SELECT *
+FROM (
+    -- rank call count by company level for each user
+    SELECT rcu.company_id,
+           rcu.user_id,
+           DENSE_RANK() OVER (PARTITION BY rcu.company_id
+                              ORDER BY ucc.call_count DESC) AS rank
+    FROM rc_users rcu
+    JOIN user_call_count ucc
+        ON rcu.user_id = ucc.user_id
+) call_count_ranking
+WHERE rank <= 2;
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
