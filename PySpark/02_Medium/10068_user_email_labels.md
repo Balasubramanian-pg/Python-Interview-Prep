@@ -38,4 +38,44 @@ label                   varchar
    - Understand the primary entity and granularity required in the final output.
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
-   - Utiliz
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- we need count for each user, 'promotion', 'social' and 'shopping' tags
+-- users are the user that RECEVIED
+
+SELECT to_user,
+       SUM(CASE WHEN label = 'Promotion' THEN 1
+           ELSE 0
+           END) AS promo_cnt,
+       SUM(CASE WHEN label = 'Social' THEN 1
+           ELSE 0
+           END) AS soc_cnt,
+       SUM(CASE WHEN label = 'Shopping' THEN 1
+           ELSE 0
+           END) AS shop_cnt
+FROM google_gmail_emails e
+JOIN google_gmail_labels l
+    ON e.id = l.email_id
+GROUP BY 1
+ORDER BY 1
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpa
