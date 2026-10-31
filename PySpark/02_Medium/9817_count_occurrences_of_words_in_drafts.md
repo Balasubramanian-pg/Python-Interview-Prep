@@ -82,4 +82,50 @@ for i in contents:
     i=i.replace(',','')
 #     # print(i.split())
     lst_contents.extend(i.split())
-# #
+# # print(lst_contents)
+for i in lst_contents:
+    if i not in dict1:
+        dict1[i] = 1
+    else:
+        dict1[i]+=1
+# print(dict1)
+# lst_key = list(dict1.keys())
+# lst_val = list(dict1.values())
+# data = list(zip(lst_key,lst_val))
+# print(data)
+# google_file_store = spark.createDataFrame(data, ["word","occurrences"])
+# google_file_store.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+# google_file_store.toPandas()
+dict2={'word':[],'occurrences':[]}
+for i,j in dict1.items():
+    dict2['word'].append(i)
+    dict2['occurrences'].append(j)
+# print(dict2)
+
+df=pd.DataFrame(dict2)
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9817").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9817\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
