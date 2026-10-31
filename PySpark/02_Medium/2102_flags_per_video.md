@@ -48,4 +48,46 @@ Richard	Hasson	y6120QOlsfU	6jjkvn
 Pauline	Wilks	jNQXAC9IVRw	7ks264
 Courtney		dQw4w9WgXcQ	
 Helen	Hearn	dQw4w9WgXcQ	8946nx
-Mark	
+Mark	Johnson	y6120QOlsfU	8wwg0l
+Richard	Hasson	dQw4w9WgXcQ	arydfd
+Gina	Korman		
+Mark	Johnson	y6120QOlsfU	bl40qw
+Richard	Hasson	dQw4w9WgXcQ	ehn1pt
+Lopez	dQw4w9WgXcQ	hucyzx
+Greg		5qap5aO4i9A	
+Pauline	Wilks	jNQXAC9IVRw	i2l3oo
+Richard	Hasson	jNQXAC9IVRw	i6336w
+Johnson	y6120QOlsfU	iey5vi
+William 	Kwan	y6120QOlsfU	kktiwe
+Ct6BUPvE2sM	
+Loretta	Crutcher	y6120QOlsfU	nkjgku
+Pauline	Wilks	jNQXAC9IVRw	ov5gd8
+Mary	Thompson	Ct6BUPvE2sM	qa16ua
+Daniel	Bell	5qap5aO4i9A	xciyse
+Evelyn	Johnson	dQw4w9WgXcQ	xvhk6d
+user_firstname:
+string
+user_lastname:
+string
+video_id:
+string
+flag_id:
+string
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
