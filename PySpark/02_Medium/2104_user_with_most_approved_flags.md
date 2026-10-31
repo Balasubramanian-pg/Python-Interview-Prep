@@ -129,4 +129,49 @@ string
 
 ```python
 # Import your libraries
-import pysp
+import pyspark
+from pyspark.sql import *
+from pyspark.sql.functions import *
+# Start writing code
+df=user_flags.na.drop(how="any")
+# df.show(50,truncate=False)
+df1=flag_review.filter(col("reviewed_outcome")=="APPROVED")
+df1=df1.withColumnRenamed("flag_id","flag_id1")
+# df1.show(50,truncate=False)
+df2=df.join(df1,df.flag_id==df1.flag_id1,"left_outer")
+df2=df2.na.drop(how="any").select("user_firstname","user_lastname","video_id","flag_id")
+df2=df2.withColumn("username",concat(df2.user_firstname,lit(" "),df2.user_lastname)).select("username","video_id").distinct()
+df2=df2.groupBy("username").agg(count("video_id")).orderBy(col("count(video_id)").desc())
+df2=df2.withColumnRenamed("count(video_id)","cnt")
+max1=df2.select(max(col("cnt"))).limit(1).collect()[0][0]
+# print(max1)
+df2=df2.filter(col("cnt")==max1).select("username")
+# df2.show(truncate=False)
+df2.toPandas()
+# To validate your solution, convert your final pySpark df to a pandas df
+# user_flags.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2104").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2104\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
