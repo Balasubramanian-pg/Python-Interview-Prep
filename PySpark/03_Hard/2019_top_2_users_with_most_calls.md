@@ -40,4 +40,54 @@ company_id  int
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
    - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
-   - If ranking or windowed calculations are needed, define exp
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- logic: we need top 2 users that called the most
+-- need: a ranking of users, ranking keeps all users with similar profiles
+
+-- get the aggregation (count) of calls by users
+WITH user_call_count AS (
+    SELECT user_id, COUNT(*) AS call_count
+    FROM rc_calls
+    GROUP BY user_id
+)
+
+-- filter the rank up to top 2 user(s)
+SELECT *
+FROM (
+    -- rank call count by company level for each user
+    SELECT rcu.company_id,
+           rcu.user_id,
+           DENSE_RANK() OVER (PARTITION BY rcu.company_id
+                              ORDER BY ucc.call_count DESC) AS rank
+    FROM rc_users rcu
+    JOIN user_call_count ucc
+        ON rcu.user_id = ucc.user_id
+) call_count_ranking
+WHERE rank <= 2;
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSessio
