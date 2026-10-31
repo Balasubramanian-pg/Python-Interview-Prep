@@ -54,4 +54,80 @@ import pyspark
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
 
-# Execute solution using 
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- objective:
+-- compare diff between avg distance per dollar for EACH date vs. avg distance per dollar for EACH month that the date is in
+
+-- assumption:
+-- distance and cost values applies regardless of `request_status`
+-- all dates are unique in the dataset
+
+-- output:
+-- 1. year-month
+-- 2. ABSOLUTE avg diff in distance per dollar, rounded to 2nd decimal e.g., xx.xx
+-- 3. order by earliest request date
+
+-- logic:
+-- groupby request_date
+-- divide total distance_to_travel / monetary_cost
+-- groupby request_date on a yyyy-mm basics
+-- divide total distance_to_travel / monetary cost
+-- diff unique date's distance-per-dollar - month's distance-per-dollar
+-- avg diff distance_per_dollar by yyyy-mm
+-- order by earliest request date
+
+-- computing distance-per-dollar on a daily basis
+WITH daily_dpd AS (
+    SELECT request_date,
+           distance_to_travel/monetary_cost::float AS distance_per_dollar
+    FROM uber_request_logs
+),
+
+-- compute distance-per-dollar on year-month basis
+monthly_dpd AS (
+    SELECT year_month,
+           sum_distance_per_travel/sum_monetary_cost::float as distance_per_dollar
+    FROM (
+        SELECT LEFT(request_date::varchar, 7) AS year_month,
+            SUM(distance_to_travel) AS sum_distance_per_travel,
+            SUM(monetary_cost) AS sum_monetary_cost
+        FROM uber_request_logs
+        GROUP BY 1
+    ) AS sum_distance_monetary
+),
+
+-- compare the daily dpd vs monthly dpd
+-- compute the absolute difference
+compare_monthly_daily_dpd AS (
+    SELECT request_date,
+           ABS(d.distance_per_dollar - m.distance_per_dollar) AS difference
+    FROM daily_dpd d
+    JOIN monthly_dpd m
+        ON LEFT(d.request_date::varchar, 7) = m.year_month
+)
+
+-- just find the avg diff distance per dollar for each year-month
+SELECT LEFT(request_date::varchar, 7) request_mnth,
+       ROUND(AVG(difference)::numeric, 2) difference
+FROM compare_monthly_daily_dpd
+GROUP BY 1
+ORDER BY 1 ASC
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10302").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- compare diff between avg distance per dollar for EACH date vs. 
