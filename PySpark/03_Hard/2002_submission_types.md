@@ -89,3 +89,42 @@ JOIN (
 from pyspark.sql import SparkSession
 
 # Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2002").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- find user ID have both `Refinance` and `InSchool` submission
+
+-- assumption:
+-- not all user may have that
+
+-- logic:
+-- filter user WHERE type = 'refinance' and 'inschool'
+-- self join refinance and inschool
+-- distinct user_id as user may have submit more thna once for both types of submissions.
+
+SELECT DISTINCT loans.user_id
+FROM loans
+JOIN (
+    SELECT user_id
+    FROM loans
+    WHERE type = 'Refinance'
+) refinance
+    ON loans.user_id = refinance.user_id
+JOIN (
+    SELECT user_id
+    FROM loans
+    WHERE type = 'InSchool'
+) inschool
+     ON loans.user_id = inschool.user_id
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
