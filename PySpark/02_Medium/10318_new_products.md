@@ -65,4 +65,43 @@ car_launches_df1.toPandas()
 ```python
 from pyspark.sql import SparkSession
 
-# Initializ
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10318").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+/*
+
+1. figure the net dfifference (no. comp in 2020 vs 2019)
+2. if company does not exist in 2019, all launched in 2020 is NEW
+
+Potential edge case:
+1. exist in 2019 but not in 2020
+
+*/
+
+SELECT company_name,
+       SUM(product_2020) - SUM(product_2019) AS net_difference
+FROM (
+    SELECT company_name,
+           (CASE 
+                WHEN year = 2019 THEN 1
+                ELSE 0
+            END) AS product_2019, 
+            (CASE 
+                WHEN year = 2020 THEN 1
+                ELSE 0
+            END) AS product_2020
+    FROM car_launches
+    ) AS product_counts
+GROUP BY 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
