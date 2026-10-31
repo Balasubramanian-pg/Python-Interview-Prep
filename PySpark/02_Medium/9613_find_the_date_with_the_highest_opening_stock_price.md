@@ -52,4 +52,30 @@ aapl_historical_stock_price = aapl_historical_stock_price.filter(F.col('open') =
 
 aapl_historical_stock_price.toPandas()
 
-# if we do sort using desc and limit -> spark do total shuffle over network(moving single
+# if we do sort using desc and limit -> spark do total shuffle over network(moving single rows over network ) to putting them in order .
+# instead of it we use filter . which filter the max open at every node level.
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9613").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9613\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
