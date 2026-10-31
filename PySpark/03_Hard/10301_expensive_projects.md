@@ -39,4 +39,61 @@ project_id          int
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
    - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
-   - If ranking or windowed calculation
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- objective:
+-- calculate the amount of budget to each employee
+
+-- assumption:
+-- one employee may have multiple project budgets
+
+-- output:
+-- project title, project budget per employee
+
+-- logic:
+-- count number of employee per budget
+-- compute budget / no. employees
+-- order budget/employee DESC
+
+-- calculate the budget/employee
+SELECT title,
+       budget/no_employees::integer budget_per_emp
+FROM (
+    -- join the two tables first
+    -- this will result in duplicates
+    SELECT DISTINCT title,
+           budget,
+           -- find the total employee per project
+           COUNT(*) OVER(PARTITION BY title) no_employees
+    FROM ms_projects
+    JOIN ms_emp_projects
+        ON ms_projects.id = ms_emp_projects.project_id
+) budget_emps
+-- sort them by desc order
+ORDER BY 2 DESC
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark =
