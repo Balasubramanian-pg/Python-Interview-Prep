@@ -77,4 +77,51 @@ from pyspark.sql.window import Window
 SELECT EXTRACT(HOUR FROM customer_placed_order_datetime) AS hour,
        AVG(order_total) avg_order_cost
 FROM doordash_delivery
-WHERE (EXTRACT(HOUR FROM customer
+WHERE (EXTRACT(HOUR FROM customer_placed_order_datetime) BETWEEN 15 AND 17)
+        AND delivery_region = 'San Jose'
+GROUP BY 1
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2035").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- find avg order cost during hours 15 - 18
+-- in SAN JOSE
+
+-- logic:
+-- filter orders by SAN JOSE and hours between 15 - 18
+-- AVG(order_total)
+-- group by rush hours
+-- order by rush hours
+
+-- output:
+-- hour, avg(total_cost)
+
+SELECT EXTRACT(HOUR FROM customer_placed_order_datetime) AS hour,
+       AVG(order_total) avg_order_cost
+FROM doordash_delivery
+WHERE (EXTRACT(HOUR FROM customer_placed_order_datetime) BETWEEN 15 AND 17)
+        AND delivery_region = 'San Jose'
+GROUP BY 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
