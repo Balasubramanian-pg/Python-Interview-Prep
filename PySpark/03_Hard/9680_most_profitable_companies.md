@@ -79,3 +79,48 @@ FROM (
     FROM forbes_global_2010_2014
 ) rank_profits
 WHERE profit_rank <= 3
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9680").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- FIND TOP 3 most profitable companies
+
+-- assumption:
+-- company can have same profits
+
+-- output:
+-- company name, profits
+-- ORDER BY profits DESC
+
+SELECT company,
+       profits
+FROM (
+    SELECT company,
+           profits,
+           DENSE_RANK() OVER(ORDER BY profits DESC) profit_rank
+    FROM forbes_global_2010_2014
+) rank_profits
+WHERE profit_rank <= 3
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
