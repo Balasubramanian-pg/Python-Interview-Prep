@@ -58,3 +58,45 @@ c002	1	2024-11-26 15:00:00
 c002	0	2024-11-26 16:30:00
 c003	1	2024-11-26 09:00:00
 c003	0	2024-11-26 10:30:00
+c004	1	2024-11-26 10:00:00
+c004	0	2024-11-26 10:30:00
+c004	1	2024-11-26 14:00:00
+c004	0	2024-11-26 15:30:00
+c005	1	2024-11-26 10:00:00
+c005	0	2024-11-26 14:30:00
+c005	1	2024-11-26 15:30:00
+c005	0	2024-11-26 18:30:00
+cust_id:
+string
+state:
+bigint
+timestamp:
+timestamp
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.window import *
+# Start writing code
+df=cust_tracking
+window_spec = Window.orderBy("cust_id","timestamp")
+
+df=df.withColumn("next",lead("timestamp",1).over
