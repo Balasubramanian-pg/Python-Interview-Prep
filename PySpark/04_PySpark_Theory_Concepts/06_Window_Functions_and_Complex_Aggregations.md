@@ -31,4 +31,34 @@ A high-frequency interview question: Explain the exact behavioral differences be
 | 800  | 5 | 5 | 4 |
 
 ```python
-windowSpec = Window.partitionBy("dept_id").orderBy(F.col("
+windowSpec = Window.partitionBy("dept_id").orderBy(F.col("salary").desc())
+
+df = df.withColumn("row_num", F.row_number().over(windowSpec)) \
+       .withColumn("rank", F.rank().over(windowSpec)) \
+       .withColumn("dense_rank", F.dense_rank().over(windowSpec))
+```
+
+---
+
+## 3. Lead & Lag Analytic Functions
+
+Used to access prior or subsequent records without performing self-joins (e.g., month-over-month growth, consecutive active days):
+
+```python
+windowSpec = Window.partitionBy("user_id").orderBy("event_date")
+
+df = df.withColumn("prev_date", F.lag("event_date", 1).over(windowSpec)) \
+       .withColumn("next_date", F.lead("event_date", 1).over(windowSpec)) \
+       .withColumn("days_since_last", F.datediff(F.col("event_date"), F.col("prev_date")))
+```
+
+---
+
+## 4. Window Framing: `rowsBetween()` vs. `rangeBetween()`
+
+Defines which subset of rows within the partition are included in the calculation:
+
+```python
+# Cumulative Running Total (From start of partition up to current row)
+cum_window = Window.partitionBy("account_id").orderBy("tx_date") \
+                   .rowsBetween(Window.unboundedPrec
