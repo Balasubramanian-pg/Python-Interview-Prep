@@ -98,4 +98,47 @@ HAVING COUNT(o.id) >= 5
 ## 5. Alternative Approach: PySpark SQL
 
 ```python
-fro
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9908").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- aggregation by city
+
+-- assumption:
+-- only include cities with at least 5 orders
+-- count all customers in each city even if they did not place an order
+
+-- logic:
+-- LEFT JOIN orders on customers
+-- GROUPBY(city) to aggregate by city
+-- COUNT(orders.id) for number of orders per city
+-- COUNT(customers.id) for number of customer per city
+-- COALESCE(SUM(total_order_cost)) total cost of orders, 0 if no COUNT(orders.id)
+
+-- output:
+-- city, no. orders, no. custs, total_order_cost
+
+
+SELECT city,
+       COUNT(o.id) AS no_orders,
+       COUNT(DISTINCT c.id) AS no_customers,
+       COALESCE(SUM(total_order_cost), 0) AS total_order_cost
+FROM customers c
+LEFT JOIN orders o
+    ON c.id = o.cust_id
+GROUP BY 1
+HAVING COUNT(o.id) >= 5
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
