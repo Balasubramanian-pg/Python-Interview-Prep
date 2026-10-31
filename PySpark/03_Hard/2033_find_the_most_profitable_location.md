@@ -103,3 +103,52 @@ ORDER BY 4 DESC
 
 ```python
 from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2033").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- MOST profitable location
+-- FIND average signup duration, average to compute ratio
+
+-- logic:
+-- COMPUTE avg duration signup_stop_date - signup_start_date
+-- AVG(duration) / signup, AVG(amt) / signup per location
+-- COMPUTE ratio: avg_revenue / avg_duration
+-- ORDER BY ratio
+
+-- output:
+-- location, avg_duration, avg_revenue, ratio
+-- order by ratio DESC
+
+SELECT DISTINCT location,
+       avg_duration,
+       avg_revenue,
+       avg_revenue/avg_duration::float AS ratio
+FROM (
+    SELECT s2.location,
+           AVG(s2.signup_stop_date - s2.signup_start_date) OVER(PARTITION BY s2.location) AS avg_duration,
+           avg_revenue
+    FROM signups s2
+    JOIN (
+        SELECT location,
+               AVG(amt) OVER(PARTITION BY location) AS avg_revenue
+        FROM transactions t1
+        JOIN signups s1
+            ON s1.signup_id = t1.signup_id
+    ) t2
+        ON s2.location = t2.location
+) avg_metrics
+ORDER BY 4 DESC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
