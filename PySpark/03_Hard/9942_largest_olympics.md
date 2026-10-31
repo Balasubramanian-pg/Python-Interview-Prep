@@ -153,4 +153,133 @@ id	name	sex	age	height	weight	team	noc	games	year	season	city	sport	event	medal
 129828	Edvard Vilhelm Westerlund	M	23	174	77.5	Finland	FIN	1924 Summer	1924	Summer	Paris	Wrestling	Wrestling Men's Middleweight Greco-Roman	Gold
 92249	Georges Marie Nestor Pauwels	M	20			Belgium-1	BEL	1900 Summer	1900	Summer	Paris	Equestrianism	Equestrianism Mixed Four-In-Hand Competition	
 24838	Edward Martin Dahl	M	21			Sweden	SWE	1908 Summer	1908	Summer	London	Athletics	Athletics Men's 800 metres	
-30732	A. Duponcheel	M				France	FRA	1908 Summer	1
+30732	A. Duponcheel	M				France	FRA	1908 Summer	1908	Summer	London	Gymnastics	Gymnastics Men's Team All-Around	
+12323	Teodor Tore Blom	M	20			Sweden	SWE	1900 Summer	1900	Summer	Paris	Athletics	Athletics Men's Long Jump	
+129642	Charles Sven Otto Wennergren	M	35			Sweden	SWE	1924 Summer	1924	Summer	Paris	Tennis	Tennis Men's Singles	
+120168	Georges Thurnherr	M	22	175	66	France	FRA	1908 Summer	1908	Summer	London	Gymnastics	Gymnastics Men's Individual All-Around	
+25911	Jan Danil Hendrik de Beaufort	M	27			Netherlands	NED	1908 Summer	1908	Summer	London	Fencing	Fencing Men's Sabre Individual	
+115967	Theodore Frederick Ted Studier	M	22			United States	USA	1904 Summer	1904	Summer	St. Louis	Gymnastics	Gymnastics Men's Individual All-Around Apparatus Work	
+108863	Giacomo Serra	M				Italy	ITA	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Trap Team	
+12814	Erik Viktor Bohlin	M	26			Sweden	SWE	1924 Summer	1924	Summer	Paris	Cycling	Cycling Men's Road Race Team	Bronze
+70330	Alois F. Linka	M	25	172	62	Czechoslovakia	TCH	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's 100 metres	
+40972	A. Godinat	M				France	FRA	1924 Summer	1924	Summer	Paris	Art Competitions	Art Competitions Mixed Literature	
+27423	mile Joseph Demangel	M	25	173	64	France	FRA	1908 Summer	1908	Summer	London	Cycling	Cycling Men's Sprint	Silver
+66754	Roberto Larraz	M	25	168		Argentina	ARG	1924 Summer	1924	Summer	Paris	Fencing	Fencing Men's Foil Team	
+4404	Johan August Anker	M	36			Fram	NOR	1908 Summer	1908	Summer	London	Sailing	Sailing Mixed 8 metres	
+86143	Isidor Gadar Jack Niflot	M	23			United States	USA	1904 Summer	1904	Summer	St. Louis	Wrestling	Wrestling Men's Bantamweight Freestyle	Gold
+31220	Ernest Walter Ebbage	M	34			K Division Metropolitan Police Team-3	GBR	1908 Summer	1908	Summer	London	Tug-Of-War	Tug-Of-War Men's Tug-Of-War	Bronze
+134205	Juozas ebrauskas	M	19			Lithuania	LTU	1924 Summer	1924	Summer	Paris	Football	Football Men's Football	
+53253	Victor Jacquemin	M	16			Belgium	BEL	1908 Summer	1908	Summer	London	Athletics	Athletics Men's 100 metres	
+13073	Simon Bon	M	20			Netherlands	NED	1924 Summer	1924	Summer	Paris	Rowing	Rowing Men's Coxed Eights	
+22085	Robert Bobby Cloughen	M	19	179	76	United States	USA	1908 Summer	1908	Summer	London	Athletics	Athletics Men's 200 metres	Silver
+54686	Marion Hall Jessup (Zinderstein- -MacLure)	F	27	163		United States	USA	1924 Summer	1924	Summer	Paris	Tennis	Tennis Women's Singles	
+93221	Giulia Perelli	F				Italy	ITA	1924 Summer	1924	Summer	Paris	Tennis	Tennis Women's Singles	
+107550	George Schroeder	M				United States	USA	1904 Summer	1904	Summer	St. Louis	Gymnastics	Gymnastics Men's Individual All-Around Apparatus Work	
+25685	Gladys Mary Davis	F	30			Great Britain	GBR	1924 Summer	1924	Summer	Paris	Fencing	Fencing Women's Foil Individual	Silver
+26974	Peter Deer	M	25			Canada	CAN	1904 Summer	1904	Summer	St. Louis	Athletics	Athletics Men's 1500 metres	
+66681	Allan Edward Lard	M	37			United States	USA	1904 Summer	1904	Summer	St. Louis	Golf	Golf Men's Individual	
+51135	Marcus Latimer Hurley	M	20	181		United States	USA	1904 Summer	1904	Summer	St. Louis	Cycling	Cycling Men's 5 mile	
+116681	Henri Lon Victor Susse	M	55			Favorite-17	FRA	1900 Summer	1900	Summer	Paris	Sailing	Sailing Mixed Open	
+88281	Per Erik Fabian Ohlsson	M	23	173		Sweden	SWE	1908 Summer	1908	Summer	London	Shooting	Shooting Men's Free Rifle 1000 Yards	
+26055	Maurice Henri mile de Conninck	M	26			France	FRA	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's 3000 metres Steeplechase	
+50961	Jules Guillaume Hulsmans	M	25			Belgium	BEL	1924 Summer	1924	Summer	Paris	Modern Pentathlon	Modern Pentathlon Men's Individual	
+121142	Rasmus Aage Ejnar Torgensen	M	24			Denmark	DEN	1924 Summer	1924	Summer	Paris	Wrestling	Wrestling Men's Featherweight Freestyle	
+58305	Jzef Ignacy Kaua	M	28	164	66	Poland	POL	1924 Summer	1924	Summer	Paris	Football	Football Men's Football	
+17975	James Cantion	M				Moseley Wanderers	GBR	1900 Summer	1900	Summer	Paris	Rugby	Rugby Men's Rugby	Silver
+81433	Edwin Herbert Montague	M	23			Great Britain	GBR	1908 Summer	1908	Summer	London	Athletics	Athletics Men's 400 metres	
+75956	Charles Louis Marty	M	34			France	FRA	1900 Summer	1900	Summer	Paris	Fencing	Fencing Men's Foil Masters Individual	
+39588	Ioannis Georgiadis	M	48			Greece	GRE	1924 Summer	1924	Summer	Paris	Fencing	Fencing Men's Sabre Individual	
+16538	Thomas William Bill Burgess	M	27	185	95	Great Britain	GBR	1900 Summer	1900	Summer	Paris	Swimming	Swimming Men's 1000 metres Freestyle	
+48898	Stane Hlastan	M				Yugoslavia	YUG	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's Rope Climbing	
+93893	Peter Geltzer Petersen	M	31			Denmark	DEN	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Free Rifle 400 600 and 800 metres Team	
+82090	David Victor Moriaud	M	23			Switzerland	SUI	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's 100 metres	
+41856	John Marshall Gorham	M	54			Quicksilver-2	GBR	1908 Summer	1908	Summer	London	Motorboating	Motorboating Mixed B-Class (Under 60 Feet)	
+24613	Arthur Ernest D'Anvers	M	25			Belgium	BEL	1924 Summer	1924	Summer	Paris	Rowing	Rowing Men's Coxed Eights	
+84580	Jos Nasazzi Yarza	M	22	182	85	Uruguay	URU	1924 Summer	1924	Summer	Paris	Football	Football Men's Football	Gold
+26841	Frederick Dean	M	27			Cornwall	GBR	1908 Summer	1908	Summer	London	Rugby	Rugby Men's Rugby	Silver
+103259	Joseph Aloysius Joe Ruddy Sr.	M	25			New York Athletic Club #1-1	USA	1904 Summer	1904	Summer	St. Louis	Swimming	Swimming Men's 4 x 50 Yard Freestyle Relay	Gold
+112963	John Charles Barney Solomon	M	25			Cornwall	GBR	1908 Summer	1908	Summer	London	Rugby	Rugby Men's Rugby	Silver
+78779	Menso Johannes Menso	M	21			Netherlands	NED	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's 400 metres	
+125353	Simion Vartolomeu	M	32			Romania	ROU	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Free Rifle 400 600 and 800 metres Team	
+86044	Svend Aage Thorvald Michael Nielsen	M	31			Denmark	DEN	1924 Summer	1924	Summer	Paris	Wrestling	Wrestling Men's Middleweight Freestyle	
+119794	Albert Henry Harry Thomas	M	19			Great Britain	GBR	1908 Summer	1908	Summer	London	Boxing	Boxing Men's Bantamweight	Gold
+76245	Cencio Massola	M				Mebi	ITA	1924 Summer	1924	Summer	Paris	Sailing	Sailing Mixed 6 metres	
+72100	Erich Ludwig	M				Frankfurt Club	GER	1900 Summer	1900	Summer	Paris	Rugby	Rugby Men's Rugby	Silver
+76221	Gustave Florent Marie Masselin	M	33			France	FRA	1900 Summer	1900	Summer	Paris	Fencing	Fencing Men's Foil Masters Individual	
+76928	Ernest Edmund Bedford May	M	29			Great Britain	GBR	1908 Summer	1908	Summer	London	Athletics	Athletics Men's Hammer Throw	
+111741	Antonn Skopov	M				Czechoslovakia	TCH	1924 Summer	1924	Summer	Paris	Wrestling	Wrestling Men's Bantamweight Greco-Roman	
+94393	Alexandre Emmanuel Pharamond	M	23	164	70	Union des Socits Franais de Sports Athletiques	FRA	1900 Summer	1900	Summer	Paris	Rugby	Rugby Men's Rugby	Gold
+96484	Clarkson Potter	M	23			United States	USA	1904 Summer	1904	Summer	St. Louis	Golf	Golf Men's Individual	
+27126	Jorge del Mazo	M				Argentina	ARG	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Small-Bore Rifle Prone 50 metres	
+70216	Adolf Atte Lindqvist (-Launos)	M	29			Finland	FIN	1924 Summer	1924	Summer	Paris	Diving	Diving Men's Springboard	
+8875	Honor Jean Bayard	M	26	173	78	France	FRA	1924 Summer	1924	Summer	Paris	Rugby	Rugby Men's Rugby	Silver
+49855	Thomas Hopkins	M				Great Britain	GBR	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's Horizontal Bar	
+75384	Edward Ed Marsh	M	26			Vesper Boat Club	USA	1900 Summer	1900	Summer	Paris	Rowing	Rowing Men's Coxed Eights	Gold
+4285	Andr Angelini	M				France	FRA	1908 Summer	1908	Summer	London	Shooting	Shooting Men's Free Rifle 1000 Yards	
+44221	Jean Gutweniger	M	31			Switzerland	SUI	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's Team All-Around	Bronze
+95402	Clarence Bitters Platt	M	50			United States	USA	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Trap Team	Gold
+82362	William Morton	M	27			Canada	CAN	1908 Summer	1908	Summer	London	Cycling	Cycling Men's Sprint	
+109597	Martin Joseph Sheridan	M	27	190	88	United States	USA	1908 Summer	1908	Summer	London	Athletics	Athletics Men's Discus Throw Greek Style	Gold
+6212	Albert Louis Flix Ayat	M	17	175		France	FRA	1900 Summer	1900	Summer	Paris	Fencing	Fencing Men's epee Masters Individual	
+26559	Hlne de Pourtals (Barbey-)	F	32			Lerina	SUI	1900 Summer	1900	Summer	Paris	Sailing	Sailing Mixed Open	
+22312	Paul Ren Colas	M	27	170		France	FRA	1908 Summer	1908	Summer	London	Shooting	Shooting Men's Free Rifle Three Positions 300 metres	
+41753	Vilm Ladislav Jan Goppold z Lobsdorfu Sr.	M	38			Bohemia	BOH	1908 Summer	1908	Summer	London	Fencing	Fencing Men's epee Individual	
+35747	Alfred Edward Flaxman	M	28			Great Britain	GBR	1908 Summer	1908	Summer	London	Athletics	Athletics Men's Discus Throw	
+71514	Mogens Lorentzen	M	32			Denmark	DEN	1924 Summer	1924	Summer	Paris	Art Competitions	Art Competitions Mixed Painting	
+104899	Salvanahac	M				France	FRA	1900 Summer	1900	Summer	Paris	Fencing	Fencing Men's epee Individual	
+32614	Nils Erik Engdahl	M	25	165	57	Sweden	SWE	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's 400 metres	
+27429	Jules Demar	M				Societ Nautique de la Marne-3	FRA	1900 Summer	1900	Summer	Paris	Rowing	Rowing Men's Coxed Fours	
+26085	Romain Henri Theodor David Reindert de Favauge	M	35			Netherlands	NED	1908 Summer	1908	Summer	London	Shooting	Shooting Men's Trap	
+41713	Leo Joseph Budd Goodwin	M	20			New York Athletic Club #1-1	USA	1904 Summer	1904	Summer	St. Louis	Swimming	Swimming Men's 4 x 50 Yard Freestyle Relay	Gold
+128837	Watson McLean Watty Washburn	M	29	194		United States-1	USA	1924 Summer	1924	Summer	Paris	Tennis	Tennis Men's Doubles	
+125022	Etienne Gustave Frdric Van Zuylen Van Nijevelt Van De Haar	M	39			Belgium-1	BEL	1900 Summer	1900	Summer	Paris	Equestrianism	Equestrianism Mixed Four-In-Hand Competition	
+86847	Gustaf Martin Eugen Norberg	M	21			Sweden	SWE	1924 Summer	1924	Summer	Paris	Water Polo	Water Polo Men's Water Polo	
+100253	Robert Bob Reynolds	M				United States	USA	1904 Summer	1904	Summer	St. Louis	Gymnastics	Gymnastics Men's Individual All-Around Field Sports	
+10287	J. Brard	M				France	FRA	1900 Summer	1900	Summer	Paris	Cycling	Cycling Men's 25 kilometres	
+78900	Alexandros Merkati	M	25			Greece	GRE	1900 Summer	1900	Summer	Paris	Golf	Golf Men's Individual	
+65839	Franois Jacques Florentin Lafortune	M	28	173	65	Belgium	BEL	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Free Rifle 400 600 and 800 metres Team	
+96627	Kenneth Powell	M	23			Great Britain-4	GBR	1908 Summer	1908	Summer	London	Tennis	Tennis Men's Doubles	
+46088	Ernest Nason Harmon	M	30	170		United States	USA	1924 Summer	1924	Summer	Paris	Modern Pentathlon	Modern Pentathlon Men's Individual	
+48898	Stane Hlastan	M				Yugoslavia	YUG	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's Parallel Bars	
+52100	Stanislav Indruch	M	24			Czechoslovakia	TCH	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's Horizontal Bar	
+41936	Bolesaw Gociewicz	M	34			Poland	POL	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Free Rifle 400 600 and 800 metres Team	
+14607	Carlos Castello Branco	M		178		Brazil	BRA	1924 Summer	1924	Summer	Paris	Rowing	Rowing Men's Double Sculls	
+31394	Gertrude Caroline Trudy Ederle	F	18	167	64	United States	USA	1924 Summer	1924	Summer	Paris	Swimming	Swimming Women's 400 metres Freestyle	Bronze
+130318	Hazel Virginia Wightman (Hotchkiss-)	F	37			United States-1	USA	1924 Summer	1924	Summer	Paris	Tennis	Tennis Women's Doubles	Gold
+42368	Jules Grandjean	M				Switzerland	SUI	1924 Summer	1924	Summer	Paris	Wrestling	Wrestling Men's Middleweight Greco-Roman	
+129215	Thomas Grenfell Wedge	M	26			Cornwall	GBR	1908 Summer	1908	Summer	London	Rugby	Rugby Men's Rugby	Silver
+30361	Roger Franois Ducret	M	36			France	FRA	1924 Summer	1924	Summer	Paris	Fencing	Fencing Men's epee Individual	Silver
+112308	Joseph M. Joe Smith	M				Great Britain	GBR	1908 Summer	1908	Summer	London	Athletics	Athletics Men's 1500 metres	
+47647	L. Hennebicq	M				France	FRA	1908 Summer	1908	Summer	London	Gymnastics	Gymnastics Men's Team All-Around	
+126675	Francisco Villota y Baquiola	M	26			Spain	ESP	1900 Summer	1900	Summer	Paris	Basque Pelota	Basque Pelota Men's Two-Man Teams With Cesta	Gold
+11050	J. Btout	M				France	FRA	1924 Summer	1924	Summer	Paris	Rowing	Rowing Men's Coxed Eights	
+88554	John J. O'Leary	M	43			Great Britain	GBR	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Running Target Single Shot Team	
+121960	Giovanni Giorgio Giangiorgio Trissino	M	22			Italy	ITA	1900 Summer	1900	Summer	Paris	Equestrianism	Equestrianism Mixed High Jump	
+124149	Cornelis van Altenburg	M	36			Netherlands	NED	1908 Summer	1908	Summer	London	Shooting	Shooting Men's Free Rifle Three Positions 300 metres Team	
+32956	Erik Eriksson	M				Sweden	SWE	1900 Summer	1900	Summer	Paris	Swimming	Swimming Men's 200 metres Backstroke	
+28418	Jess Diguez Romero	M	21			Spain	ESP	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's Cross-Country Individual	
+30927	Albert Duval	M				Martha-1	FRA	1900 Summer	1900	Summer	Paris	Sailing	Sailing Mixed 1-2 Ton	Bronze
+36559	Arthur George Fox	M	25			United States	USA	1904 Summer	1904	Summer	St. Louis	Fencing	Fencing Men's Foil Team	Silver
+8783	Jean Jacques Baumert	M	21	180	84	France	FRA	1924 Summer	1924	Summer	Paris	Wrestling	Wrestling Men's Light-Heavyweight Greco-Roman	
+101050	Viljo Eino Ville Ritola (Koukkari-)	M	28	175	66	Finland	FIN	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's Cross-Country Individual	Silver
+115405	Walter Raymond Stokes	M	25	171		United States	USA	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Small-Bore Rifle Prone 50 metres	
+45818	Willy Falck Hansen	M	18			Denmark	DEN	1924 Summer	1924	Summer	Paris	Cycling	Cycling Men's 50 kilometres	
+5497	George Aschenbrener	M				United States	USA	1904 Summer	1904	Summer	St. Louis	Gymnastics	Gymnastics Men's Individual All-Around Field Sports	
+106746	Zoltn Schenker (Ozoray)	M	43			Hungary	HUN	1924 Summer	1924	Summer	Paris	Fencing	Fencing Men's Sabre Individual	
+24838	Edward Martin Dahl	M	21			Sweden	SWE	1908 Summer	1908	Summer	London	Athletics	Athletics Men's 5 mile	
+100656	Charles Riddy	M	23		77	Argonaut Rowing Club	CAN	1908 Summer	1908	Summer	London	Rowing	Rowing Men's Coxless Fours	Bronze
+93846	Willem Wim Peters	M	20	185		Netherlands	NED	1924 Summer	1924	Summer	Paris	Athletics	Athletics Men's Triple Jump	
+35364	Jeanne Marie Henriette Filleaul-Brohy (Hantjens-)	F	33			France	FRA	1900 Summer	1900	Summer	Paris	Croquet	Croquet Mixed Singles Two Balls	
+91682	Johnson Parker-Smith	M	26			Great Britain	GBR	1908 Summer	1908	Summer	London	Lacrosse	Lacrosse Men's Lacrosse	Silver
+83360	David Curtiss Munson	M	20			United States	USA	1904 Summer	1904	Summer	St. Louis	Athletics	Athletics Men's 1500 metres	
+49688	Asaji Honda	M				Japan	JPN	1924 Summer	1924	Summer	Paris	Tennis	Tennis Men's Singles	
+84716	Georg Naue	M				Aschenbrodel	GER	1900 Summer	1900	Summer	Paris	Sailing	Sailing Mixed 1-2 Ton	Gold
+48688	Sidney Rae Sid Hinds	M	23	185		United States	USA	1924 Summer	1924	Summer	Paris	Shooting	Shooting Men's Free Rifle 400 600 and 800 metres Team	Gold
+69172	Marcel Lvy	M				France	FRA	1900 Summer	1900	Summer	Paris	Fencing	Fencing Men's epee Individual	
+96500	Gustave Pottier	M				France	FRA	1908 Summer	1908	Summer	London	Gymnastics	Gymnastics Men's Team All-Around	
+37915	George William Gaidzik	M	23	166		United States	USA	1908 Summer	1908	Summer	London	Diving	Diving Men's Springboard	Bronze
+53800	Jan Janssen	M	28			Netherlands	NED	1908 Summer	1908	Summer	London	Gymnastics	Gymnastics Men's Individual All-Around	
+100799	Walter Riggs	M	47			Emily	GBR	1924 Summer	1924	Summer	Paris	Sailing	Sailing Mixed 8 metres	Silver
+29109	Reginald Frank Reggie Doherty	M	27			Great Britain-1	GBR	1900 Summer	1900	Summer	Paris	Tennis	Tennis Men's Doubles	Gold
+37138	Heinrich Heinz Freyschmidt	M	20			Germany	GER	1908 Summer	1908	Summer	London	Diving	Diving Men's Springboard	
+42827	Hans Grieder	M	22			Switzerland	SUI	1924 Summer	1924	Summer	Paris	Gymnastics	Gymnastics Men's P
