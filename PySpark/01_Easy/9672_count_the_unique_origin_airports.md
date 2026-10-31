@@ -28,4 +28,27 @@ Dataset provided by StrataScratch environment for Question ID 9672.
 ## 3. Interview Strategy & Logic
 
 1. **Requirement Analysis**:
-   - Understand the primary entity and granularity required in the 
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+port pyspark
+
+
+us_flights = us_flights.select("origin").distinct()
+# we use distinct to remove deplicates.
+
+us_flights.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: P
