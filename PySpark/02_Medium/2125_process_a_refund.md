@@ -67,4 +67,37 @@ refund_days_df = full_joined_df.withColumn("refund_days",F.datediff(F.col("refun
 
     
 # so now we perform group_by and aggreation here for our final answer.
-final_df = ref
+final_df = refund_days_df.groupBy("billing_cycle_in_months").agg(
+    F.min("refund_days").alias("min_days"),
+    F.avg("refund_days").alias("avg_days"),
+    F.max("refund_days").alias("max_days")
+    ).orderBy("billing_cycle_in_months")
+
+final_df.explain(True)
+# To validate your solution, convert your final pySpark df to a pandas df
+final_df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2125").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2125\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
