@@ -26,4 +26,26 @@ Selecting the appropriate join strategy is a critical performance differentiator
 ### Mechanism:
 1. The Driver collects the smaller DataFrame into memory.
 2. The Driver broadcasts the entire small DataFrame to all executor nodes via efficient BitTorrent-like peer-to-peer protocols.
-3. Ea
+3. Each executor builds a hash table in memory.
+4. The large DataFrame is streamed partition-by-partition and probed against the local in-memory hash table.
+5. **ZERO Shuffle occurs for the large table!**
+
+```python
+from pyspark.sql import functions as F
+
+# Explicit Broadcast Join Hint
+large_df.join(F.broadcast(small_df), on="customer_id", how="inner")
+```
+
+- **Default Threshold**: Controlled by `spark.sql.autoBroadcastJoinThreshold` (default: 10 MB, can be increased to 100 MB+ depending on Driver RAM).
+- **Interview Caution**: Never broadcast a table that does not fit comfortably in Driver RAM and Executor RAM, as it will trigger an immediate `Driver OutOfMemoryError`.
+
+---
+
+## 3. Sort-Merge Join (SMJ)
+
+### Mechanism:
+The default join strategy in Spark 3.x for two large DataFrames:
+1. **Shuffle Phase**: Both DataFrames are shuffled across the cluster using hash partitioning on the join key, ensuring rows with identical keys end up on the exact same executor.
+2. **Sort Phase**: Each executor sorts its local partition by join key.
+3. **Merge Phase**: The executor iterates sequentially through both sorted streams, outputting matched records with 
