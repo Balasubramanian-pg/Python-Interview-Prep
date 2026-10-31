@@ -61,4 +61,25 @@ Defines which subset of rows within the partition are included in the calculatio
 ```python
 # Cumulative Running Total (From start of partition up to current row)
 cum_window = Window.partitionBy("account_id").orderBy("tx_date") \
-                   .rowsBetween(Window.unboundedPrec
+                   .rowsBetween(Window.unboundedPreceding, Window.currentRow)
+
+df = df.withColumn("running_total", F.sum("amount").over(cum_window))
+
+# 7-Day Moving Average
+# rowsBetween uses PHYSICAL row offsets (-3 to +3 rows)
+moving_avg_rows = Window.partitionBy("ticker").orderBy("trade_date") \
+                        .rowsBetween(-3, 3)
+
+# rangeBetween uses LOGICAL value offsets (e.g., within 7 days in seconds)
+# Requires unix_timestamp for date ranges
+days_window = Window.partitionBy("ticker").orderBy(F.col("date_seconds")) \
+                    .rangeBetween(-7 * 86400, 0)
+```
+
+---
+
+## 5. Performance Tips for Window Functions
+
+1. **Always provide a `partitionBy`**: A window without `partitionBy` moves **all cluster data onto a single partition on one executor**, causing severe bottlenecking and OOM.
+2. **Prune unnecessary columns**: Window operations spill to disk if records have wide schemas. Select only required columns prior to applying window definitions.
+3. **Filter after ranking**: When finding top-N records per group, filter immediately after assigning `row_number()` or `dense_rank()`.
