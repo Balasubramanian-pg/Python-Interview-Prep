@@ -43,4 +43,32 @@ manager_id              int
 ## 3. Interview Strategy & Logic
 
 1. **Requirement Analysis**:
-   - Understand the primary entity and granularity required in the
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import *
+from pyspark.sql.functions import *
+
+# Start writing code
+df=employee
+df1=df.groupBy(col("department")).agg(max(col("salary")).alias("salary"))
+df1=df1.withColumnRenamed("department","dpt").withColumnRenamed("salary","sal")
+# df1.show(truncate=False)
+df=df1.join(df,df1.sal==df.salary,"left")
+# df.show(truncate=False)
+df=df.drop("department","salary")
+df=df.withColumnRenamed("dpt","department").withColumnRenamed("sal","salary")
+df=df.select("department","first_name","salary")
+# df.show(truncate=False)
+# To validate your solutio
