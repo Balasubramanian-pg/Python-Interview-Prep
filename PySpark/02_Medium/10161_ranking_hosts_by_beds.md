@@ -56,3 +56,31 @@ final_df = beds_per_count.select(
     "bed_counts",
     F.dense_rank().over(window_spec).alias('rank')
     )
+
+# To validate your solution, convert your final pySpark df to a pandas df
+final_df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10161").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 10161\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
