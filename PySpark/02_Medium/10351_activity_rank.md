@@ -59,4 +59,44 @@ w = Window.orderBy(google_gmail_emails1.total_emails.desc())
 google_gmail_emails1 = google_gmail_emails1.sort(asc("from_user"),desc("count")).withColumn("rank",row_number().over(w))
 # google_gmail_emails1.show(truncate=False)
 
-# To validate your solution, conv
+# To validate your solution, convert your final pySpark df to a pandas df
+google_gmail_emails1.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10351").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- assumption:
+-- clean data
+-- all ranks must be unique
+
+-- logic:
+-- count total emails sent by each user
+-- rank users by the total emails sent
+-- break rank by ordering total emails desc, then user_id asc
+
+SELECT from_user,
+       COUNT(*) total_emails,
+       -- rank by total emails desc, user_id asc
+       RANK() OVER(ORDER BY COUNT(*) DESC, from_user ASC) AS activity_rank
+FROM google_gmail_emails
+GROUP BY 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
