@@ -74,4 +74,31 @@ FROM (
 
 ```python
 from pyspark.sql import SparkSession
-
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2062").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic: find quarter for date and ensure we are looking into year 2021, simple group by count thereafter
+
+-- we only want the result
+SELECT result
+FROM (
+    -- getting the quarter and group by
+    SELECT EXTRACT(QUARTER FROM date), COUNT(*) AS result
+    FROM fb_searches
+    -- ensure that we are only finding 2nd quarter and year 2021
+    WHERE EXTRACT(QUARTER FROM date) = 2 AND EXTRACT(YEAR FROM date) = '2021'
+    GROUP BY 1
+) count_by_quarter
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
