@@ -74,4 +74,41 @@ from pyspark.sql import SparkSession
 # Initialize Spark Session
 spark = SparkSession.builder.appName("StrataScratch_9782").getOrCreate()
 
-# If using raw SQL query on registered temporary
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- total revenue for each customer in March 2019
+
+-- assumption:
+-- customer may not have any revenue ($0)
+
+-- logic:
+-- sum(total_order_cost) by cust_id
+-- left join orders on cust_id
+-- coalesce total revenue with 0 if null
+-- order by revenue DESC
+
+-- ouput: cust_id and total_revenue
+SELECT DISTINCT o.cust_id,
+       -- ensure we factor in all customer
+       COALESCE(rev.total_revenue, 0) total_revenue
+FROM orders o
+JOIN (
+    SELECT cust_id,
+          SUM(total_order_cost) total_revenue
+    FROM orders
+    WHERE LEFT(order_date::varchar, 7) = '2019-03'
+    GROUP BY 1
+) rev
+    ON o.cust_id = rev.cust_id
+ORDER BY total_revenue DESC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
