@@ -79,4 +79,49 @@ FROM (
            city,
            (accommodates/beds::float) AS a2b_ratio
     FROM airbnb_search_details
-    
+    WHERE room_type = 'Shared room'
+) ind_ratio
+GROUP BY 1
+ORDER BY city_a2b DESC
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9624").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic:
+-- 1. find the individual accommodates2bed ratio per listing first
+-- 2. avg a2b ratio by each city
+-- 3. order by desc in highest ratio
+
+SELECT city,
+       AVG(a2b_ratio) AS city_a2b
+FROM (
+    SELECT id,
+           city,
+           (accommodates/beds::float) AS a2b_ratio
+    FROM airbnb_search_details
+    WHERE room_type = 'Shared room'
+) ind_ratio
+GROUP BY 1
+ORDER BY city_a2b DESC
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
