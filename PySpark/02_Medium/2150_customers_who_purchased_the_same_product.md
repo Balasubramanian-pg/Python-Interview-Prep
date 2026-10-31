@@ -62,4 +62,35 @@ final_df = joined_df.groupBy(
     "product_id",
     "brand_name"
     ).agg(
-        F.collect_set("customer_id").
+        F.collect_set("customer_id").alias("unique_customer_ids"),
+        F.countDistinct("customer_id").alias("customer_count")
+     ).orderBy(F.col("customer_count").desc())
+
+
+# To validate your solution, convert your final pySpark df to a pandas df
+final_df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2150").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2150\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
