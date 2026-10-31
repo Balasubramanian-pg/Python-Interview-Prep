@@ -58,4 +58,33 @@ joined_df = signups.join(
 weekday_df = joined_df.withColumn("number_of_day", F.dayofweek(F.col('signup_start_date'))-1)
 
 # now we use pivot . and finsl output as bussiness requirements
-pivot_df  = weekday_df.groupBy('number_of_day').pivot('billing_cycle',["monthly","quarterly","annual"]).agg(F.count("billing_c
+pivot_df  = weekday_df.groupBy('number_of_day').pivot('billing_cycle',["monthly","quarterly","annual"]).agg(F.count("billing_cycle")).fillna(0).orderBy(F.col("number_of_day").asc())
+
+
+# To validate your solution, convert your final pySpark df to a pandas df
+pivot_df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2032").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2032\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
