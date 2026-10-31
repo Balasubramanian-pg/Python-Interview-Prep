@@ -76,4 +76,36 @@ FROM (
 ## 5. Alternative Approach: PySpark SQL
 
 ```python
-from pyspark.sql import SparkSess
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9818").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- logic:
+-- 1. filter filename for 'final.txt'
+-- 2. turn content into individual words within an array
+-- 3. unnest the array
+-- 4. sort rows by alphabetical order
+-- 5. merge rows back into 1 file content
+
+SELECT 'wacky.txt' AS filename, STRING_AGG(words, ' ') AS contents
+FROM (
+    -- turn content into individual words in array
+    SELECT UNNEST(STRING_TO_ARRAY(LOWER(contents), ' ')) AS words
+    FROM google_file_store
+    -- filter for filename = 'final.txt'
+    WHERE filename = 'final.txt'
+    ORDER BY words ASC
+) AS order_words
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
