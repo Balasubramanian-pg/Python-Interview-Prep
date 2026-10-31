@@ -90,4 +90,46 @@ string
 ---
 
 ## 4. PySpark DataFrame API Solution
-
+
+```python
+# Import your libraries
+
+import pyspark
+from pyspark.sql.functions import *
+
+# Start writing code
+df = user_flags
+# df.show(100,truncate=False)
+df1=df.withColumn("name",concat(col("user_firstname"),lit(" "),col("user_lastname")))
+df1=df1.filter(col("flag_id").isNotNull())
+df_distinct = df1.dropDuplicates(["name","video_id"])
+# print(df_distinct.count())
+df=df_distinct.groupBy(col("video_id")).agg(count("*").alias("num_unique_users"))
+# df.show(truncate=False)
+
+df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2102").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2102\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
