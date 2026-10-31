@@ -82,4 +82,40 @@ WHERE DATE_PART('year', CURRENT_DATE) - year <= 30
 ## 5. Alternative Approach: PySpark SQL
 
 ```python
-from py
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_10283").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- find song that at least ranked first one time in any year
+-- within the last 30 years
+
+-- assumption:
+-- the song has to be rank 1 at least once
+-- song can be rank 1 for many times
+-- we use song_name as the primary key
+
+-- logic:
+-- filter songs in the last 30 years
+-- count the number of rank 1 in the same period
+-- return all details about the song
+
+-- select song name
+SELECT DISTINCT song_name
+FROM billboard_top_100_year_end
+-- within the last 30 years from today's year
+WHERE DATE_PART('year', CURRENT_DATE) - year <= 30
+    AND year_rank = 1
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
