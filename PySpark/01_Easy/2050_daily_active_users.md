@@ -51,4 +51,31 @@ sf_events = sf_events.filter((F.col('record_date') >= '2021-01-01') & (F.col('re
 daily_active = sf_events.groupBy('record_date','account_id').agg(F.countDistinct('user_id').alias('daily_active_user'))
 
 # we calculate average of daily active users
-sf_events = daily_active.groupBy('account_id').agg(F.avg('daily_active_user').alias('
+sf_events = daily_active.groupBy('account_id').agg(F.avg('daily_active_user').alias('avg_daily_active_users'))
+# To validate your solution, convert your final pySpark df to a pandas df
+sf_events.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2050").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 2050\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
