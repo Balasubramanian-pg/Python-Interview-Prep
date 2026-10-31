@@ -47,4 +47,41 @@ beds                    int
 
 ## 3. Interview Strategy & Logic
 
-1. **Requirement Analysis*
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- logic:
+-- 1. filter for internet, bed_type and property_type
+-- 2. rank by price
+-- 3. get the lowest price
+
+SELECT neighbourhood
+FROM (
+    SELECT neighbourhood,
+           RANK() OVER(ORDER BY price ASC) AS price_rank
+    FROM (
+        SELECT id,
+               neighbourhood,
+               price
+        FROM airbnb_search_details
+        WHERE amenities LIKE '%Wireless Internet%'
+            AND property_type = 'Villa'
+            AND bed_type = 'Real Bed'
+    ) pri
