@@ -86,4 +86,42 @@ JOIN submissions b
 ## 5. Alternative Approach: PySpark SQL
 
 ```python
-from p
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_2000").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- objective:
+-- true/false for variable and fixed per load_id
+
+-- assumption:
+-- binary description = 0/1
+
+-- logic:
+-- self join on loan_id to get two columns of rate_type
+-- case when to insert 0/1 for both variable and fixed columns
+
+SELECT a.loan_id,
+       CASE
+           WHEN a.rate_type = 'variable'
+           THEN 1
+           ELSE 0 END AS variable,
+       CASE
+           WHEN b.rate_type = 'fixed'
+           THEN 1
+           ELSE 0 END as fixed
+FROM submissions a
+JOIN submissions b
+    ON a.loan_id = b.loan_id
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
