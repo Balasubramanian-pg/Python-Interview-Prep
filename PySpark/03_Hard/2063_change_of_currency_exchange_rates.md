@@ -35,4 +35,41 @@ date                    datetime
    - Understand the primary entity and granularity required in the final output.
    - Filter down the dataset early if specific conditional flags or date ranges are specified.
 2. **PySpark Optimization Strategy**:
-   - Utilize native DataFrame API trans
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+
+# Execute solution using Spark SQL or DataFrame API:
+# spark.sql('''
+# -- logic: self-join to get the columns side by side for diff operations, need to join on two keys to have 1:1 match
+-- logic: we will also need to find exchange to USD ONLY
+
+-- ensure that we are minus from the latest date
+SELECT t1.source_currency, t2.exchange_rate - t1.exchange_rate AS difference
+FROM sf_exchange_rate t1
+JOIN sf_exchange_rate t2
+    ON t1.source_currency = t2.source_currency
+    AND t2.target_currency = t2.target_currency
+-- set the date for differencing
+WHERE t1.date = '2020-01-01'
+      AND t2.date = '2020-07-01'
+      AND t1.target_currency = 'USD'
+# ''').show()
+
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```p
