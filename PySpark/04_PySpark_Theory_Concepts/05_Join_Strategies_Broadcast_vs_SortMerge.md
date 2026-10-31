@@ -48,4 +48,26 @@ large_df.join(F.broadcast(small_df), on="customer_id", how="inner")
 The default join strategy in Spark 3.x for two large DataFrames:
 1. **Shuffle Phase**: Both DataFrames are shuffled across the cluster using hash partitioning on the join key, ensuring rows with identical keys end up on the exact same executor.
 2. **Sort Phase**: Each executor sorts its local partition by join key.
-3. **Merge Phase**: The executor iterates sequentially through both sorted streams, outputting matched records with 
+3. **Merge Phase**: The executor iterates sequentially through both sorted streams, outputting matched records with minimal memory overhead.
+
+- **Pros**: Highly scalable, immune to OOM errors because sorted streams are merged sequentially.
+- **Cons**: High network shuffle and disk sort I/O overhead.
+
+---
+
+## 4. Shuffle Hash Join (SHJ)
+
+- Shuffles both datasets on join keys, then builds an in-memory hash table for each partition of the smaller dataset.
+- Useful when one table is moderately sized (too large to broadcast, but its individual partitions fit easily into executor RAM) and join keys are not easily sortable.
+
+---
+
+## 5. Join Comparison Matrix
+
+| Join Type | Shuffle? | Memory Footprint | Best Used When... |
+| :--- | :--- | :--- | :--- |
+| **Broadcast Hash Join (BHJ)** | **None** | High on Driver; Moderate on Worker | One dataset < 100 MB. |
+| **Sort-Merge Join (SMJ)** | **Yes** | Very Low (Streamed from disk) | Both datasets are large. |
+| **Shuffle Hash Join (SHJ)** | **Yes** | Moderate (Hash table per partition)| One dataset partitions fit in RAM. |
+| **Broadcast Nested Loop (BNLJ)**| **None** | High | Non-equi joins (`df1.id > df2.id`) on small tables. |
+| **Cartesian Join** | **Yes** | Massive | Cross joins without join keys (`O(N * M)`). |
