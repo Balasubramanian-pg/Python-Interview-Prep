@@ -128,4 +128,104 @@ passengerid	survived	pclass	name	sex	age	sibsp	parch	ticket	fare	cabin	embarked
 85	1	2	Ilett, Miss. Bertha	female	17	0	0	SO/C 14885	10.5		S
 86	1	3	Backstrom, Mrs. Karl Alfred (Maria Mathilda Gustafsson)	female	33	3	0	3101278	15.85		S
 87	0	3	Ford, Mr. William Neal	male	16	1	3	W./C. 6608	34.38		S
-88	0	3	Slocovski, Mr. Selman Francis	male		0	0	S
+88	0	3	Slocovski, Mr. Selman Francis	male		0	0	SOTON/OQ 392086	8.05		S
+89	1	1	Fortune, Miss. Mabel Helen	female	23	3	2	19950	263	C23 C25 C27	S
+90	0	3	Celotti, Mr. Francesco	male	24	0	0	343275	8.05		S
+91	0	3	Christmann, Mr. Emil	male	29	0	0	343276	8.05		S
+92	0	3	Andreasson, Mr. Paul Edvin	male	20	0	0	347466	7.85		S
+93	0	1	Chaffee, Mr. Herbert Fuller	male	46	1	0	W.E.P. 5734	61.17	E31	S
+94	0	3	Dean, Mr. Bertram Frank	male	26	1	2	C.A. 2315	20.57		S
+95	0	3	Coxon, Mr. Daniel	male	59	0	0	364500	7.25		S
+96	0	3	Shorney, Mr. Charles Joseph	male		0	0	374910	8.05		S
+97	0	1	Goldschmidt, Mr. George B	male	71	0	0	PC 17754	34.65	A5	C
+98	1	1	Greenfield, Mr. William Bertram	male	23	0	1	PC 17759	63.36	D10 D12	C
+99	1	2	Doling, Mrs. John T (Ada Julia Bone)	female	34	0	1	231919	23		S
+100	0	2	Kantor, Mr. Sinai	male	34	1	0	244367	26		S
+passengerid:
+bigint
+survived:
+bigint
+pclass:
+bigint
+name:
+string
+sex:
+string
+age:
+double
+sibsp:
+bigint
+parch:
+bigint
+ticket:
+string
+fare:
+double
+cabin:
+string
+embarked:
+string
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql import *
+# Start writing code
+df=titanic
+df=df.groupBy(col("pclass"),col("survived")).agg(count(col("pclass")==1).alias("cnt"))
+
+df1=df.select("survived","cnt").where(df.pclass==1).withColumnRenamed("cnt","first_class")
+# df1.show(truncate=False)
+df2=df.select("survived","cnt").where(df.pclass==2).withColumnRenamed("cnt","second_class")
+# df2.show(truncate=False)
+df3=df.select("survived","cnt").where(df.pclass==3).withColumnRenamed("cnt","third_class")
+# df3.show(truncate=False)
+
+#Syntax to join 3 dataframes
+df=df1.join(df2,["survived"],"left_outer").join(df3,["survived"],"left_outer")
+# df.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+df.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9881").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9881\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
