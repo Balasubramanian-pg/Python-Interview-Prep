@@ -167,4 +167,158 @@ id	price	property_type	room_type	amenities	accommodates	bathrooms	bed_type	cance
 11606802	455.39	House	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,"Free parking on premises","Pets allowed",Breakfast,Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher",Essentials,Shampoo,"24-hour check-in",Hangers,"Hair dryer",Iron,"Laptop friendly workspace","Private entrance"}	5	1	Real Bed	moderate	TRUE	LA	t	100%	2016-06-22	Westlake	45	97	90015	1	2
 12289125	486.75	House	Entire home/apt	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,Breakfast,"Indoor fireplace","Buzzer/wireless intercom",Heating,"Smoke detector","Carbon monoxide detector","Fire extinguisher",Essentials,Shampoo,Hangers,Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	6	2	Real Bed	strict	TRUE	LA	t	80%	2014-02-02	Westlake	31	95	90057	2	4
 14320263	321.89	House	Shared room	{TV,"Wireless Internet","Air conditioning",Kitchen,Heating,"Smoke detector","Carbon monoxide detector",Essentials,Shampoo,Hangers,"Hair dryer",Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	1	2	Real Bed	strict	TRUE	LA	f	100%	2016-03-27	Westlake	0		90005	1	1
-392794	270.81	House	Shared room	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit","Safety c
+392794	270.81	House	Shared room	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer",Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	4	1	Real Bed	strict	FALSE	LA	t	99%	2016-03-27	Westlake	35	85	90006	1	10
+6692191	423.41	House	Private room	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,"Free parking on premises",Breakfast,Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher",Essentials,Shampoo,"Lock on bedroom door","24-hour check-in",Hangers,"Hair dryer",Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	1	2	Real Bed	flexible	FALSE	LA	t	100%	2013-09-13	Westlake	9	100	90015	1	1
+5321538	674.52	Townhouse	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,"Indoor fireplace","Smoke detector","Carbon monoxide detector","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	8	1	Real Bed	flexible	TRUE	NYC	f	100%	2013-09-13	Harlem	0		10027	0	1
+17497415	404.31	Apartment	Shared room	{"Wireless Internet",Kitchen,Elevator,"Family/kid friendly","Smoke detector",Essentials,Shampoo,"Hair dryer",Iron,"translation missing: en.hosting_amenity_50"}	2	1	Real Bed	flexible	TRUE	NYC	t	22%	2016-10-08	Harlem	6	84	10027	1	1
+992786	474.49	Apartment	Entire home/apt	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,"Pets allowed","Pets live on this property",Dog(s),"Buzzer/wireless intercom",Heating,"Smoke detector","First aid kit","Safety card",Essentials,Shampoo,"24-hour check-in",Hangers,Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	2	1	Real Bed	moderate	TRUE	NYC	t	67%	2012-02-04	Harlem	21	96	10035	1	1
+13650177	438.2	Apartment	Private room	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning","Wheelchair accessible",Kitchen,Elevator,Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","First aid kit","Fire extinguisher",Essentials,Hangers,Iron,"Laptop friendly workspace","Hot water","Bed linens",Microwave,"Coffee maker",Refrigerator,"Dishes and silverware","Cooking basics",Oven,Stove}	2	1	Real Bed	strict	TRUE	NYC	t	100%	2015-07-04	Harlem	2	100	10030	1	1
+5792141	486.75	Apartment	Entire home/apt	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,"Buzzer/wireless intercom",Heating,"Family/kid friendly","Smoke detector",Hangers,"Hair dryer",Iron}	4	1	Real Bed	strict	TRUE	NYC	t	80%	2010-12-03	Harlem	85	90	10027	1	2
+6390069	570.38	Apartment	Entire home/apt	{TV,"Wireless Internet",Kitchen,"Buzzer/wireless intercom",Heating,"Family/kid friendly","Smoke detector","Carbon monoxide detector",Essentials,"Laptop friendly workspace"}	4	1	Real Bed	moderate	TRUE	NYC	t		2011-01-17	Harlem	0		10027	2	3
+8579757	501.06	Condominium	Entire home/apt	{TV,"Wireless Internet","Air conditioning",Kitchen,Elevator,Heating,"Family/kid friendly","Suitable for events","Smoke detector","Carbon monoxide detector","First aid kit",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer",Iron}	5	1	Real Bed	moderate	FALSE	NYC	f	93%	2017-01-05	Harlem	2	90	10039	2	3
+14115855	448.86	Apartment	Private room	{TV,"Wireless Internet",Kitchen,Washer,Dryer,"Smoke detector",Essentials,Hangers,"Hair dryer",Iron,"Laptop friendly workspace","Hot water","Bed linens","Extra pillows and blankets"}	2	1	Real Bed	moderate	FALSE	NYC	f	100%	2013-08-10	Harlem	8	100	10031	1	1
+685364	478.75	Apartment	Entire home/apt	{Internet,"Wireless Internet","Air conditioning",Kitchen,"Hot tub","Buzzer/wireless intercom",Heating}	3	1	Real Bed	moderate	FALSE	NYC	t	100%	2012-05-12	Harlem	7	100	10035	1	1
+20031027	409.43	Apartment	Private room	{TV,"Wireless Internet","Air conditioning",Kitchen,"Smoking allowed","Pets allowed",Heating,"Smoke detector","Carbon monoxide detector",Essentials,"Lock on bedroom door",Hangers,Iron,"Laptop friendly workspace","Private living room"}	2	1	Real Bed	flexible	TRUE	NYC	f	100%	2014-12-16	Harlem	4	100	10030	1	1
+15991936	551.75	Apartment	Entire home/apt	{TV,"Wireless Internet","Air conditioning",Kitchen,Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit","Fire extinguisher",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer",Iron,"Laptop friendly workspace","Self Check-In",Keypad,"Private living room","High chair","Children��s books and toys","Window guards",Crib,"Pack ��n Play/travel crib","Children��s dinnerware","Hot water","Bed linens","Extra pillows and blankets","Coffee maker",Refrigerator,Dishwasher,"Dishes and silverware","Cooking basics",Oven,Stove,"Luggage dropoff allowed","Long term stays allowed","Wide hallway clearance","Wide doorway","Well-lit path to entrance"}	4	1	Real Bed	moderate	TRUE	NYC	t	100%	2013-09-20	Harlem	19	99	10027	2	2
+11399852	424.85	House	Private room	{"Wireless Internet","Air conditioning",Kitchen,Heating,"Smoke detector","Carbon monoxide detector",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	2	1	Real Bed	strict	FALSE	NYC	t	100%	2015-06-10	Harlem	41	95	10027	1	2
+14219018	444.27	Apartment	Private room	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Gym,"Buzzer/wireless intercom",Heating,"Family/kid friendly","translation missing: en.hosting_amenity_50",Microwave,Refrigerator,"Dishes and silverware","Cooking basics",Oven,Stove}	2	1	Real Bed	strict	TRUE	NYC	t	89%	2013-06-07	Harlem	97	91	10027	1	1
+6228461	409.43	Apartment	Private room	{TV,"Wireless Internet","Air conditioning",Kitchen,Breakfast,"Pets live on this property",Cat(s),"Buzzer/wireless intercom",Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit","Fire extinguisher",Essentials,"Lock on bedroom door",Hangers,"Hair dryer",Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50","Hot water","Bed linens","Extra pillows and blankets",Microwave,"Coffee maker",Refrigerator,Dishwasher,"Dishes and silverware","Cooking basics",Oven,Stove}	2	1	Real Bed	flexible	TRUE	NYC	t	100%	2013-03-19	Harlem	7	97	10030	1	1
+14057888	494.16	Apartment	Entire home/apt	{TV,"Cable TV","Wireless Internet","Air conditioning","Wheelchair accessible",Kitchen,Doorman,Elevator,"Buzzer/wireless intercom",Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector","Fire extinguisher",Essentials,Shampoo,Hangers,Iron,"translation missing: en.hosting_amenity_50"}	4	1	Real Bed	flexible	TRUE	NYC	t	100%	2013-05-20	Harlem	16	91	10037	1	1
+8084290	497.67	Condominium	Entire home/apt	{TV,"Wireless Internet","Air conditioning",Kitchen,Breakfast,Elevator,Heating,"Suitable for events",Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer",Iron,"Private entrance",Bathtub,"Hot water","Bed linens","Extra pillows and blankets",Microwave,"Coffee maker",Refrigerator,Dishwasher,"Dishes and silverware","Cooking basics",Oven,Stove,"Patio or balcony","Step-free access","Flat, smooth pathway to front door","Host greets you"}	4	1	Real Bed	moderate	TRUE	NYC	t	100%	2012-05-09	Harlem	7	94	10027	1	2
+12282255	449.98	Apartment	Entire home/apt	{Internet,"Wireless Internet","Air conditioning",Kitchen,"Pets allowed","Family/kid friendly","Smoke detector","Fire extinguisher",Shampoo}	3	1	Real Bed	strict	FALSE	NYC	t	100%	2015-04-23	Harlem	23	94	10030	0	1
+21005590	444.27	Apartment	Private room	{TV,"Wireless Internet","Air conditioning",Kitchen,"Smoking allowed","Pets allowed",Elevator,Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer",Iron}	3	1	Real Bed	flexible	FALSE	NYC	t		2016-03-20	Harlem	0		10039	2	1
+4698479	510.59	Apartment	Entire home/apt	{TV,Internet,"Wireless Internet","Air conditioning","Wheelchair accessible",Kitchen,Gym,Elevator,"Buzzer/wireless intercom",Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector","Safety card",Shampoo,Hangers,"Hair dryer","Laptop friendly workspace"}	2	1	Real Bed	moderate	TRUE	NYC	t		2015-12-10	Harlem	5	100	10026	1	1
+6661783	448.86	Apartment	Private room	{TV,"Wireless Internet","Air conditioning",Kitchen,Heating,"Smoke detector","Carbon monoxide detector","Fire extinguisher",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer",Iron,"Laptop friendly workspace",Other}	2	2	Real Bed	flexible	TRUE	NYC	t	100%	2014-04-26	Harlem	28	91	10027	1	1
+2243670	519.3	Apartment	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,"Buzzer/wireless intercom",Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector","Safety card","Fire extinguisher",Essentials,Shampoo,Hangers,Iron,"Laptop friendly workspace"}	3	1	Real Bed	strict	TRUE	NYC	t	90%	2013-03-05	Harlem	15	97	10027	2	2
+5059214	431.75	Apartment	Private room	{TV,"Wireless Internet","Air conditioning",Kitchen,"Free parking on premises",Breakfast,Heating,"Smoke detector","Carbon monoxide detector","First aid kit","Fire extinguisher",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Laptop friendly workspace","Private living room"}	1	3	Real Bed	strict	FALSE	NYC	f		2014-03-14	Harlem	0		10030	2	1
+20556938	438.2	Apartment	Private room	{TV,Washer,"Cable TV",Dryer,Internet,"Smoke detector","Wireless Internet","Carbon monoxide detector","Air conditioning",Kitchen,Essentials,"Lock on bedroom door",Hangers,"Hair dryer",Doorman,"Laptop friendly workspace","translation missing: en.hosting_amenity_49",Elevator,"Private living room",Heating}	2	1	Real Bed	strict	FALSE	NYC	f	100%	2016-04-12	Harlem	41	94	10029	1	1
+10165064	431.75	Apartment	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Gym,Elevator,"Buzzer/wireless intercom",Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector",Essentials,Shampoo,"Hair dryer",Iron,"Laptop friendly workspace"}	3	1	Real Bed	flexible	FALSE	NYC	t		2016-11-02	Harlem	1	100	10039	2	3
+7359527	434.38	Apartment	Entire home/apt	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,"Free parking on premises",Breakfast,"Buzzer/wireless intercom",Heating,"Smoke detector","Carbon monoxide detector","Fire extinguisher",Essentials,Shampoo}	2	1	Real Bed	flexible	FALSE	NYC	f		2015-04-08	Harlem	1	100	10030	0	1
+6630775	504.34	Apartment	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,"Pets live on this property",Dog(s),Heating,"Family/kid friendly","Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher",Essentials,Shampoo,Hangers,"Hair dryer",Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_50","Self Check-In","Smart lock"}	4	1	Real Bed	moderate	TRUE	NYC	t	100%	2014-06-30	Harlem	40	97	10030	1	4
+2399406	389.18	Apartment	Private room	{"Wireless Internet",Kitchen,"Pets allowed",Breakfast,Elevator,"Family/kid friendly","Smoke detector","Carbon monoxide detector","First aid kit",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer",Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_50"}	2	1	Real Bed	flexible	FALSE	NYC	f	100%	2016-02-28	Harlem	12	92	10030	1	1
+12386097	366.36	Apartment	Shared room	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,Heating,"Smoke detector",Essentials,Shampoo}	1	1	Real Bed	moderate	TRUE	NYC	t	100%	2015-10-02	Harlem	18	96	10027	1	2
+4559312	510.59	Apartment	Entire home/apt	{Internet,"Wireless Internet","Air conditioning",Kitchen,"Pets live on this property",Dog(s),"Buzzer/wireless intercom",Heating,"Family/kid friendly","Smoke detector","Carbon monoxide detector",Shampoo,Hangers,"Hair dryer","Laptop friendly workspace"}	4	1	Real Bed	strict	FALSE	NYC	t		2013-03-06	Harlem	2	80	10026	2	2
+2165604	368.89	Apartment	Private room	{"Wireless Internet","Air conditioning",Kitchen,"Smoking allowed",Breakfast,"Pets live on this property",Cat(s),"Buzzer/wireless intercom","Smoke detector","Carbon monoxide detector","First aid kit","Fire extinguisher",Essentials,Shampoo,Hangers,"Hair dryer",Iron,"translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50","Host greets you"}	2	1	Real Bed	moderate	TRUE	NYC	t	100%	2016-03-14	Harlem	7	94	10039	1	1
+14276565	486.75	Apartment	Entire home/apt	{TV,"Wireless Internet","Air conditioning",Kitchen,"Buzzer/wireless intercom",Heating,"Family/kid friendly","Smoke detector","Carbon monoxide detector",Essentials,Hangers,"Hair dryer",Iron,"Laptop friendly workspace"}	4	1	Real Bed	strict	TRUE	NYC	t	87%	2014-01-22	Harlem	0		10027	2	2
+18385413	409.43	Apartment	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Elevator,"Buzzer/wireless intercom",Heating,Essentials,Hangers,"Hair dryer",Iron}	2	1	Real Bed	flexible	FALSE	NYC	f		2014-06-04	Harlem	18	91	10030	0	1
+4902799	621.26	Apartment	Entire home/apt	{TV,Internet,"Wireless Internet","Air conditioning","Wheelchair accessible",Kitchen,Elevator,Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector","Fire extinguisher",Essentials,Shampoo}	4	2	Real Bed	strict	TRUE	NYC	t		2011-12-23	Harlem	0		10026	2	2
+20976767	431.75	Apartment	Shared room	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,"Free parking on premises",Elevator,"Buzzer/wireless intercom",Heating,"Family/kid friendly","Smoke detector","Carbon monoxide detector","First aid kit",Essentials,Shampoo,Hangers,"Hair dryer",Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_50"}	2	1	Pull-out Sofa	moderate	TRUE	NYC	t	100%	2013-03-19	Harlem	30	94	10026	1	1
+10869168	552.15	Apartment	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,"Free parking on premises","Buzzer/wireless intercom",Heating,"Family/kid friendly",Dryer,"Smoke detector",Essentials,Shampoo,"Hair dryer",Iron}	7	1	Real Bed	strict	TRUE	NYC	f	90%	2013-01-01	Harlem	29	88	10027	3	4
+7591555	424.85	Apartment	Entire home/apt	{"Wireless Internet","Air conditioning",Kitchen,Heating,"Family/kid friendly","Smoke detector","Carbon monoxide detector",Essentials,Shampoo,"Hair dryer",Iron,"Laptop friendly workspace"}	2	1	Real Bed	flexible	TRUE	NYC	f	38%	2013-06-02	Harlem	7	95	10039	1	1
+15454112	459.51	House	Private room	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Heating,"Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher",Essentials,Shampoo,Hangers,"Hair dryer",Iron,"Laptop friendly workspace","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50","Private entrance"}	2	1	Real Bed	moderate	TRUE	NYC	t	100%	2014-06-30	Harlem	73	94	10030	1	1
+10923708	340.12	Apartment	Private room	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,"Pets live on this property",Cat(s),"Buzzer/wireless intercom",Heating,"Family/kid friendly",Washer,"Smoke detector","Carbon monoxide detector","First aid kit","Fire extinguisher",Essentials}	1	1	Real Bed	strict	FALSE	NYC	t	100%	2014-06-30	Harlem	166	91	10031	1	1
+1998513	438.2	Apartment	Entire home/apt	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,"Pets allowed",Elevator,Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector",Shampoo,"Self Check-In",Lockbox}	2	1	Real Bed	strict	TRUE	NYC	t	80%	2013-12-21	Harlem	11	87	10027	0	1
+18211034	449.98	Apartment	Private room	{"Wireless Internet",Kitchen,"Smoke detector","Carbon monoxide detector","First aid kit",Essentials,"Lock on bedroom door","Laptop friendly workspace","translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	2	1	Real Bed	flexible	FALSE	NYC	f		2016-01-07	Harlem	0		10030	1	1
+13041230	431.75	Apartment	Entire home/apt	{TV,Internet,"Wireless Internet","Wheelchair accessible",Kitchen,"Free parking on premises",Elevator,"Hot tub","Buzzer/wireless intercom",Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector",Essentials,Shampoo,Hangers,Iron,"translation missing: en.hosting_amenity_49","translation missing: en.hosting_amenity_50"}	3	1	Real Bed	flexible	TRUE	NYC	t		2013-12-21	Harlem	31	87	10027	1	1
+9470528	477.91	Apartment	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Heating,"Smoke detector",Essentials}	2	1	Real Bed	moderate	TRUE	NYC	t	100%	2015-10-02	Harlem	5	88	10027	0	2
+8256789	552.15	Apartment	Entire home/apt	{TV,"Wireless Internet","Air conditioning",Elevator,Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector",Essentials,Shampoo,"Hair dryer",Iron}	4	2	Real Bed	moderate	TRUE	NYC	t	100%	2015-10-02	Harlem	0		10027	2	2
+3323232	460.52	Condominium	Private room	{TV,"Wireless Internet","Air conditioning",Kitchen,Breakfast,Heating,"Family/kid friendly",Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit","Fire extinguisher",Essentials,Shampoo,"Lock on bedroom door",Hangers,"Hair dryer",Iron,"Laptop friendly workspace","Private living room"}	2	1	Real Bed	flexible	FALSE	NYC	f	100%	2015-10-02	Harlem	0		10039	1	1
+20899396	470.05	Apartment	Entire home/apt	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,"Buzzer/wireless intercom",Heating,"Family/kid friendly","Smoke detector","Carbon monoxide detector",Essentials,Shampoo}	4	1	Real Bed	flexible	TRUE	NYC	t	100%	2013-12-21	Harlem	4	85	10030	1	2
+3380585	436.94	Apartment	Private room	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Elevator,"Buzzer/wireless intercom",Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector",Essentials}	2	1	Real Bed	moderate	FALSE	NYC	f		2014-06-30	Harlem	2	70	10027	1	1
+10770929	561.68	Apartment	Entire home/apt	{TV,"Cable TV",Internet,"Wireless Internet","Air conditioning",Kitchen,Heating,"Smoke detector","Carbon monoxide detector","Fire extinguisher",Essentials,Hangers,"Hair dryer",Iron}	8	2	Real Bed	strict	TRUE	NYC	t	100%	2014-06-30	Harlem	28	92	10026	2	5
+7347593	504.34	House	Private room	{TV,Internet,"Wireless Internet",Kitchen,"Smoking allowed","Indoor fireplace","Buzzer/wireless intercom",Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector","First aid kit",Essentials,Shampoo,"24-hour check-in",Hangers,"Hair dryer",Iron,"Laptop friendly workspace","Self Check-In",Lockbox,"Hot water","Private bathroom","Bed linens","Extra pillows and blankets",Microwave,"Coffee maker",Refrigerator,"Dishes and silverware","Cooking basics",Oven,Stove,"BBQ grill","Patio or balcony","Garden or backyard","Luggage dropoff allowed","Cleaning before checkout","Wide hallway clearance","Wide doorway","Wide doorway","Wide clearance to bed","Step-free access","Wide doorway","Fixed grab bars for shower & toilet","Accessible-height toilet","Wide clearance to shower & toilet","Step-free access","Wide entryway"}	4	1	Real Bed	strict	FALSE	NYC	t	100%	2013-12-11	Harlem	14	89	10037	1	2
+11157369	409.43	Apartment	Private room	{TV,Internet,"Wireless Internet","Air conditioning",Kitchen,Heating,Essentials,Shampoo,Iron,"Laptop friendly workspace"}	1	1	Real Bed	flexible	TRUE	NYC	t		2014-06-30	Harlem	0		10026	1	1
+16354537	478.75	Apartment	Private room	{"Wireless Internet","Air conditioning",Kitchen,Heating,Washer,Dryer,"Smoke detector","Carbon monoxide detector",Essentials,Shampoo,Hangers,"Hair dryer",Iron,"Laptop friendly workspace","Bed linens"}	2	1	Real Bed	strict	FALSE	NYC	t	100%	2013-12-21	Harlem	14	99	10027	1	1
+id:
+bigint
+price:
+double
+property_type:
+string
+room_type:
+string
+amenities:
+string
+accommodates:
+bigint
+bathrooms:
+bigint
+bed_type:
+string
+cancellation_policy:
+string
+cleaning_fee:
+boolean
+city:
+string
+host_identity_verified:
+string
+host_response_rate:
+string
+host_since:
+date
+neighbourhood:
+string
+number_of_reviews:
+bigint
+review_scores_rating:
+double
+zipcode:
+bigint
+bedrooms:
+bigint
+beds:
+bigint
+```
+
+---
+
+## 3. Interview Strategy & Logic
+
+1. **Requirement Analysis**:
+   - Understand the primary entity and granularity required in the final output.
+   - Filter down the dataset early if specific conditional flags or date ranges are specified.
+2. **PySpark Optimization Strategy**:
+   - Utilize native DataFrame API transformations (`select`, `filter`, `groupBy`, `withColumn`) to allow the Catalyst Optimizer to optimize query execution plans.
+   - If ranking or windowed calculations are needed, define explicit partition keys and order expressions using `pyspark.sql.window.Window`.
+   - Avoid collecting large DataFrames to the driver node; utilize distributed operations until final aggregations.
+
+---
+
+## 4. PySpark DataFrame API Solution
+
+```python
+# Import your libraries
+import pyspark
+import math
+from pyspark.sql.functions import *
+# Start writing code
+airbnb_host_searches1 = airbnb_host_searches
+# airbnb_host_searches1.show(50,truncate=False)
+
+airbnb_host_searches2 = airbnb_host_searches1.withColumn("host_id",concat(airbnb_host_searches1.price,lit("|"),airbnb_host_searches1.room_type,lit("|"),airbnb_host_searches1.host_since,lit("|"),airbnb_host_searches1.zipcode,lit("|"),airbnb_host_searches1.number_of_reviews))
+# airbnb_host_searches2 = airbnb_host_searches2.drop("price","room_type","host_since","zipcode")
+# airbnb_host_searches2.show(50,truncate=False)
+airbnb_host_searches3 = airbnb_host_searches2.withColumn("host_popularity",when(airbnb_host_searches2.number_of_reviews == 0,lit("New")).when((airbnb_host_searches2.number_of_reviews>=1) & (airbnb_host_searches2.number_of_reviews<=5),lit("Rising")).when((airbnb_host_searches2.number_of_reviews>=6) & (airbnb_host_searches2.number_of_reviews<=15),lit("Trending Up")).when((airbnb_host_searches2.number_of_reviews>=16) & (airbnb_host_searches2.number_of_reviews<=40),lit("Popular")).when(airbnb_host_searches2.number_of_reviews>40,lit("Hot")))
+# airbnb_host_searches3.show(truncate=False)
+airbnb_host_searches4 = airbnb_host_searches3.select("price","host_popularity","host_id")
+# airbnb_host_searches4.show(truncate=False)
+airbnb_host_searches4 = airbnb_host_searches4.groupBy("host_popularity").agg((min("price").alias("min_price"),2),(avg("price").alias("avg_price"),2),(max("price").alias("max_price"),2))
+airbnb_host_searches4.show(truncate=False)
+# To validate your solution, convert your final pySpark df to a pandas df
+# airbnb_host_searches4.toPandas()
+```
+
+---
+
+## 5. Alternative Approach: PySpark SQL
+
+```python
+from pyspark.sql import SparkSession
+
+# Initialize Spark Session
+spark = SparkSession.builder.appName("StrataScratch_9632").getOrCreate()
+
+# If using raw SQL query on registered temporary tables:
+"""
+-- Equivalent SQL logic for StrataScratch ID 9632\nSELECT * FROM input_table
+"""
+```
+
+---
+
+## 6. Key Takeaways & Best Practices
+
+- **Avoid Shuffling When Possible**: Prefer `coalesce()` over `repartition()` when decreasing partition count after filtering large datasets.
+- **Null Handling**: Explicitly account for potential `NULL` values in grouping or join keys to prevent dropped rows during inner joins.
+- **Testing**: In the StrataScratch platform, solutions are typically verified by converting the final Spark DataFrame to a Pandas DataFrame using `.toPandas()`.
